@@ -44,7 +44,7 @@
 				//, mysql_real_escape_string($username));
 				//header($redirect) ;
 				//echo $_POST["password_log"];
-				$ps=echo $row['user_pass'];
+				$ps=$row['user_pass'];
 				$eps=$_POST["password_log"];
 				echo $ps;
 				echo $eps;
