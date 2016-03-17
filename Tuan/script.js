@@ -20,10 +20,10 @@
 					var url = window.URL;// || window.webkitURL;
 	        			v.src = url.createObjectURL(stream);// : stream;
 	        			// Set the video to play
-	        			v.play();
 	        			v.onloadedmetadata = function(e) {
 	        				
 	        			}
+	        			v.play();
 				},
 				function(error) {
 					alert('Something went wrong. (error code ' + error.code + ')');
