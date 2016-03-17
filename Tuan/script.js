@@ -23,7 +23,7 @@
 	        			v.onloadedmetadata = function(e) {
 	        				
 	        			}
-	        			v.play();
+	        			//v.play();
 				},
 				function(error) {
 					alert('Something went wrong. (error code ' + error.code + ')');
