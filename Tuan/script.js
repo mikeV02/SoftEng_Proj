@@ -27,7 +27,7 @@
         			// Set the video to play
         			//v.play();
         			v.onloadedmetadata = function(e) {
-    					// Do something with the video here.
+    					v.play();// Do something with the video here.
   				};
 			},
 			function(error) {
