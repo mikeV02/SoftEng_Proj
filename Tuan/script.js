@@ -37,7 +37,7 @@
 		}
 
 		// Wait until the video stream can play
-		v.addEventListener('canplay', function(e) {
+		/*v.addEventListener('canplay', function(e) {
 		    if (!isStreaming) {
 		    	// videoWidth isn't always set correctly in all browsers
 		    	if (v.videoWidth > 0) h = v.videoHeight / (v.videoWidth / w);
@@ -75,6 +75,6 @@
 
 		// When the grey button is clicked, toggle the greyness indicator
 		grey.addEventListener('click', function() {	greyscale = !greyscale; }, false);
-		
+		*/
 	})
 })();
