@@ -14,17 +14,13 @@
 		navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 		if (navigator.getUserMedia) {
 			// Request access to video only
-			navigator.getUserMedia(
-				{
-					video:true,
-					audio:false
-				},		
+			navigator.getUserMedia({ video:true, audio:true },		
 				function(stream) {
 					// Cross browser checks
-					var url = window.URL || window.webkitURL;
-        			v.src = url ? url.createObjectURL(stream) : stream;
-        			// Set the video to play
-        			v.play();
+					var url = window.URL;// || window.webkitURL;
+	        			v.src = url.createObjectURL(stream);// : stream;
+	        			// Set the video to play
+	        			v.play();
 				},
 				function(error) {
 					alert('Something went wrong. (error code ' + error.code + ')');
