@@ -11,8 +11,8 @@
 			greyscale = false;
 
 		// Cross browser
-		navigator.mediaDevices.getUserMedia = ({ audio: true, video: true });
-			.then(
+		var p =navigator.mediaDevices.getUserMedia = ({ audio: true, video: true });
+			p.then(
 				function(stream) {
 					// Cross browser checks
 					var url = window.URL || window.webkitURL;
@@ -23,7 +23,7 @@
 	        			}
 				}
 			)
-			.catch(
+			p.catch(
 				function(error) {
 					alert('Something went wrong. (error code ' + error.code + ')');
 					return;
