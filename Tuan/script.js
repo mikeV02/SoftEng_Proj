@@ -11,31 +11,32 @@
 			greyscale = false;
 
 		// Cross browser
-		navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-		if (navigator.getUserMedia) {
+		//OLDnavigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+		var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+		if (p) {
 			// Request access to video only
-			navigator.getUserMedia(
-				{
-					video:true,
-					audio:false
-				},		
-				function(stream) {
-					// Cross browser checks
-					var url = window.URL || window.webkitURL;
+			/*navigator.getUserMedia(
+			{
+				video:true,
+				audio:false
+			},*/	
+			function(stream) {
+				// Cross browser checks
+				var url = window.URL || window.webkitURL;
         			v.src = url ? url.createObjectURL(stream) : stream;
         			// Set the video to play
         			v.play();
-				},
-				function(error) {
-					alert('Something went wrong. (error code ' + error.code + ')');
-					return;
-				}
-			);
-		}
-		else {
-			alert('Sorry, the browser you are using doesn\'t support getUserMedia');
-			return;
-		}
+			},
+			function(error) {
+				alert('Something went wrong. (error code ' + error.code + ')');
+				return;
+			}
+	);
+	}
+	else {
+		alert('Sorry, the browser you are using doesn\'t support getUserMedia');
+		return;
+	}
 
 		// Wait until the video stream can play
 		v.addEventListener('canplay', function(e) {
