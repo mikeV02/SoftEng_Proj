@@ -8,8 +8,8 @@
 		// if id and password not matching from database return false 
 		// else return true
 		<!--ADDED BY MIGUEL-->
-		var ret;
-		<?php
+		var ret=true;
+	<?php
 		$user_name = "root";
 		$password = "softeng";
 		$database = "softeng";
@@ -38,7 +38,7 @@
 			mysql_close($db_handle);
 		}
 	?>
-		return true;
+		return ret;
 		
 	</script>
 <head>
