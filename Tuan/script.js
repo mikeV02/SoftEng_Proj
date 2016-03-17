@@ -11,7 +11,7 @@
 			greyscale = false;
 
 		// Cross browser
-		navigator.MediaDevices.getUserMedia = ({ audio: true, video: true });
+		navigator.mediaDevices.getUserMedia = ({ audio: true, video: true });
 			.then(
 				function(stream) {
 					// Cross browser checks
