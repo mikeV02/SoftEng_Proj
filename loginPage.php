@@ -21,7 +21,7 @@
 				, mysql_real_escape_string($username));
 
 		if ($db_found) {
-			$result =mysql_query($query);
+			$result = mysql_query($query);
 			if ($result && mysql_num_rows($result) > 0)
 			{
 				$row=mysql_fetch_assoc($result);
@@ -37,7 +37,7 @@
 			mysql_close($db_handle);
 		}
 	?>
-		return ret;
+		return true;
 		
 	</script>
 <head>
