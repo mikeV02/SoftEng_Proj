@@ -26,7 +26,10 @@
 		
 		$db_handle = mysql_connect($server, $user_name, $password);
 		$db_found = mysql_select_db($database, $db_handle);
-		$username="admin";
+		
+		$username=$_POST["user_log"];
+		echo $_POST["password_log"];
+		
 		$query=sprintf("SELECT ID, user_pass, user_email, display_name FROM users WHERE user_login = '%s'"
 				, mysql_real_escape_string($username));
 
@@ -48,7 +51,7 @@
 		}
 	?>
 	<!--action="mainPage.php"-->
-	<form id = "loginform"  method="post" onsubmit="return login_Validation()" >
+	<form id = "loginform" action="loginPage.php" method="post" onsubmit="return login_Validation()" >
 		User ID  : <input style="margin-left:16px" type="text" name="user_log" id= "user_log" value=""><br><br>
 		Password : <input style="margin-left:2px" type="text" name="password_log" id= "password_log" value=""><br><br>
 		<input type="submit" value="Login">
