@@ -21,7 +21,7 @@
 	<?php
 		$user_name = "root";
 		$password = "softeng";
-		$database = "users";
+		$database = "softeng";
 		$server = "localhost";
 
 
