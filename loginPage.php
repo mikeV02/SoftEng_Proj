@@ -29,7 +29,7 @@
 		$db_found = mysql_select_db($database, $db_handle);
 		
 		$username=$_POST["user_log"];
-		echo $_POST["password_log"];
+		//echo $_POST["password_log"];
 		
 		$query=sprintf("SELECT ID, user_pass, user_email, display_name FROM users WHERE user_login = '%s'"
 				, mysql_real_escape_string($username));
@@ -38,12 +38,13 @@
 			$result = mysql_query($query);
 			if ($result && mysql_num_rows($result) > 0)
 			{
-				//$row=mysql_fetch_assoc($result);
-				//echo $row['user_email']; 
+				$row=mysql_fetch_assoc($result);
+				echo $row['user_email']; 
 				//$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 				//, mysql_real_escape_string($username));
 				//header($redirect) ;
-				echo $_POST["password_log"];
+				//echo $_POST["password_log"];
+				//if()
     			}
 			else
     			{
