@@ -37,8 +37,9 @@
 			$result = mysql_query($query);
 			if ($result && mysql_num_rows($result) > 0)
 			{
-				$row=mysql_fetch_assoc($result);
-				echo $row['user_email']; 
+				//$row=mysql_fetch_assoc($result);
+				//echo $row['user_email']; 
+				header( 'Location: http://softeng.mikedlv.com/mainPage.php' ) ;
     			}
 			else
     			{
