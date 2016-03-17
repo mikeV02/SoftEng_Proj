@@ -5,10 +5,11 @@
 	<script type="text/javascript">
 	function login_Validation() {
 		
-			<!--ADDED BY MIGUEL-->
-			// if id and password not matching from database return false 
-			// else return true
-			return true;
+		<!--ADDED BY MIGUEL-->
+		
+		// if id and password not matching from database return false 
+		// else return true
+		return true;
 		
 	</script>
 <head>
@@ -16,9 +17,35 @@
 	</head>
 	<h1>Welcome to CSCE Group 15's project page</h1>
 	<body align="center" style="background-color:#247">
-
+		
 	<?php
-		echo "My first PHP script by MIKE!";
+		$user_name = "root";
+		$password = "softeng";
+		$database = "users";
+		$server = "localhost";
+
+
+
+$db_handle = mysql_connect($server, $user_name, $password);
+$db_found = mysql_select_db($database, $db_handle);
+$username="admin";
+
+
+		if ($db_found) {
+			$result =mysql_query("SELECT 1 FROM users WHERE user_login = '$username'");
+			if ($result && mysql_num_rows($result) > 0)
+			{
+        			echo 'Username and Password Found'; 
+    			}
+			else
+    			{
+    				echo 'Username and Password NOT Found';
+    			}
+		}
+		else {
+			print "Database NOT Found.";
+			mysql_close($db_handle);
+		}
 	?>
 
 	<form id = "loginform" action="mainPage.php" method="post" onsubmit="return login_Validation()" >
