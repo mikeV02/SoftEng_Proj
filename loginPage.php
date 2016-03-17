@@ -39,7 +39,9 @@
 			{
 				//$row=mysql_fetch_assoc($result);
 				//echo $row['user_email']; 
-				header( 'Location: http://softeng.mikedlv.com/mainPage.php' ) ;
+				$redirect=$sprintf(":Location: http://softeng.mikedlv.com/mainPage.php&userID='%s'"
+				, mysql_real_escape_string($username));
+				header($redirect) ;
     			}
 			else
     			{
