@@ -3,7 +3,7 @@
 	window.addEventListener('DOMContentLoaded', function() {
 		var isStreaming = false,
 			v = document.getElementById('v'),
-			c = document.getElementById('c'),
+			//c = document.getElementById('c'),
 			grey = document.getElementById('grey');
 			con = c.getContext('2d');
 			w = 600, 
