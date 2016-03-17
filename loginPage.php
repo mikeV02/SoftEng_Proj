@@ -18,8 +18,8 @@
 		$db_handle = mysql_connect($server, $user_name, $password);
 		$db_found = mysql_select_db($database, $db_handle);
 		$username="admin";
-		$query=sprintf("SELECT ID, user_pass, user_email, display_name FROM users WHERE user_login = '%s'", 
-				mysql_real_escape_string($username));
+		$query=sprintf("SELECT ID, user_pass, user_email, display_name FROM users WHERE user_login = '%s'"
+				, mysql_real_escape_string($username));
 
 		if ($db_found) {
 			$result =mysql_query($query);
