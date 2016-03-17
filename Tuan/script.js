@@ -11,19 +11,21 @@
 			greyscale = false;
 
 		// Cross browser
-		var p =navigator.mediaDevices.getUserMedia = ({ audio: true, video: true });
-			p.then(
+		navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+		if (navigator.getUserMedia) {
+			// Request access to video only
+			navigator.getUserMedia(
+				{
+					video:true,
+					audio:false
+				},		
 				function(stream) {
 					// Cross browser checks
 					var url = window.URL || window.webkitURL;
-	        			v.src = url ? url.createObjectURL(stream);// : stream;
-	        			// Set the video to play
-	        			v.onloadedmetadata = function(e) {
-	        				v.play();
-	        			}
-				}
-			)
-			p.catch(
+        			v.src = url ? url.createObjectURL(stream) : stream;
+        			// Set the video to play
+        			v.play();
+				},
 				function(error) {
 					alert('Something went wrong. (error code ' + error.code + ')');
 					return;
