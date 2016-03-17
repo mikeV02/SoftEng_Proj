@@ -20,10 +20,10 @@
 				video:true,
 				audio:false
 			},*/	
-			function(stream) {
+			p.then(function(mediaStream) {
 				// Cross browser checks
 				var url = window.URL || window.webkitURL;
-        			v.src = url ? url.createObjectURL(stream) : stream;
+        			v.src = url ? url.createObjectURL(mediaStream);// : stream;
         			// Set the video to play
         			v.play();
 			},
