@@ -22,10 +22,10 @@
 				audio:false
 			},*/	
 			.then(
-				function(mediaStream) {
+				function(stream) {
 					// Cross browser checks
 					var url = window.URL;
-        				v.src = url.createObjectURL(mediaStream);// : stream;
+        				v.src = url.createObjectURL(stream);// : stream;
         				// Set the video to play
         				//v.play();
         				v.onloadedmetadata = function(e) {
