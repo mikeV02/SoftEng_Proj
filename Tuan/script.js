@@ -12,7 +12,8 @@
 
 		// Cross browser
 		//OLDnavigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-		navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+		var constraints = { audio: true, video: { width: 1280, height: 720 } };
+		navigator.mediaDevices.getUserMedia(constraints);
 		//if (p) {
 			// Request access to video only
 			/*navigator.getUserMedia(
@@ -20,20 +21,21 @@
 				video:true,
 				audio:false
 			},*/	
-			.then(function(mediaStream) {
-				// Cross browser checks
-				var url = window.URL;
-        			v.src = url.createObjectURL(mediaStream);// : stream;
-        			// Set the video to play
-        			//v.play();
-        			v.onloadedmetadata = function(e) {
-    					v.play();// Do something with the video here.
-  				};
-			},
-			function(error) {
-				alert('Something went wrong. (error code ' + error.code + ')');
-				return;
-			}
+			.then(
+				function(mediaStream) {
+					// Cross browser checks
+					var url = window.URL;
+        				v.src = url.createObjectURL(mediaStream);// : stream;
+        				// Set the video to play
+        				//v.play();
+        				v.onloadedmetadata = function(e) {
+    						v.play();// Do something with the video here.
+  					};
+				},
+				function(error) {
+					alert('Something went wrong. (error code ' + error.code + ')');
+					return;
+				}
 			);
 		//}
 	else {
