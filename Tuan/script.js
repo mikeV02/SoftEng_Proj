@@ -21,7 +21,7 @@
 	        			v.src = url.createObjectURL(stream);// : stream;
 	        			// Set the video to play
 	        			v.onloadedmetadata = function(e) {
-	        				v.play();
+	        				//v.play();
 	        			}
 				},
 				function(error) {
