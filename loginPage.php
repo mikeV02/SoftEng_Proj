@@ -6,9 +6,6 @@
 	function login_Validation() {
 		
 			<!--ADDED BY MIGUEL-->
-			<?php
-				echo "My first PHP script!";
-			?>
 			// if id and password not matching from database return false 
 			// else return true
 			return true;
