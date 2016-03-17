@@ -8,7 +8,6 @@
 		// if id and password not matching from database return false 
 		// else return true
 		<!--ADDED BY MIGUEL-->
-		var ret=true;
 	<?php
 		$user_name = "root";
 		$password = "softeng";
