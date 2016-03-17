@@ -18,7 +18,7 @@
 	<body align="center" style="background-color:#247">
 
 	<?php
-		echo "My first PHP script!";
+		echo "My first PHP script by MIKE!";
 	?>
 
 	<form id = "loginform" action="mainPage.php" method="post" onsubmit="return login_Validation()" >
