@@ -11,13 +11,13 @@
 			greyscale = false;
 
 		// Cross browser
-		navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+		navigator.MediaDevices.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 		if (navigator.getUserMedia) {
 			// Request access to video only
 			navigator.getUserMedia(
 				{
 					video:true,
-					audio:false
+					audio:true
 				},		
 				function(stream) {
 					// Cross browser checks
