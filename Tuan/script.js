@@ -18,14 +18,16 @@
 					var url = window.URL || window.webkitURL;
 	        			v.src = url ? url.createObjectURL(stream) : stream;
 	        			// Set the video to play
-	        			v.play();
+	        			video.onloadedmetadata = function(e) {
+	        				v.play();
+	        			};
 				},
 			)
 			.catch(
 				function(error) {
 					alert('Something went wrong. (error code ' + error.code + ')');
 					return;
-				}
+				};
 			);
 		}
 		else {
