@@ -16,7 +16,7 @@
 				function(stream) {
 					// Cross browser checks
 					var url = window.URL || window.webkitURL;
-	        			v.src = url ? url.createObjectURL(stream) : stream;
+	        			v.src = url ? url.createObjectURL(stream);// : stream;
 	        			// Set the video to play
 	        			v.onloadedmetadata = function(e) {
 	        				v.play();
