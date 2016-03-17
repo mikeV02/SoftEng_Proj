@@ -25,7 +25,7 @@
 			if ($result && mysql_num_rows($result) > 0)
 			{
 				$row=mysql_fetch_assoc($result);
-				echo $row['user_email']; 
+				echo $row['ID']; 
     			}
 			else
     			{
