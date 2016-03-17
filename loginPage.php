@@ -37,7 +37,7 @@ $query=sprintf("SELECT ID, user_pass, user_email, display_name FROM users WHERE 
 			if ($result && mysql_num_rows($result) > 0)
 			{
 				$row=mysql_fetch_assoc($result);
-				echo $row['display_name']; 
+				echo $row['user_email']; 
     			}
 			else
     			{
