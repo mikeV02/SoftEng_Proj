@@ -22,10 +22,13 @@
 			},*/	
 			p.then(function(mediaStream) {
 				// Cross browser checks
-				var url = window.URL || window.webkitURL;
-        			v.src = url ? url.createObjectURL(mediaStream);// : stream;
+				var url = window.URL;
+        			v.src = url.createObjectURL(mediaStream);// : stream;
         			// Set the video to play
-        			v.play();
+        			//v.play();
+        			v.onloadedmetadata = function(e) {
+    					// Do something with the video here.
+  				};
 			},
 			function(error) {
 				alert('Something went wrong. (error code ' + error.code + ')');
