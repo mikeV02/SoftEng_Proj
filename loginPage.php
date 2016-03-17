@@ -46,14 +46,14 @@
 				//echo $_POST["password_log"];
 				$ps=$row['user_pass'];
 				$eps=$_POST["password_log"];
-				echo $ps;
-				echo $eps;
-				/*if ($ps==$eps)
+				//echo $ps;
+				//echo $eps;
+				if ($ps==$eps)
 				{
 					$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 					, mysql_real_escape_string($username));
 					header($redirect);
-				}*/
+				}
     			}
 			else
     			{
