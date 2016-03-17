@@ -35,7 +35,7 @@ $username="admin";
 			$result =mysql_query("SELECT 1 FROM users WHERE user_login = '$username'");
 			if ($result && mysql_num_rows($result) > 0)
 			{
-				$print = $username->user_email;
+				$print = $result->user_email;
         			echo $print; 
     			}
 			else
