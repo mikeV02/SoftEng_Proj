@@ -11,21 +11,17 @@
 			greyscale = false;
 
 		// Cross browser
-		navigator.MediaDevices.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-		if (navigator.getUserMedia) {
-			// Request access to video only
-			navigator.getUserMedia(
-				{
-					video:true,
-					audio:true
-				},		
+		navigator.MediaDevices.getUserMedia = ({ audio: true, video: true });
+			.then(
 				function(stream) {
 					// Cross browser checks
 					var url = window.URL || window.webkitURL;
-        			v.src = url ? url.createObjectURL(stream) : stream;
-        			// Set the video to play
-        			v.play();
+	        			v.src = url ? url.createObjectURL(stream) : stream;
+	        			// Set the video to play
+	        			v.play();
 				},
+			)
+			.catch(
 				function(error) {
 					alert('Something went wrong. (error code ' + error.code + ')');
 					return;
