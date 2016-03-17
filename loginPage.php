@@ -5,6 +5,10 @@
 	<script type="text/javascript">
 	function login_Validation() {
 		
+			<!--ADDED BY MIGUEL-->
+			<?php
+				echo "My first PHP script!";
+			?>
 			// if id and password not matching from database return false 
 			// else return true
 			return true;
@@ -16,6 +20,9 @@
 	<h1>Welcome to CSCE Group 15's project page</h1>
 	<body align="center" style="background-color:#247">
 
+	<?php
+		echo "My first PHP script!";
+	?>
 
 	<form id = "loginform" action="mainPage.php" method="post" onsubmit="return login_Validation()" >
 		User ID  : <input style="margin-left:16px" type="text" name="user_log" id= "user_log" value=""><br><br>
