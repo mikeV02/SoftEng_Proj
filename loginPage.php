@@ -58,6 +58,8 @@
 		I also modifiend the next code to make the form call the same page to use the code above to check the database.
 		We could create an intermedian page to check credentials before going to mainPage.
 		
+		It's better to use php t manage the database as we execute it on the server, and we do not reaveal sensitive data
+		
 	action="mainPage.php"-->
 	<form id = "loginform" action="loginPage.php" method="post" onsubmit="return login_Validation()" >
 		User ID  : <input style="margin-left:16px" type="text" name="user_log" id= "user_log" value=""><br><br>
