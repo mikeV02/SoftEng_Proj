@@ -39,7 +39,7 @@
 	
 
 	<p> 
-	    Welcome <?php echo $_POST["userID"]; ?> to Gorup15's project page.<br>
+	    Welcome <?php echo $_GET["userID"]; ?> to Gorup15's project page.<br>
 	    search category<br>
 		recent view videos<br>
 		your upload file<br>
