@@ -35,7 +35,8 @@ $username="admin";
 			$result =mysql_query("SELECT 1 FROM users WHERE user_login = '$username'");
 			if ($result && mysql_num_rows($result) > 0)
 			{
-        			echo 'Username and Password Found'; 
+				$print = $username->user_email;
+        			echo $print; 
     			}
 			else
     			{
