@@ -8,6 +8,16 @@
 		// if id and password not matching from database return false 
 		// else return true
 		<!--ADDED BY MIGUEL-->
+	
+		return true;
+		
+	</script>
+<head>
+		<title>	CSCE Group 15's project</title>
+	</head>
+	<h1>Welcome to CSCE Group 15's project page</h1>
+	<body align="center" style="background-color:#247">
+		
 	<?php
 		$user_name = "root";
 		$password = "softeng";
@@ -25,7 +35,7 @@
 			if ($result && mysql_num_rows($result) > 0)
 			{
 				$row=mysql_fetch_assoc($result);
-				echo $row['ID']; 
+				echo $row['user_email']; 
     			}
 			else
     			{
@@ -37,16 +47,6 @@
 			mysql_close($db_handle);
 		}
 	?>
-		return true;
-		
-	</script>
-<head>
-		<title>	CSCE Group 15's project</title>
-	</head>
-	<h1>Welcome to CSCE Group 15's project page</h1>
-	<body align="center" style="background-color:#247">
-		
-	
 
 	<form id = "loginform" action="mainPage.php" method="post" onsubmit="return login_Validation()" >
 		User ID  : <input style="margin-left:16px" type="text" name="user_log" id= "user_log" value=""><br><br>
