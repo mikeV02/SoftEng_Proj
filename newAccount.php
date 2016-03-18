@@ -55,7 +55,7 @@ function account_Validation() {
 	$db = "softeng";
 	$password = "softeng";
 	$username = "root";
-	$con = mysqli_connect("localhost", $username, $password, $password);
+	$con = mysqli_connect("localhost", $username, $password, $db);
 	//$db_found = mysql_select_db($db, $con);
 	
 	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
