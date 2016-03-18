@@ -1,6 +1,78 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+/*
+	Making some changes to test FABIAN
+*/
+
+<?php
+
+	$fname = $_POST["userfname"];
+	$lname = $_POST["userlname"];
+	$usernam = $_POST["usernam"];
+	$uemail	= $_POST["useremail"];
+	$passreg = $_POST["password"];
+	$passcheck = $_POST["password2"];
+	
+	$confir ="false";
+	$db = "softeng";
+	$password = "softeng";
+	$username = "root";
+
+	if($uemail && $passreg && $passcheck && &usernam){
+		if($passreg == $passcheck){
+			$con = mysql_connect('localhost', $username, $password) or die("Unable to log into database");
+			$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
+	
+			mysql_query("INSERT INTO users VALUES($usernam, $passreg, $uemail, CURRENT_TIMESTAMP, 1, $fname)") or die ("Not able to Register");
+			echo "Account Created";
+			mysql_close($con);
+			$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
+				, mysql_real_escape_string($username));
+				header($redirect);
+		} else{
+			echo "Please make sure both passwords are the same.";
+		}
+		
+	} else{
+		echo "You need to have both the email and passwords fields filled."
+	}
+
+?>
+	<head>
+		<title>	CSCE Group 15's project</title>
+	</head>
+	<h1>Welcome to CSCE Group 15's project page</h1>
+	<body align="center" style="background-color:#540">	
+
+	<form action=".php" method="post">
+	<div align = "center">
+		First Name:
+		<input type="text" name="userfname"><br>
+		Last Name:
+		<input type="text" name="userlname"><br>
+		Username*: 
+		<input type="text" name="usernam"><br>
+		Email*:
+		<input type="text" name="useremail"><br>
+		Password*:
+		<input type="password" name="password"><br>
+		Confirm Password*:
+		<input type="password" name="password2"><br>
+		
+	<input type="submit" value="Register">
+	</div>
+	</form>
+	</body>
+</html>
+
+
+
+
+
+
+/*
 	<title>CSCE Group 15's project</title>
 
 <script type="text/javascript">
@@ -61,4 +133,4 @@ function account_Validation() {
 		</form>
 	</body>
 	</html>
-	
+*/
