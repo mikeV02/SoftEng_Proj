@@ -12,3 +12,15 @@ I have created a subdomain on mu webpage, so we can easily access the server.
 
 You need to download the key filento be ablento use ssh. Here is the link:
 
+# Credentials
+
+$ofTeng
+
+sofeng MySQL PHPmyadmin
+
+#phpmyadmin entrance
+usr	SE_TEAM
+pwd	softeng
+
+SignIn	root
+pwd	softeng
