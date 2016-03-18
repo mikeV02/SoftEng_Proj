@@ -26,7 +26,7 @@
     $mail="tst2@tst.tst";
     $disp="test2";
     $sql = "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name)
-        VALUES (NULL, '$user', '$pass', '$mail', NULL, 0, '$disp')";
+        VALUES (2, '$user', '$pass', '$mail', NULL, 0, '$disp')";
 
     if(mysql_query($sql)){
 
