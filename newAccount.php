@@ -6,7 +6,7 @@
 <script type="text/javascript">
 
 function account_Validation() {
-		
+/*
 			var email = document.forms["createform"]["email"].value;
             var pass = document.forms["createform"]["password"].value;
 			if ((document.forms["createform"]["userId"].value) == "") {
@@ -38,7 +38,7 @@ function account_Validation() {
 			}
 			
 			return true;
-		
+*/
 }
 </script>
 
@@ -91,7 +91,7 @@ function account_Validation() {
 	<h1>Welcome to CSCE Group 15's project page</h1>
 	<body align="center" style="background-color:#540">
 <!-- added by Fabian M. -->			
-	<form action="newAccount.php" method="post" onsubmit="return login_Validation()">
+	<form action="newAccount.php" method="post" onsubmit="return account_Validation()">
 		First Name:
 		<input type="text" name="ufname" id="ufname" value=""><br>
 		Last Name:
