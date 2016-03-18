@@ -58,7 +58,7 @@ function account_Validation() {
 	$db_found = mysql_select_db($db, $con);
 	
 	if(db_found){
-		if($uemail && $passreg && $passcheck && &user_nam){
+		if($uemail && $passreg && $passcheck && $user_nam){
 			if($passreg == $passcheck){
 				$con = mysql_connect(0, 'localhost', $username, $password);
 				$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
