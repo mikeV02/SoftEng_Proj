@@ -15,16 +15,18 @@ http://bit.ly/21jUgy1
 
 # Credentials
 
+softeng.mikedlv.com::5901
+
 $ofTeng //VNC Connection
+
+You can download the following VNC client to connect remotely to the server and work as a Virtual Machine
+
+http://www.uvnc.com/component/jdownloads/summary/5/97.html
 
 sofeng MySQL
 
 --phpmyadmin entrance
 
-usr	SE_TEAM
+User	SE_TEAM     Password	softeng
 
-pwd	softeng
-
-SignIn	root
-
-pwd	softeng
+SignIn	on PHPMyAdmin   User root     Password	softeng
