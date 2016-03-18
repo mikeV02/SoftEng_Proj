@@ -20,8 +20,11 @@ $ofTeng //VNC Connection
 sofeng MySQL
 
 --phpmyadmin entrance
+
 usr	SE_TEAM
+
 pwd	softeng
 
 SignIn	root
+
 pwd	softeng
