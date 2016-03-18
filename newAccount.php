@@ -65,7 +65,7 @@ return ret;
 				//$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
 	
 				mysql_query("INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name)
-				VALUES(2, '$user_nam', '$passreg', '$uemail', CURRENT_TIMESTAMP, '1', '$user_nam')");
+				VALUES(2, '$user_nam', '$passreg', '$uemail', CURRENT_TIMESTAMP, 1, '$user_nam')");
 				echo "Account Created";
 				mysql_close($con);
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
@@ -103,9 +103,9 @@ return ret;
 		Email*:
 		<input type="text" name="uemail" id="uemail" value=""><br>
 		Password*:
-		<input type="password" name="passw" id="passw" value=""><br>
+		<input type="text" name="passw" id="passw" value=""><br>
 		Confirm Password*:
-		<input type="password" name="pass2" id="passw2" value=""><br>
+		<input type="text" name="pass2" id="passw2" value=""><br>
 		
 	<input type="submit" value="Register">
 	</form>
