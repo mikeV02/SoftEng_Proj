@@ -64,6 +64,7 @@ function account_Validation() {
 	
 	
 	if($db_found){
+		echo "DB Found";
 		if($uemail && $passreg && $passcheck && $user_nam){
 			echo "True";
 		//	if($passreg == $passcheck){
