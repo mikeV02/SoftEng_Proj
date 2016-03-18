@@ -91,7 +91,7 @@ function account_Validation() {
 	<h1>Welcome to CSCE Group 15's project page</h1>
 	<body align="center" style="background-color:#540">
 <!-- added by Fabian M. -->			
-	<form action="newAccount.php" method="post">
+	<form action="newAccount.php" method="post" onsubmit="return login_Validation()">
 		First Name:
 		<input type="text" name="userfname"><br>
 		Last Name:
