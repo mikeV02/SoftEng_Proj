@@ -55,21 +55,22 @@ function account_Validation() {
 	$db = "softeng";
 	$password = "softeng";
 	$username = "root";
-	$con = mysql_connect("localhost", $username, $password);
+	$con = mysqli_connect("localhost", $username, $password);
 	$db_found = mysql_select_db($db, $con);
 	
+	$sql="INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
+		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')");
 	
 	if($db_found){
 		echo "DB Found";
-		if($uemail && $passreg && $passcheck && $user_nam){
-			echo "True";
+		if(mysqli_query($con, $sql)){
+		//if($uemail && $passreg && $passcheck && $user_nam){
+		//	echo "True";
 		//	if($passreg == $passcheck){
 				//$con = mysql_connect(0, 'localhost', $username, $password);
 				//$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
-				mysql_query("INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
-					VALUES(2, '$user_nam', '$passreg', '$uemail', NULL, NULL, NULL)");
 				echo "Account Created";
-				mysql_close($con);
+				mysqli_close($con);
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 				, mysql_real_escape_string($user_nam));
 				header($redirect);
@@ -77,8 +78,7 @@ function account_Validation() {
 		//		echo "Please make sure both passwords are the same.";
 		//	}
 		} else{
-			echo "You need to have both the email and passwords fields filled.";
-			mysql_close($con);
+			echo "ERROR";
 		}
 	} else {
 		echo "Database not found.";
