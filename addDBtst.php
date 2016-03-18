@@ -6,7 +6,7 @@
 
     server with default setting (user 'root' with no password) */
 
-    $link = mysqli_connect("localhost", "root", "softeng");
+    $link = mysql_connect("localhost", "root", "softeng");
     $db_found = mysql_select_db("softeng", $link);
      
 
