@@ -28,7 +28,7 @@
     $sql = "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name)
         VALUES (NULL, '$user', '$pass', '$mail', NULL, 0, '$disp')";
 
-    if(mysqli_query($link, $sql)){
+    if(mysql_query($sql)){
 
         echo "Records added successfully.";
 
