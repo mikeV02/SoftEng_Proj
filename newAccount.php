@@ -107,7 +107,8 @@ function account_Validation() {
 		
 	<input type="submit" value="Register">
 	</form>
-
+</body>
+</html>
 <!--
 		<p>Please fill out the form below to make a new account.</p>	
 		<form id = "createform" action="mainPage.php" method="post" onsubmit="return account_Validation()" >
