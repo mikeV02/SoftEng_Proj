@@ -86,9 +86,26 @@ function account_Validation() {
 		<title>	CSCE Group 15's project</title>
 	</head>
 	<h1>Welcome to CSCE Group 15's project page</h1>
-	<body align="center" style="background-color:#540">	
+	<body align="center" style="background-color:#540">
+<!-- added by Fabian M. -->			
+	<form action="newAccount.php" method="post">
+		First Name:
+		<input type="text" name="userfname"><br>
+		Last Name:
+		<input type="text" name="userlname"><br>
+		Username*: 
+		<input type="text" name="usernam"><br>
+		Email*:
+		<input type="text" name="useremail"><br>
+		Password*:
+		<input type="password" name="password"><br>
+		Confirm Password*:
+		<input type="password" name="password2"><br>
+		
+	<input type="submit" value="Register">
+	</form>
 
-
+<!--
 		<p>Please fill out the form below to make a new account.</p>	
 		<form id = "createform" action="mainPage.php" method="post" onsubmit="return account_Validation()" >
 		User ID           : <input  style="margin-left:80px" type="text" name="user" id= "userId" value=""><br>
@@ -99,6 +116,8 @@ function account_Validation() {
 		<br>
 		<input type="submit" value="Create a New Account">
 		</form>
+
+-->
 	</body>
 	</html>
 */
