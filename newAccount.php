@@ -59,17 +59,11 @@ function account_Validation() {
 	//$db_found = mysql_select_db($db, $con);
 	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
 		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";
-				
-	//if($db_found){
-	//	echo "DB Found";
-		if(mysqli_query($con, $sql)){
-		//if($uemail && $passreg && $passcheck && $user_nam){
-		//	echo "True";
-			if(($user_nam=="")||($passreg=="")||($passcheck==""))
-				echo "Inser your credentials";
-			else{
+	if(mysqli_query($con, $sql)){
+		if(($user_nam=="")||($passreg=="")||($passcheck==""))
+			echo "Inser your credentials";
+		else{
 			if($passreg == $passcheck){
-					
 				echo "Account Created";
 				mysqli_close($con);
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
@@ -82,14 +76,7 @@ function account_Validation() {
 		} else{
 			echo "ERROR";
 		}
-	//} else {
-	//	echo "Database not found.";
-	//	mysql_close($con);
-	//}
-
 ?>
-
-
 
 	<head>
 		<title>	CSCE Group 15's project</title>
