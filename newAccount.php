@@ -67,7 +67,7 @@ function account_Validation() {
 				echo "Account Created";
 				mysqli_close($con);
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
-				, mysql_real_escape_string($user_nam));
+				, mysql_real_escape_string($username));
 				header($redirect);
 			} else{
 				echo "Please make sure both passwords are the same.";
