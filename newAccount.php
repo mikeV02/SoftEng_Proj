@@ -46,39 +46,42 @@ function account_Validation() {
 <!-- Added by Fabian -->
 <?php
 
-	$fname = $_POST["userfname"];
-	$lname = $_POST["userlname"];
-	$usernam = $_POST["usernam"];
-	$uemail	= $_POST["useremail"];
-	$passreg = $_POST["password"];
-	$passcheck = $_POST["password2"];
+	$usernam = $_POST['uname'];
+	$uemail	= $_POST['uemail'];
+	$passreg = $_POST['passw'];
+	$passcheck = $_POST['passw2'];
 	
-	$confir ="false";
 	$db = "softeng";
 	$password = "softeng";
 	$username = "root";
-
-	if($uemail && $passreg && $passcheck && &usernam){
-		if($passreg == $passcheck){
-			$con = mysql_connect('localhost', $username, $password) or die("Unable to log into database");
-			$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
+	$con = mysql_connect('localhost', $username, $password) or die("Unable to log into database");
+	$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
 	
-			mysql_query("INSERT INTO users VALUES($usernam, $passreg, $uemail, CURRENT_TIMESTAMP, 1, $fname)") or die ("Not able to Register");
-			echo "Account Created";
-			mysql_close($con);
-			$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
-				, mysql_real_escape_string($username));
+	if(db_found){
+		if($uemail && $passreg && $passcheck && &usernam){
+			if($passreg == $passcheck){
+				$con = mysql_connect('localhost', $username, $password) or die("Unable to log into database");
+				$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
+	
+				mysql_query("INSERT INTO users VALUES('$usernam', '$passreg', '$uemail', CURRENT_TIMESTAMP, 1, '$usernam')") or die ("Not able to Register");
+				echo "Account Created";
+				mysql_close($con);
+				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
+				, mysql_real_escape_string($usernam));
 				header($redirect);
+			} else{
+				echo "Please make sure both passwords are the same.";
+			}
 		} else{
-			echo "Please make sure both passwords are the same.";
+			print "You need to have both the email and passwords fields filled.";
+			mysql_close($db_handle);
 		}
-		
-	} else{
-		echo "You need to have both the email and passwords fields filled."
+	} else {
+		print "Database not found.";
+		mysql_close($db_handle);
 	}
 
 ?>
-
 
 
 
