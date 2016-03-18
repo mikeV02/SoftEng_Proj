@@ -58,9 +58,9 @@ function account_Validation() {
 	$con = mysql_connect("localhost", $username, $password);
 	$db_found = mysql_select_db($db, $con);
 	
-	echo $user_nam;
-	echo $uemail;
-	echo $passreg;
+	//echo $user_nam;
+	//echo $uemail;
+	//echo $passreg;
 	
 	
 	if($db_found){
@@ -69,7 +69,7 @@ function account_Validation() {
 				//$con = mysql_connect(0, 'localhost', $username, $password);
 				//$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
 	
-				mysql_query("INSERT INTO 'users' VALUES(2, '$user_nam', '$passreg', '$uemail', NULL, 1, '$user_nam')");
+				mysql_query("INSERT INTO 'users' VALUES(2, $user_nam, $passreg, $uemail, NULL, 1, $user_nam)");
 				echo "Account Created";
 				mysql_close($con);
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
