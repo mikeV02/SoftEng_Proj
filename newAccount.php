@@ -73,7 +73,7 @@ function account_Validation() {
 				echo "Please make sure both passwords are the same.";
 			}
 		} else{
-			print "You need to have both the email and passwords fields filled.";
+			echo "You need to have both the email and passwords fields filled.";
 			mysql_close($db_handle);
 		}
 	} else {
