@@ -39,7 +39,7 @@ function account_Validation() {
 			
 			return true;
 */
-return ret;
+
 }
 </script>
 
@@ -47,10 +47,10 @@ return ret;
 <!-- Added by Fabian -->
 <?php
 
-	$user_nam = $_POST["uname"];
-	$uemail	= $_POST["uemail"];
-	$passreg = $_POST["passw"];
-	$passcheck = $_POST["passw2"];
+	$user_nam = $_POST['uname'];
+	$uemail	= $_POST['uemail'];
+	$passreg = $_POST['passw'];
+	$passcheck = $_POST['passw2'];
 	
 	$db = "softeng";
 	$password = "softeng";
@@ -65,6 +65,7 @@ return ret;
 	
 	if($db_found){
 		if($uemail && $passreg && $passcheck && $user_nam){
+			echo "True";
 		//	if($passreg == $passcheck){
 				//$con = mysql_connect(0, 'localhost', $username, $password);
 				//$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
