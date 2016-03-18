@@ -21,8 +21,12 @@
      
 
     // Attempt insert query execution
-
-    $sql = "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) VALUES (5, 'test', 'testpass', 'tst@tst.tst', NULL, 0, 'test')";
+    $user="test2";
+    $pass="testpass2";
+    $mail="tst2@tst.tst";
+    $disp="test2";
+    $sql = "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name)
+        VALUES (NULL, '$user', '$pass', '$mail', NULL, 0, '$disp')";
 
     if(mysqli_query($link, $sql)){
 
