@@ -59,7 +59,7 @@ function account_Validation() {
 	//$db_found = mysql_select_db($db, $con);
 	
 	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
-		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')");
+		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";
 	
 	//if($db_found){
 	//	echo "DB Found";
