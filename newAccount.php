@@ -39,6 +39,7 @@ function account_Validation() {
 			
 			return true;
 */
+return ret;
 }
 </script>
 
@@ -59,7 +60,7 @@ function account_Validation() {
 	
 	if($db_found){
 		if($uemail && $passreg && $passcheck && $user_nam){
-			if($passreg == $passcheck){
+		//	if($passreg == $passcheck){
 				//$con = mysql_connect(0, 'localhost', $username, $password);
 				//$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
 	
@@ -70,9 +71,9 @@ function account_Validation() {
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 				, mysql_real_escape_string($user_nam));
 				header($redirect);
-			} else{
-				echo "Please make sure both passwords are the same.";
-			}
+		//	} else{
+		//		echo "Please make sure both passwords are the same.";
+		//	}
 		} else{
 			echo "You need to have both the email and passwords fields filled.";
 			mysql_close($con);
