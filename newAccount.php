@@ -54,7 +54,7 @@ function account_Validation() {
 	$db = "softeng";
 	$password = "softeng";
 	$username = "root";
-	$con = mysql_connect('localhost', $username, $password);
+	$con = mysql_connect("localhost", $username, $password);
 	$db_found = mysql_select_db($db, $con);
 	
 	if(db_found){
@@ -74,11 +74,11 @@ function account_Validation() {
 			}
 		} else{
 			echo "You need to have both the email and passwords fields filled.";
-			mysql_close($db_handle);
+			mysql_close($con);
 		}
 	} else {
 		echo "Database not found.";
-		mysql_close($db_handle);
+		mysql_close($con);
 	}
 
 ?>
