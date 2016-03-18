@@ -58,16 +58,16 @@ function account_Validation() {
 	$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
 	
 	if(db_found){
-		if($uemail && $passreg && $passcheck && &usernam){
+		if($uemail && $passreg && $passcheck && &user_nam){
 			if($passreg == $passcheck){
 				$con = mysql_connect('localhost', $username, $password) or die("Unable to log into database");
 				$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
 	
-				mysql_query("INSERT INTO users VALUES('$user_nam', '$passreg', '$uemail', CURRENT_TIMESTAMP, 1, '$username')") or die ("Not able to Register");
+				mysql_query("INSERT INTO users VALUES('$user_nam', '$passreg', '$uemail', CURRENT_TIMESTAMP, 1, '$user_nam')");
 				echo "Account Created";
 				mysql_close($con);
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
-				, mysql_real_escape_string($usernam));
+				, mysql_real_escape_string($user_nam));
 				header($redirect);
 			} else{
 				echo "Please make sure both passwords are the same.";
