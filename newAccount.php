@@ -54,8 +54,8 @@ function account_Validation() {
 	$db = "softeng";
 	$password = "softeng";
 	$username = "root";
-	$con = mysql_connect('localhost', $username, $password) or die("Unable to log into database");
-	$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
+	$con = mysql_connect('localhost', $username, $password);
+	$db_found = mysql_select_db($db, $con);
 	
 	if(db_found){
 		if($uemail && $passreg && $passcheck && &user_nam){
