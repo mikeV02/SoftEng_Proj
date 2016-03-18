@@ -42,6 +42,46 @@ function account_Validation() {
 }
 </script>
 
+
+<!-- Added by Fabian -->
+<?php
+
+	$fname = $_POST["userfname"];
+	$lname = $_POST["userlname"];
+	$usernam = $_POST["usernam"];
+	$uemail	= $_POST["useremail"];
+	$passreg = $_POST["password"];
+	$passcheck = $_POST["password2"];
+	
+	$confir ="false";
+	$db = "softeng";
+	$password = "softeng";
+	$username = "root";
+
+	if($uemail && $passreg && $passcheck && &usernam){
+		if($passreg == $passcheck){
+			$con = mysql_connect('localhost', $username, $password) or die("Unable to log into database");
+			$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
+	
+			mysql_query("INSERT INTO users VALUES($usernam, $passreg, $uemail, CURRENT_TIMESTAMP, 1, $fname)") or die ("Not able to Register");
+			echo "Account Created";
+			mysql_close($con);
+			$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
+				, mysql_real_escape_string($username));
+				header($redirect);
+		} else{
+			echo "Please make sure both passwords are the same.";
+		}
+		
+	} else{
+		echo "You need to have both the email and passwords fields filled."
+	}
+
+?>
+
+
+
+
 	<head>
 		<title>	CSCE Group 15's project</title>
 	</head>
