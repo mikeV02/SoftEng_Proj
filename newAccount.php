@@ -66,7 +66,7 @@ function account_Validation() {
 		if(mysqli_query($con, $sql)){
 		//if($uemail && $passreg && $passcheck && $user_nam){
 		//	echo "True";
-		//	if($passreg == $passcheck){
+			if($passreg == $passcheck){
 				//$con = mysql_connect(0, 'localhost', $username, $password);
 				//$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
 				echo "Account Created";
@@ -74,9 +74,9 @@ function account_Validation() {
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 				, mysql_real_escape_string($user_nam));
 				header($redirect);
-		//	} else{
-		//		echo "Please make sure both passwords are the same.";
-		//	}
+			} else{
+				echo "Please make sure both passwords are the same.";
+			}
 		} else{
 			echo "ERROR";
 		}
