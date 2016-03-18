@@ -47,15 +47,15 @@ function account_Validation() {
 <!-- Added by Fabian -->
 <?php
 
-	$user_nam = $_POST['uname'];
-	$uemail	= $_POST['uemail'];
-	$passreg = $_POST['passw'];
-	$passcheck = $_POST['passw2'];
+	$user_nam = $_POST["uname"];
+	$uemail	= $_POST["uemail"];
+	$passreg = $_POST["passw"];
+	$passcheck = $_POST["passw2"];
 	
 	$db = "softeng";
 	$password = "softeng";
 	$username = "root";
-	$con = mysqli_connect("localhost", $username, $password);
+	$con = mysqli_connect("localhost", $username, $password, $password);
 	//$db_found = mysql_select_db($db, $con);
 	
 	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
