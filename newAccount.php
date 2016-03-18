@@ -47,7 +47,6 @@
 	<body align="center" style="background-color:#540">	
 
 	<form action=".php" method="post">
-	<div align = "center">
 		First Name:
 		<input type="text" name="userfname"><br>
 		Last Name:
@@ -62,14 +61,9 @@
 		<input type="password" name="password2"><br>
 		
 	<input type="submit" value="Register">
-	</div>
 	</form>
 	</body>
 </html>
-
-
-
-
 
 
 /*
