@@ -46,7 +46,7 @@ function account_Validation() {
 <!-- Added by Fabian -->
 <?php
 
-	$usernam = $_POST['uname'];
+	$user_nam = $_POST['uname'];
 	$uemail	= $_POST['uemail'];
 	$passreg = $_POST['passw'];
 	$passcheck = $_POST['passw2'];
@@ -63,7 +63,7 @@ function account_Validation() {
 				$con = mysql_connect('localhost', $username, $password) or die("Unable to log into database");
 				$db_found = mysql_select_db($db, $con) or die ("Unable to connect to specific database.");
 	
-				mysql_query("INSERT INTO users VALUES('$usernam', '$passreg', '$uemail', CURRENT_TIMESTAMP, 1, '$usernam')") or die ("Not able to Register");
+				mysql_query("INSERT INTO users VALUES('$user_nam', '$passreg', '$uemail', CURRENT_TIMESTAMP, 1, '$username')") or die ("Not able to Register");
 				echo "Account Created";
 				mysql_close($con);
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
@@ -93,17 +93,17 @@ function account_Validation() {
 <!-- added by Fabian M. -->			
 	<form action="newAccount.php" method="post" onsubmit="return login_Validation()">
 		First Name:
-		<input type="text" name="userfname"><br>
+		<input type="text" name="ufname" id="ufname" value=""><br>
 		Last Name:
-		<input type="text" name="userlname"><br>
+		<input type="text" name="ulname" id="ulname" value=""><br>
 		Username*: 
-		<input type="text" name="usernam"><br>
+		<input type="text" name="uname" id="uname" value=""><br>
 		Email*:
-		<input type="text" name="useremail"><br>
+		<input type="text" name="uemail" id="uemail" value=""><br>
 		Password*:
-		<input type="password" name="password"><br>
+		<input type="password" name="passw" id="passw" value=""><br>
 		Confirm Password*:
-		<input type="password" name="password2"><br>
+		<input type="password" name="pass2" id="passw2" value=""><br>
 		
 	<input type="submit" value="Register">
 	</form>
