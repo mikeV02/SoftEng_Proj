@@ -122,6 +122,3 @@ function account_Validation() {
 		</form>
 
 -->
-	</body>
-	</html>
-*/
