@@ -27,12 +27,14 @@ http://www.uvnc.com/component/jdownloads/summary/5/97.html
 
 sofeng MySQL
 
---phpmyadmin entrance
+***phpmyadmin entrance
 
 User	SE_TEAM
+
 Password	softeng
 
-*SignIn	on PHPMyAdmin
+***SignIn	on PHPMyAdmin
 
 User root
+
 Password	softeng
