@@ -19,7 +19,8 @@ localhost::5901
 
 $ofTeng //VNC Connection
 
-YOU NEED TO CONNECT TO SSH BEFORE USING VNC... I added this as someone was trying to access our server with invalid credentials
+YOU NEED TO CONNECT TO SSH BEFORE USING VNC... I added this as someone was trying to access our server with invalid credentials.
+
 You can download the following VNC client to connect remotely to the server and work as a Virtual Machine
 
 http://www.uvnc.com/component/jdownloads/summary/5/97.html
@@ -32,5 +33,6 @@ User	SE_TEAM
 Password	softeng
 
 *SignIn	on PHPMyAdmin
+
 User root
 Password	softeng
