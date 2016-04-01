@@ -18,7 +18,7 @@
 	</p>
 	<br>
 	<form align="center " id = "startGform" action="guestLogin.php" method="post" onsubmit="return guestC_Validation()" >
-	<p  id="pCreate">Please click <input type="submit" value="here"> to login as a visitor</p>
+	<p  id="pCreate">Please click <input type="submit" value="here">to login as a visitor</p>
 	</form>
 	<br>
 	<form id = "startCform"  align="center " action="newAccount.php" method="post" onsubmit="return guestC_Validation()" >
