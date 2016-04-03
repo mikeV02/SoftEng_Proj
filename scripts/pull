@@ -7,5 +7,5 @@
 
 #exec git update-server-info
 
-#cd /home/mike/SE/
+cd /home/mike/SE/
 env -i git pull origin master
