@@ -1,3 +1,3 @@
 <?php
-  exec(dirname(__FILE__) . '/scripts/pull');
+  exec('/home/mike/SE/scripts/pull');
 ?>
