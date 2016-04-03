@@ -1,3 +1,4 @@
 <?php
-  exec('/home/mike/SE/scripts/pull');
+  $output = shell_exec('sh /home/ubuntu/Desktop/Files/scripts/pull');
+  echo "$output";
 ?>
