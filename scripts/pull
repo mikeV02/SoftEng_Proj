@@ -7,9 +7,5 @@
 
 #exec git update-server-info
 
-<<<<<<< HEAD
-cd /home/ubuntu/Desktop/Files/
-=======
-#cd /home/mike/SE/
->>>>>>> ebc2680ea8553c6f073f8ec058b3a20f4c63f23a
+cd /home/mike/SE/
 env -i git pull origin master
