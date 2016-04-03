@@ -1,3 +1,3 @@
 <?php
-shell_exec('sh /home/ubuntu/Desktop/Files/scripts/pull');
+  exec(dirname(__FILE__) . '/scripts/pull');
 ?>
