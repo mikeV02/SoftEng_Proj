@@ -1,6 +1,1 @@
 testing
-halhflakjg
-
-
-cd /home/mike/SE/
-env -i git pull origin master
