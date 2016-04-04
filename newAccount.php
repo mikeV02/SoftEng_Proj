@@ -63,8 +63,19 @@ function account_Validation() {
 		die('Not connected : '.mysql_error());
 	}
 
-	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
-		echo "We did bro";
+	if(($user_nam=="")||($passreg=="")||($passcheck=="")){
+			echo "Insert your credentials";
+	} else{
+		if($passreg == $passcheck){
+			mysqli_query($con, $sql);
+			echo "Account Created";
+			mysqli_close($con);
+			$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
+				, mysql_real_escape_string($username));
+			header($redirect);
+		} else{
+			echo "Please make sure both passwords are the same.";
+		}
 	}
 /*	
 	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
