@@ -9,26 +9,21 @@ $con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not 
 //display videos that are in database
 $sql = "SELECT * FROM videos ";
 $result = mysqli_query($con, $sql);
-
+$stack = array();
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    $videos = array();
-    $i = 0;
     while($row = mysqli_fetch_assoc($result)) {
         echo "url: " . $row['name']. "<br>";
-        $videos[i] = $row['name'];
-        $i = $i +1;
+        array_push($stack, $row['name']);
     }
 } else {
     echo "0 results";
 }
-    $arrlength = count($videos);
-echo $arrlength;
-for($x = 0; $x < $arrlength; $x++) {
-    echo $videos[$x];
-    echo "<br>";
+print_r($stack);
+if(isset($_POST['Search']))
+{
+	
 }
-
 
 mysqli_close($con);
 ?>
