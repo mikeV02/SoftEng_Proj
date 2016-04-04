@@ -1,3 +1,18 @@
+<?php
+$db ="softeng";
+$password = "softeng";
+$username = "root";
+
+$con = $mysql_connect("localhost",$username, $password,$db);
+if(!$con)
+{
+	die('Not connected' .mysql_error());
+}
+
+
+	
+}
+?>
 
 <!doctype html>
 <html>
@@ -22,7 +37,7 @@
 
 if(isset($_POST['submit']))
 {
-	echo "<br />".$name." has been uploades";
+	echo "<br />".$name." has been uploaded";
 }
 
 
