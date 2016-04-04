@@ -47,6 +47,12 @@
 				//echo $eps;
 				if ($ps==$eps)
 				{
+					//Trying to set SESSION ID
+					session_start();
+					// Store Session Data
+					$_SESSION['login_user']= $username;  // Initializing Session with value of PHP Variable
+					echo $_SESSION['login_user'];
+					
 					$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 					, mysql_real_escape_string($username));
 					header($redirect);
