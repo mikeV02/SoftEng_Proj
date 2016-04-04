@@ -31,6 +31,10 @@
     if(mysql_query($sql)){
         $message = "Account Created";
 		echo "<script type='text/javascript'>alert('$message');</script>";
+	$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
+				, mysql_real_escape_string($user));
+				mysqli_close($link);
+				header($redirect);
         echo "Records added successfully.";
 
     } else{
