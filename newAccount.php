@@ -50,7 +50,7 @@ function account_Validation() {
 	$user_nam = $_POST["uname"];
 	$uemail	= $_POST["uemail"];
 	$passreg = $_POST["passw"];
-	$passcheck = $_POST["passw2"];
+	$passcheck = $_POST["pass2"];
 	
 	$db = "softeng";
 	$password = "softeng";
