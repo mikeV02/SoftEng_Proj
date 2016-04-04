@@ -31,18 +31,18 @@ function account_Validation() {
 		die('Not connected : '.mysql_error());
 	}
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
-		echo "All data Inserted.";
+		//echo "All data Inserted.";
 		if($passreg == $passcheck){
 			$result = mysqli_query($con, $sql);
 			if(isset($result)){
 				//Pop up Added by Miguel
 				$message = "Account Created Successfully";
 				$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
-					, mysql_real_escape_string($user));
+					, mysql_real_escape_string($user_nam));
 				echo "<script type='text/javascript'>
 					alert('$message');
 					</script>";
-				sleep(2);
+				sleep(1);
 				mysqli_close($con);
 				echo "<script type='text/javascript'>
 					window.location.href='$redirect';
