@@ -30,7 +30,7 @@
 
     if(mysql_query($sql)){
         $message = "Account Created";
-        	$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
+        	$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
 				, mysql_real_escape_string($user));
 		mysqli_close($link);
 		echo $redirect;
