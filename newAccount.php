@@ -38,7 +38,7 @@ function account_Validation() {
 				//Pop up Added by Miguel
 				$message = "Account Created Successfully";
 				$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
-					, mysql_real_escape_string($user_nam));
+					, mysql_real_escape_string($user));
 				echo $redirect;
 				echo "<script type='text/javascript'>
 					alert('$message');
