@@ -33,14 +33,14 @@ mysqli_close($con);
 
 <h1 align="center"> Find Video  </h1>
 
-<body align ="center" style="background-color:#111">
+<body align ="center" style="background-color:#114>
 
 <form action = "findVideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
 	
 <input type="text" name="searchFile" id="searchFile" value=""><br>
 
 <input type="submit" value="Search">
-//somebody need to write php or validation function it show result of search.
+/*somebody need to write php or validation function it show result of search.*/
 </form>
 </body>
 </html>
