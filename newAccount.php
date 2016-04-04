@@ -38,6 +38,7 @@ function account_Validation() {
 				//Pop up Added by Miguel
 				$message = "Account Created";
 				echo "<script type='text/javascript'>alert('$message');</script>";
+				sleep(5);
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 				, mysql_real_escape_string($username));
 				mysqli_close($con);
