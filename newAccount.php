@@ -64,6 +64,20 @@ function account_Validation() {
 	}
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		echo "All data Inserted.";
+		if($passreg == $passcheck){
+			$result = mysqli_query($con, $sql);
+			if(isset($result)){
+				echo "Account Created";
+				mysqli_close($con);
+				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
+				, mysql_real_escape_string($username));
+				header($redirect);
+			} else{
+				echo "Please make sure both passwords match";
+			} 
+		} else{
+			echo "Please make sure both passwords are the same.";
+		}
 
 	}
 
