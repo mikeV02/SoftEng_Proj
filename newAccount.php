@@ -62,6 +62,11 @@ function account_Validation() {
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
+	if(isset($user_nam)){
+		echo "Username Inserted.";
+	}
+
+
 
 /*
 	if(($user_nam=="")||($passreg=="")||($passcheck=="")){
@@ -78,7 +83,7 @@ function account_Validation() {
 			echo "Please make sure both passwords are the same.";
 		}
 	}
-*/	
+	
 	//$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
 	//	VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";
 		
@@ -100,7 +105,7 @@ function account_Validation() {
 	} else{
 		echo "ERROR";
 	}
-
+*/
 ?>
 
 	<head>
