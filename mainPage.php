@@ -1,4 +1,10 @@
-
+<?php
+include('loginPage.php'); 
+if(isset($_SESSION['login_user'])){
+	echo "Session ID CORRECT";
+	//header("location: profile.php");
+}
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>CSCE Group 15's project</title>
