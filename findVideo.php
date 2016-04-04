@@ -33,7 +33,7 @@ mysqli_close($con);
 
 <h1 align="center"> Find Video  </h1>
 
-<body align ="center" style="background-color:#114>
+<body align ="center" style="background-color:#214>
  
 <form action = "findVideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
 	
