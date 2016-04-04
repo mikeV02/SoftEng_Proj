@@ -31,7 +31,7 @@ function account_Validation() {
 	
 	$con = mysqli_connect("localhost", $username, $password, $db);
 	$sql= "INSERT INTO users (ID, fname, lname, user_login, user_pass, user_email, user_registered, user_status, display_name) 
-			VALUES(NULL, '$fname', '$ulname', $user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
+			VALUES(NULL, '$fname', '$lname', $user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
 				
 			
 	
