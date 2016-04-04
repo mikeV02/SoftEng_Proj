@@ -4,7 +4,10 @@ $password = "softeng";
 $username = "root";
 
 $con = $mysql_connect("localhost",$username, $password,$db);
-
+if(!$con)
+{
+	die('Not connected' .mysql_error());
+}
 
 if(isset($_POST['submit']))
 {
