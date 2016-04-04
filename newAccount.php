@@ -56,15 +56,18 @@ function account_Validation() {
 	$password = "softeng";
 	$username = "root";
 	$con = mysqli_connect("localhost", $username, $password, $db);
-	//$db_found = mysql_select_db($db, $con);
+	
+	$db_found = mysql_select_db($db, $con);
+	
 	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
 		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";
 		
-	if(mysqli_query($con, $sql)){
+	if($db_found){
 		if(($user_nam=="")||($passreg=="")||($passcheck=="")){
 			echo "Inser your credentials";
 		} else{
 			if($passreg == $passcheck){
+				mysqli_query($con, $sql);
 				echo "Account Created";
 				mysqli_close($con);
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
