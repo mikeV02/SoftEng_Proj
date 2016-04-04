@@ -26,7 +26,14 @@ function account_Validation() {
 	$username = "root";
 	$db2 = "users";
 	
+	//HASH BY MIGUEL
+	$hashpass = hash("sha256", $passreg);
+	
 	$con = mysqli_connect("localhost", $username, $password, $db);
+	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
+			VALUES(NULL, '$fname', '$ulname', $user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
+				
+			
 	
 	if(!$con){
 		die('Not connected : '.mysql_error());
@@ -34,12 +41,6 @@ function account_Validation() {
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		//echo "All data Inserted.";
 		if($passreg == $passcheck){
-			//HASH BY MIGUEL
-			$hashpass = hash("sha256", $passreg);
-			
-			$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
-				VALUES(NULL, '$fname', '$ulname', $user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
-				
 			$result = mysqli_query($con, $sql);
 			
 			if(isset($result)){
