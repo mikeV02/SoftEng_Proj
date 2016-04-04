@@ -60,8 +60,6 @@
 
 echo exec('whoami');
 
-echo "lalala";
-
 echo 'Current script owner: ' . get_current_user();
 
 
