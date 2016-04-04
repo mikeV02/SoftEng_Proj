@@ -12,18 +12,18 @@ if(!$con)
 
 if(isset($_POST['upload']))
 {
-	$video_name = $_FILES['video']['name'];
-	$video_type = $_FILES['video']['type'];
-	$video_size = $_FILES['video']['size'];
-	$video_tmp_name = $_FILES['video']['tmp_name'];
+	$video_name = $_FILES["video"]["name"];
+	$video_type = $_FILES["video"]["type"];
+	$video_size = $_FILES["video"]["size"];
+	$video_tmp_name = $_FILES["video"]["tmp_name"];
 	
 	//Values check by Miguel
-	echo $video_name;
+	/*echo $video_name;
 	echo $video_type;
 	echo $video_size;
-	echo $video_tmp_name;
+	echo $video_tmp_name;*/
 	
-	if($video_name ==''){ echo "<script>alert('Select an image.')</script>"; exit();}
+	if($video_name ==''){ echo "<script>alert('Select a Video.')</script>"; exit();}
 	
 	move_uploaded_file($video_tmp_name, "videos/$video_name");
 	//$url="/home/ubuntu/Desktop/Files/";
