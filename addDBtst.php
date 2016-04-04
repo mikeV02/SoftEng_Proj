@@ -59,7 +59,7 @@
     
 	$algo ="sha256";
 	$data="testeando";
-	$key hash ( string $algo , string $data [, bool $raw_output = false ] )
+	$key hash ( string $algo , string $data [, bool $raw_output = false ] );
 	
 	echo $key;
 
