@@ -9,14 +9,16 @@ if(!$con)
 {
 	die('Not connected' .mysql_error());
 } 
-$query = "SELECT text AS txt FROM `videos`";
-$result = mysqli_query($con, $query) or trigger_error("Query Failed! SQL: $query - Error: ". mysqli_error($con), E_USER_ERROR);
-
-if($result) {
-	while($row = mysqli_fetch_assoc($result)) {
-		echo $row['txt'] . '<br>';	
-	}
+$result = mysqli_query($con, "SELECT url FROM videos);
+$row = mysqli_fetch_assoc($result);
+if (!$row)
+{
+$error = 'Error - there are no videos';
+include 'error.php';
+exit();
 }
+$url = $row['url'];
+echo implode(',',$url);
 mysqli_close($con);
 ?>
 <!doctype html>
