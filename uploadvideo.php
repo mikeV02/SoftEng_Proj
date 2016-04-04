@@ -15,9 +15,9 @@ if(isset($_POST['submit']))
 	$name = $_FILES['file']['name'];
 	$temp = $_FILES['file']['tmp_name'];
 	
-	move_uploaded_file($temp, "uploaded/".$name);
-	$url = "http://softeng.mikedlv.com/$name";
-	mysql_query("INSERT INTO 'videos' VALUE ('','$name','$url')");
+	move_uploaded_file($temp, "videos/".$name);
+	$url = "http://softeng.mikedlv.com/videos/$name";
+	$sql = "INSERT INTO videos VALUE ('','$name','$url')";
 	
 }
 ?>
