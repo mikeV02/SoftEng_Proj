@@ -42,7 +42,14 @@
 	    Welcome <?php echo $_GET["userID"]; ?> to Gorup15's project page.<br>
 	    search category<br>
 		recent view videos<br>
-		your upload file<br>
+	<form id = "startSform" align="center " action="uploadvideo.php" method="post" >
+	<p  id="sunmit">Please click <input type="submit" value="here"> to upload a video </p>
+	</form>
+	<br>
+	<form id = "startFform" align="center " action="findVideo.php" method="post" >
+	<p  id="sunmit">Please click <input type="submit" value="here"> to find a video </p>
+	</form>
+	<br>
 	
 	</p>
 	
