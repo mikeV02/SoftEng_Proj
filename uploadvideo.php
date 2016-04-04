@@ -12,17 +12,11 @@ if(!$con)
 
 if(isset($_POST['upload']))
 {
-	$name = $_FILES['video']['name'];
-	$temp = $_FILES['video']['tmp_name'];
-	echo($name);
-	move_uploaded_file($temp, "/home/ubuntu/Desktop/Files/videos/".$name);
-	//$url="/home/ubuntu/Desktop/Files/";
-	$url = "http://softeng.mikedlv.com/video/$name";
-	$sql = "INSERT INTO videos (name, ulr) VALUE ('$name','$url')";
-	$result = mysqli_query($con, $sql);
-	if(!isset($result)){
-		echo("error database");			
-	}
+	echo $video_name = $_FILES['video']['name'];
+	echo $video_type = $_FILES['video']['type'];
+	echo $video_size = $_FILES['video']['size'];
+	echo $video_tmp_name = $_FILES['video']['tmp_name'];
+
 }
 ?>
 
@@ -47,7 +41,7 @@ if(isset($_POST['upload']))
 
 <?php
 
-if(isset($_POST['submit']))
+if(isset($_POST['upload']))
 {
 	echo "<br />".$name." has been uploaded";
 }
