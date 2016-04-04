@@ -1,4 +1,4 @@
-/*<?php
+<?php
 $db ="softeng";
 $password = "softeng";
 $username = "root";
@@ -19,7 +19,7 @@ if(isset($_POST['submit']))
 
 
 
-?>*/
+?>
 
 <!doctype html>
 <html>
@@ -40,7 +40,7 @@ if(isset($_POST['submit']))
 </form>
 
 
-<?php\
+<?php
 
 if(isset($_POST['submit']))
 {
