@@ -57,9 +57,8 @@
     */
     
     
-	$algo ="sha256";
-	$data="testeando";
-	$key = hash($algo, $data);
+	$data="test";
+	$key = hash("sha256", $data);
 	
 	echo $key;
 
