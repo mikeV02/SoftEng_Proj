@@ -32,7 +32,7 @@ if(isset($_POST['upload']))
 
 <body>
 
-<form action = "uploadvideo.php" method = "POST">
+<form action = "uploadvideo.php" method = "POST" enctype ="multipart/form-data">
 	<input type="file" name = "video">
 	<input type="submit" name= "upload" value="Upload video">
 
