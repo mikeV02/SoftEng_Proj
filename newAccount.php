@@ -61,11 +61,11 @@ function account_Validation() {
 	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
 		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";
 	
-	if($con){
+	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
 	$db_found = mysql_select_db($db2, $con);
-	if(!$db_selected){
+	if(!$db_found){
 		die('Can\'t use users : '.mysql_error());
 	}
 	if(isset($user_nam) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
