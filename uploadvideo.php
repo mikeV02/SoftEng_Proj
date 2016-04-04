@@ -1,9 +1,10 @@
 <?php
-$db ="softeng";
+$db = "softeng";
 $password = "softeng";
 $username = "root";
+$db2 = "videos";
+$con = mysqli_connect("localhost", $username, $password, $db);
 
-$con = $mysql_connect("localhost",$username, $password,$db);
 if(!$con)
 {
 	die('Not connected' .mysql_error());
