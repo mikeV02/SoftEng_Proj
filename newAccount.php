@@ -36,7 +36,8 @@ function account_Validation() {
 			$result = mysqli_query($con, $sql);
 			if(isset($result)){
 				//Pop up Added by Miguel
-				echo "<script type='text/javascript'>alert("Account Created");</script>";
+				$message = "Account Created";
+				echo "<script type='text/javascript'>alert('$message');</script>";
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 				, mysql_real_escape_string($username));
 				mysqli_close($con);
