@@ -14,7 +14,8 @@ function account_Validation() {
 <!-- Added by Fabian Monasterio -->
 <!-- Code below should create new user in the database without any problems. -->
 <?php
-
+	$fname=$_POST["ufname"];
+	$lname=$_POST["ulname"];
 	$user_nam = $_POST["uname"];
 	$uemail	= $_POST["uemail"];
 	$passreg = $_POST["passw"];
@@ -24,16 +25,23 @@ function account_Validation() {
 	$password = "softeng";
 	$username = "root";
 	$db2 = "users";
+	
 	$con = mysqli_connect("localhost", $username, $password, $db);
-	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
-		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";
+	
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		//echo "All data Inserted.";
 		if($passreg == $passcheck){
+			//HASH BY MIGUEL
+			$hashpass = hash("sha256", $passreg);
+			
+			$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
+				VALUES(NULL, '$fname', '$ulname', $user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
+				
 			$result = mysqli_query($con, $sql);
+			
 			if(isset($result)){
 				//Pop up Added by Miguel
 				$message = "Account Created Successfully";
