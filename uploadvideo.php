@@ -10,8 +10,6 @@ if(!$con)
 }
 
 
-	
-}
 ?>
 
 <!doctype html>
