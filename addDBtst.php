@@ -57,10 +57,11 @@
     */
     
     
-
-echo exec('whoami');
-
-echo 'Current script owner: ' . get_current_user();
+	$algo ="sha256";
+	$data="testeando";
+	$key hash ( string $algo , string $data [, bool $raw_output = false ] )
+	
+	echo $key;
 
 
 
