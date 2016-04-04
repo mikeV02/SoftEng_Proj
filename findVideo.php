@@ -8,7 +8,7 @@ $con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not 
 mysql_select_db('videos');
 //display videos that are in database
 $sql = "SELECT * FROM videos";
-
+$result = mysqli_query($conn, $sql);
 mysqli_close($con);
 ?>
 <!doctype html>
