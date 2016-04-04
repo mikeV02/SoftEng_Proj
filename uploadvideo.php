@@ -3,7 +3,7 @@ $db ="softeng";
 $password = "softeng";
 $username = "root";
 
-$con = $mysql_connect("localhost","root",$db);
+$con = $mysql_connect("localhost",$username, $password,$db);
 
 
 if(isset($_POST['submit']))
