@@ -37,11 +37,7 @@
 	
 	
 	
-<?php
-	if(session_id('login_user')){
-		echo "Session ID Confirm. \n";
-	}
-?>
+
 	<p> 
 	    Welcome <?php echo $_GET["userID"]; ?> to Gorup15's project page.<br>
 	   
@@ -56,6 +52,8 @@
 	search category<br>
 	recent view videos<br>
 	</p>
+	
+	<p> Login username is <?php echo $_SESSION["login_user"] ?> </p>
 	
 	<form id = "logout" align="left " action="index.php" method="post" >
 	<p  id="sunmit">Please click <input type="submit" value="here"> to logout </p>
