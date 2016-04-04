@@ -33,6 +33,10 @@
 	<p  id="pLogin">Please click <input type="submit" value="here">  to watch a video</p>
 	</form>
 	<br>
+	<form id = "startWform" align="center " action="findVideo.html" method="post" onsubmit="return guestL_Validation()" >
+	<p  id="pLogin">Please click <input type="submit" value="here">  to find a video</p>
+	</form>
+	<br>
 	</body>
 </html>
 <!-- 5ef4e0f21597916154413612f706fc7cee674bfd-->
