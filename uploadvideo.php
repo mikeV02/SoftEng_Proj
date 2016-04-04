@@ -30,7 +30,7 @@ if(isset($_POST['submit']))
 
 <body>
 
-<form action = "uploadvideo.php">
+<form action = "uploadvideo.php" method = "POST">
 	<input type="file" name = "video" accept = video/*">
 	<input type="submit" name= "submit" value="Upload video">
 
