@@ -39,7 +39,6 @@ function account_Validation() {
 				$message = "Account Created Successfully";
 				$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
 					, $user_nam);
-				echo $redirect;
 				echo "<script type='text/javascript'>
 					alert('$message');
 					</script>";
