@@ -3,27 +3,26 @@ $db = "softeng";
 $password = "softeng";
 $username = "root";
 $db2 = "videos";
-$conn = new mysqli("localhost", $username, $password, $db);
-if($conn->connect_error)
+$conn = mysqli_connect("localhost", $username, $password, $db);
+if(!$conn)
 {
-	die("Connection failed: ". $conn->connect_error);
+	die("Connection failed: ". mysqli_connect_error());
 }
 
 $sql = "SELECT url FROM videos";
-$result = $conn->query($sql);
+$result = mysqli_query($conn, $sql);
 
-if($result->num_rows > 0)
-{
-	while($row = $result->fetch_assoc())
-	{
-		echo "Url: ". $row["ulr"] <br>;
-	}
-} else{
-	echo "No results";
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "Url: " . $row["ulr"]"<br>";
+    }
+} else {
+    echo "0 results";
 }
-$conn->close();
-?>
 
+mysqli_close($conn);
+?>
 <!doctype html>
 <html>
 <head>
@@ -47,7 +46,7 @@ $conn->close();
 <?php
 if(isset($_POST['submit']))
 {
-	echo "<br />".$name." has been uploades";
+	echo "<br />".$name." has been uploaded";
 }
 
 
