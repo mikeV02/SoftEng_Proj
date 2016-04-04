@@ -63,7 +63,7 @@ function account_Validation() {
 		die('Not connected : '.mysql_error());
 	}
 
-	if(isset($user_nam) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
+	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		echo "We did bro";
 	}
 /*	
