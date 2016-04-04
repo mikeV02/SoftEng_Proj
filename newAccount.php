@@ -35,10 +35,11 @@ function account_Validation() {
 		if($passreg == $passcheck){
 			$result = mysqli_query($con, $sql);
 			if(isset($result)){
-				echo "Account Created";
-				mysqli_close($con);
+				//Pop up Added by Miguel
+				echo "<script type='text/javascript'>alert("Account Created");</script>";
 				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 				, mysql_real_escape_string($username));
+				mysqli_close($con);
 				header($redirect);
 			} else{
 				echo "Please make sure both passwords match";
