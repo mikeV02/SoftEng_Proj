@@ -12,11 +12,20 @@ if(!$con)
 
 if(isset($_POST['upload']))
 {
-	echo $video_name = $_FILES['video']['name'];
-	echo $video_type = $_FILES['video']['type'];
-	echo $video_size = $_FILES['video']['size'];
-	echo $video_tmp_name = $_FILES['video']['tmp_name'];
-
+	$video_name = $_FILES['video']['name'];
+	$video_type = $_FILES['video']['type'];
+	$video_size = $_FILES['video']['size'];
+	$video_tmp_name = $_FILES['video']['tmp_name'];
+	if($_video_name ==''){ echo "<script>alert('Select an image.')</script>"; exit();}
+	
+	move_uploaded_file($video_tmp_name, "videos/$video_name");
+	//$url="/home/ubuntu/Desktop/Files/";
+	$url = "http://softeng.mikedlv.com/video/$video_name";
+	$sql = "INSERT INTO videos (name, ulr) VALUE ('$video_name','$url')";
+	$result = mysqli_query($con, $sql);
+	if(!isset($result)){
+		echo("error database");			
+	}
 }
 ?>
 
