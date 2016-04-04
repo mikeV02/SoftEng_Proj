@@ -29,14 +29,7 @@
 	<p  id="pLogin">Please click <input type="submit" value="here">  to log in your account</p>
 	</form>
 	<br>
-	<form id = "startSform" align="center " action="uploadvideo.php" method="post" >
-	<p  id="sunmit">Please click <input type="submit" value="here"> to upload a video </p>
-	</form>
-	<br>
-	<form id = "startFform" align="center " action="findVideo.php" method="post" >
-	<p  id="sunmit">Please click <input type="submit" value="here"> to find a video </p>
-	</form>
-	<br>
+
 	</body>
 </html>
 <!-- 5ef4e0f21597916154413612f706fc7cee674bfd-->
