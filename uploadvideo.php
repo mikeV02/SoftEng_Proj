@@ -41,12 +41,12 @@ if(isset($_POST['upload']))
 <head>
 
 <meta charset = "utf-8">
-<title align="center"> Video Upload </title>
+<title > Video Upload </title>
 </head>
 
-<h1 > Upload Video  </h1>
+<h1 align="center" > Upload Video  </h1>
 
-<body style="background-color:#319"  >
+<body style="background-color:#320"  >
 
 <form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
 	<input type="file" name = "video">
