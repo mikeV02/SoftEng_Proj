@@ -39,10 +39,10 @@ function account_Validation() {
 				$message = "Account Created Successfully";
 				$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
 					, mysql_real_escape_string($user_nam));
+				echo $redirect;
 				echo "<script type='text/javascript'>
 					alert('$message');
 					</script>";
-				sleep(1);
 				mysqli_close($con);
 				echo "<script type='text/javascript'>
 					window.location.href='$redirect';
