@@ -33,6 +33,7 @@
         	$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
 				, mysql_real_escape_string($user));
 		mysqli_close($link);
+		echo $redirect;
 		echo "<script type='text/javascript'>
 			alert('$message');
 			window.location.href='$redirect';
