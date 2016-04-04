@@ -23,7 +23,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "0 results";
 }
     $arrlength = count($videos);
-
+echo $arrlength;
 for($x = 0; $x < $arrlength; $x++) {
     echo $videos[$x];
     echo "<br>";
