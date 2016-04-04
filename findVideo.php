@@ -23,3 +23,34 @@ if($result->num_rows > 0)
 }
 $conn->close();
 ?>
+
+<!doctype html>
+<html>
+<head>
+
+<meta charset = "utf-8">
+<title> Find Video</title>
+</head>
+
+<h1> Find Video  </h1>
+
+<body>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
+
+
+
+<?php
+if(isset($_POST['submit']))
+{
+	echo "<br />".$name." has been uploades";
+}
+
+
+?>
+
+</body>
