@@ -31,13 +31,17 @@ mysqli_close($con);
 <title> Find Video</title>
 </head>
 
-<h1> Find Video  </h1>
+<h1 align="center"> Find Video  </h1>
 
-<body>
+<body align ="center" style="background-color:# 111">
+<form>
+    
+    
+</form action = "findVideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
+	
+<input type="text" name="searchFile" id="searchFile" value=""><br>
 
-<p>Find video</p>
-
-
+<input type="submit" value="Search">
 
 </body>
 </html>
