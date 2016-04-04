@@ -14,8 +14,8 @@ function account_Validation() {
 <!-- Added by Fabian Monasterio -->
 <!-- Code below should create new user in the database without any problems. -->
 <?php
-	$fname=$_POST["ufname"];
-	$lname=$_POST["ulname"];
+	$fname = $_POST["ufname"];
+	$lname = $_POST["ulname"];
 	$user_nam = $_POST["uname"];
 	$uemail	= $_POST["uemail"];
 	$passreg = $_POST["passw"];
@@ -42,7 +42,6 @@ function account_Validation() {
 		//echo "All data Inserted.";
 		if($passreg == $passcheck){
 			$result = mysqli_query($con, $sql);
-			
 			if(isset($result)){
 				//Pop up Added by Miguel
 				$message = "Account Created Successfully";
