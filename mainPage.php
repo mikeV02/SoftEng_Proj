@@ -38,7 +38,7 @@
 	
 	
 <?php
-	if(sessio_id('login_user')){
+	if(session_id('login_user')){
 		echo "Session ID Confirm. \n";
 	}
 ?>
