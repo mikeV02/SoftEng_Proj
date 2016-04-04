@@ -55,10 +55,16 @@ function account_Validation() {
 	$db = "softeng";
 	$password = "softeng";
 	$username = "root";
+	$db2 = "users";
 	$con = mysqli_connect("localhost", $username, $password, $db);
-	
-	$db_found = mysql_select_db($db, $con);
-	
+	if($con){
+		die('Not connected : '.mysql_error());
+	}
+	$db_found = mysql_select_db($db2, $con);
+	if(!$db_selected){
+		die('Can\'t use users : '.mysql_error());
+	}
+/*	
 	$sql= "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name) 
 		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";
 		
@@ -80,6 +86,7 @@ function account_Validation() {
 	} else{
 		echo "ERROR";
 	}
+*/
 ?>
 
 	<head>
