@@ -1,25 +1,4 @@
-<?php
-$db ="softeng";
-$password = "softeng";
-$username = "root";
 
-$con = $mysql_connect("localhost",$username, $password, $db);
-mysql_select_db($db , $con);
-
-if(isset($_POST['submit']))
-{
-	$name = $_FILES['file']['name'];
-	$temp = $_FILES['file']['tmp_name'];
-	
-	move_uploaded_file($temp, "uploaded/".$name);
-	$url = "http://softeng.mikedlv.com/videos/uploaded/$name";
-	mysql_query("INSERT INTO 'videos' VALUE ('','$name','$url')");
-	
-}
-
-
-
-?>
 
 <!doctype html>
 <html>
