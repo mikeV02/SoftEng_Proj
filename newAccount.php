@@ -36,13 +36,17 @@ function account_Validation() {
 			$result = mysqli_query($con, $sql);
 			if(isset($result)){
 				//Pop up Added by Miguel
-				$message = "Account Created";
-				echo "<script type='text/javascript'>alert('$message');</script>";
-				sleep(5);
-				$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
-				, mysql_real_escape_string($username));
+				$message = "Account Created Successfully";
+				$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
+					, mysql_real_escape_string($user));
+				echo "<script type='text/javascript'>
+					alert('$message');
+					</script>";
+				sleep(2);
 				mysqli_close($con);
-				header($redirect);
+				echo "<script type='text/javascript'>
+					window.location.href='$redirect';
+					</script>";
 			} else{
 				echo "Please make sure both passwords match";
 			} 
