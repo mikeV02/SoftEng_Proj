@@ -10,10 +10,10 @@ if(!$con)
 	die('Not connected' .mysql_error());
 }
 
-if(isset($_POST['submit']))
+if(isset($_POST['upload']))
 {
-	$name = $_FILES['file']['name'];
-	$temp = $_FILES['file']['tmp_name'];
+	$name = $_FILES['video']['name'];
+	$temp = $_FILES['video']['tmp_name'];
 	echo($name);
 	move_uploaded_file($temp, "/home/ubuntu/Desktop/Files/videos/".$name);
 	//$url="/home/ubuntu/Desktop/Files/";
@@ -40,7 +40,7 @@ if(isset($_POST['submit']))
 
 <form action = "uploadvideo.php" method = "POST">
 	<input type="file" name = "video">
-	<input type="submit" name= "submit" value="Upload video">
+	<input type="submit" name= "upload" value="Upload video">
 
 </form>
 
