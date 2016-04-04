@@ -7,7 +7,7 @@ $db2 = "videos";
 $con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not connect to SQL:'. mysqli_connect_error());
 mysql_select_db('videos');
 //display videos that are in database
-
+$sql = "SELECT * FROM videos";
 
 mysqli_close($con);
 ?>
