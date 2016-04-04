@@ -9,6 +9,7 @@ $con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not 
 //display videos that are in database
 $sql = "SELECT * FROM users";
 $result = mysqli_query($con, $sql);
+echo "result: ". $result;
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
