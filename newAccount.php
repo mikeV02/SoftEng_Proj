@@ -72,9 +72,9 @@ function account_Validation() {
 		Email*:
 		<input type="text" name="uemail" id="uemail" value=""><br>
 		Password*:
-		<input type="text" name="passw" id="passw" value=""><br>
+		<input type="password" name="passw" id="passw" value=""><br>
 		Confirm Password*:
-		<input type="text" name="pass2" id="passw2" value=""><br>
+		<input type="password" name="pass2" id="passw2" value=""><br>
 		
 	<input type="submit" value="Register">
 	</form>
