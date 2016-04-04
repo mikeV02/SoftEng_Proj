@@ -20,7 +20,7 @@ if(isset($_POST['upload']))
 	
 	move_uploaded_file($video_tmp_name, "videos/$video_name");
 	//$url="/home/ubuntu/Desktop/Files/";
-	$url = "http://softeng.mikedlv.com/video/$video_name";
+	$url = "http://softeng.mikedlv.com/videos/$video_name";
 	$sql = "INSERT INTO videos (name, ulr) VALUE ('$video_name','$url')";
 	$result = mysqli_query($con, $sql);
 	if(!isset($result)){
