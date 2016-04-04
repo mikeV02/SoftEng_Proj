@@ -1,10 +1,13 @@
 
 
     <?php
+    
 
     /* Attempt MySQL server connection. Assuming you are running MySQL
 
     server with default setting (user 'root' with no password) */
+    
+    /*
 
     $link = mysql_connect("localhost", "root", "softeng");
     $db_found = mysql_select_db("softeng", $link);
@@ -51,6 +54,12 @@
     // Close connection
 
     mysqli_close($link);
+    */
+    
+    
+
+echo exec('whoami');
+
+
 
     ?>
-
