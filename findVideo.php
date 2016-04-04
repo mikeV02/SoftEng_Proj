@@ -17,7 +17,7 @@ if($result) {
 		echo $row['txt'] . '<br>';	
 	}
 }
-mysqli_close($mysqli);
+mysqli_close($con);
 ?>
 <!doctype html>
 <html>
