@@ -62,7 +62,7 @@ function account_Validation() {
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
-	if((isset($user_nam)) && (isset($uemail))){
+	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg))){
 		echo "All data Inserted.";
 
 	}
