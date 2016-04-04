@@ -46,7 +46,7 @@ if(isset($_POST['upload']))
 
 <h1 align="center" > Upload Video  </h1>
 
-<body style="background-color:#321"  >
+<body style="background-color:#322"  >
 
 <form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
 	<input type="file" name = "video">
