@@ -21,15 +21,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 if(isset($_POST['Search']))
 {
-	//$var2 = $GET['Search'];
-/*	$var2 =" ";
-	$x = count($stack)
-	for ($i = ;0 $i < $x; $i++) {
-		if (strcmp($stack[$i], $var2) == 0) {
-    			echo "Existe boludo";
-    			$var3 = $var2;
-		}	
-	}*/
+	echo "post";
 }
 
 mysqli_close($con);
