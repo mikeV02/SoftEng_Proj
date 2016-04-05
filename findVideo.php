@@ -27,7 +27,7 @@ $videoName = " ";
 
 if(count($videos) >0)
 {
-    for($i= 0; i < count($videos); $i++)
+    for($i= 0; $i < count($videos); $i++)
     {
         if(strcmp($videos[$i],$_POST['videoToFind']) == 0)
         {
@@ -41,7 +41,7 @@ if(count($videos) >0)
     /*
     else
     {
-        $search = "videos/".$videoName.".mp4";
+        $search = "videos/".$videoName;
         echo"<video width='320' height='240' controls>";
         echo"<source src=$search type='video/mp4'>";
         echo " Your browser does not support the video tag.";
