@@ -21,7 +21,7 @@ echo"<video width='320' height='240' controls>";
 echo"<source src='videos/tst2.mp4' type='video/mp4'>";
 
 echo " Your browser does not support the video tag.";
-</video>
+echo "</video>";
 mysqli_close($con);
 }
 ?>
