@@ -1,5 +1,5 @@
 <?php
-if (!empty($_POST["video"])) {
+if (!empty($_POST['videoToFind'])) {
 {
 $db = "softeng";
 $password = "softeng";
@@ -33,8 +33,8 @@ mysqli_close($con);
 
 <body>
 
-<form action="findVideo.php" method="post">
-  Video name: <input type="text" name="video"><br>
+<form action="findVideo.php" method="POST">
+  Video name: <input type="text" name="videoToFind"><br>
   <input type="submit" value="Submit">
 </form>
    
