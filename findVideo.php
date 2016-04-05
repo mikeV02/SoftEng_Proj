@@ -29,10 +29,10 @@ if(count($videos) >0)
 {
     for($i= 0; $i < count($videos); $i++)
     {
-        /*if(strcmp($videos[$i],$_POST['videoToFind']) == 0)
+        if(strcmp($videos[$i],$_POST['videoToFind']) == 0)
         {
             $videoName = $videos[$i];
-        }*/
+        }
     }
     /*
     if(strcmp($videoName, " ") == 0)
