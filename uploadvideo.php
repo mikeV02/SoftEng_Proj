@@ -53,7 +53,10 @@ if(isset($_POST['upload']))
 	<input type="submit" name= "upload" value="Upload video">
 
 </form>
-
+</form>
+<form id="goBackMain" align="center" action="mainPage.php" method="POST">
+<p> Go back to <input type="submit" value="MainPage"></p>  
+</form>
 
 <?php
 
