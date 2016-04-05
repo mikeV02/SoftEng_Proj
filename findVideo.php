@@ -9,7 +9,7 @@
 
 <h1 align="center"> Find Video  </h1>
 
-<body align ="center" style="background-color:#214>
+<body>//</body> align ="center" style="background-color:#214>
 
 <form action="index.php" method="post">
   First name: <input type="text" name="fname"><br>
