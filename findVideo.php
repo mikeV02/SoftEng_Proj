@@ -33,7 +33,7 @@ mysqli_close($con);
 
 <body>
 
-<form action="index.php" method="post">
+<form action="findVideo.php" method="post">
   Video name: <input type="text" name="video"><br>
   <input type="submit" value="Submit">
 </form>
