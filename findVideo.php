@@ -9,7 +9,7 @@ $con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not 
 //display videos that are in database
 $sql = "SELECT * FROM videos ";
 $result = mysqli_query($con, $sql);
-$videos=array("red","green");
+$videos=array();
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) 
@@ -23,12 +23,34 @@ if (mysqli_num_rows($result) > 0) {
 //to do:
 //check if the name searched exists in the data base and then play the video
 //if it does not exist show an error message
-print_r($videos);
-echo"<video width='320' height='240' controls>";
-echo"<source src='videos/tst2.mp4' type='video/mp4'>";
+$videoName = " ";
+if(count($videos) >0)
+{
+    for($i = 0; i < count($videos); $i++)
+    {
+        if(strcmp($videos[i],$_POST['Submit']) == 0)
+        {
+            $videoName = $videos[i];
+        }
+    }
+    if(strcmp($videoName, " ") == 0)
+    {
+        echo "No videos found with that name."
+    }
+    else
+    {
+        $search = "videos/".$videoName.".mp4";
+        echo"<video width='320' height='240' controls>";
+        echo"<source src=$search type='video/mp4'>";
+        echo " Your browser does not support the video tag.";
+        echo "</video>";
+    }
+}
+else
+{
+    echo"No results";
+}
 
-echo " Your browser does not support the video tag.";
-echo "</video>";
 mysqli_close($con);
 }
 ?>
