@@ -19,7 +19,7 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "No results";
 }
-if(isset($_GET["Search"]))
+if(isset($_GET['video'])) 
 {
 	echo "search";
 }
@@ -39,8 +39,8 @@ mysqli_close($con);
 <body align ="center" style="background-color:#214>
  
 <form action="findVideo.php" method="get">
-  Video name: <input type="text" name="fname"><br>
-  <input type="submit" value="Search">
+  Video name: <input type="text" name="video"><br>
+  <input type="submit" value="search">
 </form>
    
 </body>
