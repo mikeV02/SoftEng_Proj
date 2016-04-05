@@ -24,14 +24,13 @@ function account_Validation() {
 	$db = "softeng";
 	$password = "softeng";
 	$username = "root";
-	$db2 = "users";
 	
 	//HASH BY MIGUEL
 	$hashpass = hash("sha256", $passreg);
 	
 	$con = mysqli_connect("localhost", $username, $password, $db);
-	$sql= "INSERT INTO users (ID, fname, lname, user_login, user_pass, user_email, user_registered, user_status, display_name) 
-			VALUES(NULL, '$fname', '$lname', $user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
+	$sql = "INSERT INTO users (ID, fname, lname, user_login, user_pass, user_email, user_registered, user_status, display_name)
+		VALUES(NULL, NULL, NULL, $user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
 				
 			
 	
