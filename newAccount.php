@@ -29,8 +29,10 @@ function account_Validation() {
 	$hashpass = hash("sha256", $passreg);
 	
 	$con = mysqli_connect("localhost", $username, $password, $db);
-	$sql = "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name)
-		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";
+	/*$sql = "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name)
+		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";*/
+		
+	$sql = "INSERT INTO users VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";
 				
 			
 	
