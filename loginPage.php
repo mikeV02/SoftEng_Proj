@@ -8,7 +8,7 @@
 		// else return true
 		return ret;
 	</script>
-<head>
+	<head>
 		<title>	CSCE Group 15's project</title>
 	</head>
 	<h1>Welcome to CSCE Group 15's project page</h1>
@@ -44,9 +44,13 @@
 				//echo $_POST["password_log"];
 				$ps=$row['user_pass'];
 				$eps=$_POST["password_log"];
+				
+				//HASH BY MIGUEL
+				$hashpass = hash("sha256", $eps);
+				
 				//echo $ps;
 				//echo $eps;
-				if ($ps==$eps)
+				if ($ps==$hashpass)
 				{
 					//Trying to set SESSION ID
 					//session_start();
