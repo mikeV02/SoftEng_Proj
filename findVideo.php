@@ -12,11 +12,15 @@ $result = mysqli_query($con, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "url: " . $row['url']. "<br>";
+        //echo "url: " . $row['url']. "<br>";
     }
 } else {
     echo "0 results";
 }
+//to do:
+//check if the name searched exists in the data base and then play the video
+//if it does not exist show an error message
+
 echo"<video width='320' height='240' controls>";
 echo"<source src='videos/tst2.mp4' type='video/mp4'>";
 
