@@ -26,7 +26,9 @@ if(isset($_SESSION['login_user'])){
 	<!--ADDED BY MIGUEL
 		This is using PHP to work with the DataBase
 	-->
+	
 	<?php
+	/*
 		$user_name = "root";
 		$password = "softeng";
 		$database = "softeng";
@@ -78,8 +80,10 @@ if(isset($_SESSION['login_user'])){
 			print "Database NOT Found.";
 			mysql_close($db_handle);
 		}
+	*/
 	?>
-	<!--END MIGUEL
+
+<!--END MIGUEL
 		I also modifiend the next code to make the form call the same page to use the code above
 		to check the database.
 		We could create an intermedian page to check credentials before going to mainPage.
