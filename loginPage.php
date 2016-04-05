@@ -1,3 +1,13 @@
+<?php
+include('checkLogin.php'); // Includes Login Script
+
+if(isset($_SESSION['login_user'])){
+	header("location: mainPage.php");
+}
+?>
+
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>CSCE Group 15's project</title>
@@ -48,14 +58,14 @@
 				if ($ps==$eps)
 				{
 					//Trying to set SESSION ID
-					session_start();
+					//session_start();
 					// Store Session Data
-					$_SESSION['login_user']= $username;  // Initializing Session with value of PHP Variable
-					echo $_SESSION['login_user'];
+					//$_SESSION['login_user']= $username;  // Initializing Session with value of PHP Variable
+					//echo $_SESSION['login_user'];
 					
-					$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
-					, mysql_real_escape_string($username));
-					header($redirect);
+					//$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
+					//, mysql_real_escape_string($username));
+					//header($redirect);
 				
 				}
     			}
