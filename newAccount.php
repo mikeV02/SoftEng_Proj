@@ -26,7 +26,7 @@ function account_Validation() {
 	$username = "root";
 	
 	//HASH BY MIGUEL
-	//$hashpass = hash("sha256", $passreg);
+	$hashpass = hash("sha256", $passreg);
 	
 	$con = mysqli_connect("localhost", $username, $password, $db);
 	$sql = "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name)
