@@ -19,9 +19,9 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "No results";
 }
-if(isset($_POST['Search']))
+if(isset($_POST["Search"]))
 {
-	echo "post";
+	echo $_POST['searchFile'];
 }
 
 mysqli_close($con);
