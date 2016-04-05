@@ -39,9 +39,6 @@
 	<p  id="pLogin">Please click <input type="submit" value="here">  to watch a video</p>
 	</form>
 	<br>
-	<form id = "startWform" align="left " action="findVideo.php" method="post" onsubmit="return guestL_Validation()" >
-	<p  id="pLogin">Please click <input type="submit" value="here">  to find a video</p>
-	</form>
 
 	recent view videos<br>
 	</p>
