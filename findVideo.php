@@ -24,7 +24,7 @@ if (mysqli_num_rows($result) > 0) {
 //check if the name searched exists in the data base and then play the video
 //if it does not exist show an error message
 $videoName = " ";
-if(count($videos) >0)
+/*if(count($videos) >0)
 {
     for($i = 0; i < count($videos); $i++)
     {
@@ -50,6 +50,7 @@ else
 {
     echo"No results";
 }
+*/
 
 mysqli_close($con);
 }
