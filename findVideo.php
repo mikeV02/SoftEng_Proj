@@ -37,11 +37,10 @@ mysqli_close($con);
 <h1 align="center"> Find Video  </h1>
 
 <body align ="center" style="background-color:#214>
- 
-<form action = "uploadvideo.php"  align="center" method = "GET">
-	Video name:<input type="text" name = "video"> </br>
-	<input type="submit" name= "upload" value="Find video">
 
+<form action="uploadvideo.php" method="get">
+  First name: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
 </form>
    
 </body>
