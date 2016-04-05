@@ -17,12 +17,19 @@ if (mysqli_num_rows($result) > 0) {
         array_push($stack, $row['name']);
     }
 } else {
-    echo "0 results";
+    echo "No results";
 }
-print_r($stack);
 if(isset($_POST['Search']))
 {
-	
+	$var2 = $GET['Search'];
+	$var3 =" ";
+	$x = count($stack)
+	for ($i = ;0 $i < $x; $i++) {
+		if (strcmp($stack[$i], $var2) == 0) {
+    			echo "Existe boludo";
+    			$var3 = $var2;
+		}	
+	}
 }
 
 mysqli_close($con);
