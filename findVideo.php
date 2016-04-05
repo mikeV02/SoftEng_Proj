@@ -38,7 +38,7 @@ mysqli_close($con);
 
 <body align ="center" style="background-color:#214>
 
-<form action="uploadvideo.php" method="get">
+<form action="uploadvideo.php" method="post">
   First name: <input type="text" name="fname"><br>
   <input type="submit" value="Submit">
 </form>
