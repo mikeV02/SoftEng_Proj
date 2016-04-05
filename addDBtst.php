@@ -57,7 +57,7 @@
     */
     
     
-	$data="testSoftEng";
+	$data="jryu1";
 	$key = hash("sha256", $data);
 	
 	echo $key;
