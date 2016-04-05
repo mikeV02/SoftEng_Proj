@@ -17,10 +17,10 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results";
 }
-echo"<video width='320' height='240' controls>
-  <source src='videos/tst2.mp4' type='video/mp4'>"
+echo"<video width='320' height='240' controls>";
+echo"<source src='videos/tst2.mp4' type='video/mp4'>";
 
-  Your browser does not support the video tag.
+echo " Your browser does not support the video tag.";
 </video>
 mysqli_close($con);
 }
