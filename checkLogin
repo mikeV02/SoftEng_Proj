@@ -1,0 +1,47 @@
+<?php
+session_start(); // Starting Session
+$error=''; // Variable To Store Error Message
+
+	$db = "softeng";
+	$password = "softeng";
+	$username = "root";
+	//$db2 = "users";
+	$con = mysqli_connect("localhost", $username, $password, $db);
+
+
+if (isset($_POST['submit'])) {
+	if (empty($_POST['uname']) || empty($_POST['uemail']) || empty($_POST['passw']) || empty($_POST['pass2'])) {
+		$error = "Username or Password is invalid";
+	} else{
+		// Define $username and $password
+		$user_nam=$_POST['uname'];
+		$passw =$_POST['passw'];
+		$uemail	= $_POST["uemail"];
+		$passcheck = $_POST["pass2"];
+	
+		// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+		$con = mysql_connect("localhost", $username, $password, $db);
+	/*
+		// To protect MySQL injection for Security purpose
+		$username = stripslashes($user_nam);
+		$password = stripslashes($passw);
+		$username = mysql_real_escape_string($user_nam);
+		$password = mysql_real_escape_string($passw);
+	*/
+	
+		// Selecting Database
+		//$db = mysql_select_db("company", $connection);
+
+		// SQL query to fetch information of registerd users and finds user match.
+		$query = mysql_query("SELECT * from users WHERE password='$passw' AND username='$user_nam'", $con);
+		$rows = mysql_num_rows($query);
+		if ($rows == 1) {
+			$_SESSION['login_user']=$user_nam; // Initializing Session
+			//header("location: mainPage.php"); // Redirecting To Other Page
+		} else{
+			$error = "Username or Password is invalid";
+		}
+		mysql_close($con); // Closing Connection
+	}
+}
+?>
