@@ -48,8 +48,8 @@
 				//HASH BY MIGUEL
 				$hashpass = hash("sha256", $eps);
 				
-				//echo $ps;
-				//echo $eps;
+				echo $ps;
+				echo $eps;
 				if ($ps==$hashpass)
 				{
 					//Trying to set SESSION ID
