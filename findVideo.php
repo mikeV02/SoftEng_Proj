@@ -9,9 +9,12 @@ $con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not 
 //display videos that are in database
 $sql = "SELECT * FROM videos ";
 $result = mysqli_query($con, $sql);
+$videos=array("red","green");
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
+    while($row = mysqli_fetch_assoc($result)) 
+    {
+        array_push($videos, $row['name']);
         //echo "url: " . $row['url']. "<br>";
     }
 } else {
@@ -20,7 +23,7 @@ if (mysqli_num_rows($result) > 0) {
 //to do:
 //check if the name searched exists in the data base and then play the video
 //if it does not exist show an error message
-
+print_r($videos);
 echo"<video width='320' height='240' controls>";
 echo"<source src='videos/tst2.mp4' type='video/mp4'>";
 
