@@ -38,7 +38,7 @@ mysqli_close($con);
 
 <body align ="center" style="background-color:#214>
  
-<form action = "findVideo.php"  align="center" method = "POST">
+<form action = "uploadvideo.php"  align="center" method = "POST">
 	
 <input type="text" name="searchFile" id="searchFile" value=""><br>
 
