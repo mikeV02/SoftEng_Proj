@@ -40,8 +40,8 @@ function account_Validation() {
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
-	$user_check = mysqli_query($con, $check);
-	if($user_check==1){
+	$user_check = mysql_query($con, $check);
+	if(isset($user_check)){
 		echo "The username entered already exists. Please try again.";
 	}else{
 		if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
