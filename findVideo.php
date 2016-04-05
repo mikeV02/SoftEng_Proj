@@ -1,6 +1,6 @@
 
 <?php
-if(isset($_POST['upload']))
+if(isset($_GET['upload']))
 {
 	$db = "softeng";
 	$password = "softeng";
@@ -38,7 +38,7 @@ mysqli_close($con);
 
 <body align ="center" style="background-color:#214>
  
-<form action = "findVideo.php"  align="center" method = "POST">
+<form action = "findVideo.php"  align="center" method = "GET">
 	Video name:<input type="text" name = "video"> </br>
 	<input type="submit" name= "upload" value="Find video">
 
