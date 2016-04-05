@@ -34,10 +34,11 @@ if(count($videos) >0)
             $videoName = $videos[$i];
         }*/
     }
+    /*
     if(strcmp($videoName, " ") == 0)
     {
         echo "No videos found with that name."
-    }
+    }*/
     /*
     else
     {
