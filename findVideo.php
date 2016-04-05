@@ -38,12 +38,17 @@ mysqli_close($con);
 
 <body align ="center" style="background-color:#214>
  
-<form action = "uploadvideo.php"  align="center" method = "POST">
+/*<form action = "uploadvideo.php"  align="center" method = "POST">
 	
 <input type="text" name="searchFile" id="searchFile" value=""><br>
 
 <input type="submit" value="Search">
   
+</form>*/
+<form action="uploadvideo.php" method="get">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit">
 </form>
    
 </body>
