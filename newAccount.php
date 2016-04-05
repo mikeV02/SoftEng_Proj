@@ -33,7 +33,8 @@ function account_Validation() {
 		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";*/
 		
 	$sql = "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
-	$check = "SELECT * FROM users WHERE user_login = '$user_nam'";	
+	$check =sprintf("SELECT * FROM users WHERE user_login = '%s'"
+				, mysql_real_escape_string($user_nam));
 			
 	
 	if(!$con){
