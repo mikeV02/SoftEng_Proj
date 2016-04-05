@@ -38,18 +38,13 @@
 			{
 				$row=mysql_fetch_assoc($result);
 				echo $row['user_email']; 
-				//$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
-				//, mysql_real_escape_string($username));
-				//header($redirect) ;
-				//echo $_POST["password_log"];
+				
 				$ps=$row['user_pass'];
 				$eps=$_POST["password_log"];
 				
 				//HASH BY MIGUEL
 				$hashpass = hash("sha256", $eps);
 				
-				echo $ps;
-				echo $eps;
 				if ($ps==$hashpass)
 				{
 					//Trying to set SESSION ID
@@ -58,9 +53,12 @@
 					//$_SESSION['login_user']= $username;  // Initializing Session with value of PHP Variable
 					//echo $_SESSION['login_user'];
 					
-					$redirect=sprintf("Location: http://softeng.mikedlv.com/mainPage.php?userID=%s"
+					$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
 					, mysql_real_escape_string($username));
-					header($redirect);
+					
+					echo "<script type='text/javascript'>
+					window.location.href='$redirect';
+					</script>";
 				
 				}
     			}
