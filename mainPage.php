@@ -34,8 +34,14 @@
 	<form id = "startFform" align="left " action="findVideo.php" method="post" >
 	<p  id="sunmit">Please click <input type="submit" value="here"> to find a video </p>
 	</form>
+	<form id = "startWform" align="center " action="playVideo.html" method="post" onsubmit="return guestL_Validation()" >
+	<p  id="pLogin">Please click <input type="submit" value="here">  to watch a video</p>
+	</form>
 	<br>
-	search category<br>
+	<form id = "startWform" align="center " action="findVideo.php" method="post" onsubmit="return guestL_Validation()" >
+	<p  id="pLogin">Please click <input type="submit" value="here">  to find a video</p>
+	</form>
+
 	recent view videos<br>
 	</p>
 	
