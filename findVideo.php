@@ -1,4 +1,6 @@
 <?php
+if(isset($_POST['Submit']))
+{
 $db = "softeng";
 $password = "softeng";
 $username = "root";
@@ -16,6 +18,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "0 results";
 }
 mysqli_close($con);
+}
 ?>
 
 <!doctype html>
@@ -28,10 +31,10 @@ mysqli_close($con);
 
 <h1 align="center"> Find Video  </h1>
 
-<body>//</body> align ="center" style="background-color:#214>
+<body>
 
 <form action="index.php" method="post">
-  First name: <input type="text" name="fname"><br>
+  Video name: <input type="text" name="video"><br>
   <input type="submit" value="Submit">
 </form>
    
