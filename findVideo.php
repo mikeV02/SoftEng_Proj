@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['Submit']))
+if (!empty($_POST["video"])) {
 {
 $db = "softeng";
 $password = "softeng";
