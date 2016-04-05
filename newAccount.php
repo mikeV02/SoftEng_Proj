@@ -34,7 +34,7 @@ function account_Validation() {
 		
 	$sql = "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
 	$query=sprintf("SELECT * FROM users WHERE user_login = '%s'"
-				, mysql_real_escape_string($username));
+				, mysql_real_escape_string($user_nam));
 	
 	if(!$con){
 		die('Not connected : '.mysql_error());
