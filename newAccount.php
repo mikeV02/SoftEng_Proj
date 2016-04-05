@@ -33,35 +33,39 @@ function account_Validation() {
 		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";*/
 		
 	$sql = "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
-				
+	$check = "SELECT * users WHERE user_login = '$user_nam'";	
 			
 	
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
-	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
-		//echo "All data Inserted.";
-		if($passreg == $passcheck){
-			$result = mysqli_query($con, $sql);
-			if(isset($result)){
-				//Pop up Added by Miguel
-				$message = "Account Created Successfully";
-				$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
-					, $user_nam);
-				echo "<script type='text/javascript'>
-					alert('$message');
-					</script>";
-				mysqli_close($con);
-				echo "<script type='text/javascript'>
-					window.location.href='$redirect';
-					</script>";
+	$user_check = mysqli_query($con, $check);
+	if(isset($user_check)){
+		echo "The username entered already exists. Please try again.";
+	}else{
+		if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
+			//echo "All data Inserted.";
+			if($passreg == $passcheck){
+				$result = mysqli_query($con, $sql);
+				if(isset($result)){
+					//Pop up Added by Miguel
+					$message = "Account Created Successfully";
+					$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
+						, $user_nam);
+					echo "<script type='text/javascript'>
+						alert('$message');
+						</script>";
+					mysqli_close($con);
+					echo "<script type='text/javascript'>
+						window.location.href='$redirect';
+						</script>";
+				} else{
+					echo "Please make sure both passwords match";
+				} 
 			} else{
-				echo "Please make sure both passwords match";
-			} 
-		} else{
-			echo "Please make sure both passwords are the same.";
+				echo "Please make sure both passwords are the same.";
+			}
 		}
-
 	}
 ?>
 
