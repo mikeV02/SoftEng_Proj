@@ -1,27 +1,27 @@
 
 <?php
-$db = "softeng";
-$password = "softeng";
-$username = "root";
-$db2 = "videos";
-$con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not connect to SQL:'. mysqli_connect_error());
-
-//display videos that are in database
-$sql = "SELECT * FROM videos ";
-$result = mysqli_query($con, $sql);
-$stack = array();
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "url: " . $row['name']. "<br>";
-        array_push($stack, $row['name']);
-    }
-} else {
-    echo "No results";
-}
-if(isset($_GET['video'])) 
+if(isset($_POST['upload']))
 {
-	echo "search";
+	$db = "softeng";
+	$password = "softeng";
+	$username = "root";
+	$db2 = "videos";
+	$con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not connect to SQL:'. mysqli_connect_error());
+	
+	//display videos that are in database
+	$sql = "SELECT * FROM videos ";
+	$result = mysqli_query($con, $sql);
+	$stack = array();
+	if (mysqli_num_rows($result) > 0) {
+	    // output data of each row
+	    while($row = mysqli_fetch_assoc($result)) {
+	        echo "url: " . $row['name']. "<br>";
+	        array_push($stack, $row['name']);
+	    }
+	} else {
+	    echo "No results";
+	}
+	
 }
 
 mysqli_close($con);
@@ -38,9 +38,10 @@ mysqli_close($con);
 
 <body align ="center" style="background-color:#214>
  
-<form action="findVideo.php" method="get">
-  Video name: <input type="text" name="video"><br>
-  <input type="submit" value="search">
+<form action = "findVideo.php"  align="center" method = "POST">
+	Video name:<input type="text" name = "video"> </br>
+	<input type="submit" name= "upload" value="Find video">
+
 </form>
    
 </body>
