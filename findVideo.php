@@ -11,7 +11,7 @@
 
 <body align ="center" style="background-color:#214>
 
-<form action="uploadvideo.php" method="post">
+<form action="index.php" method="post">
   First name: <input type="text" name="fname"><br>
   <input type="submit" value="Submit">
 </form>
