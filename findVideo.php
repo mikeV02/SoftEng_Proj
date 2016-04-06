@@ -9,17 +9,19 @@ $con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not 
 //display videos that are in database
 $sql = "SELECT * FROM videos ";
 $result = mysqli_query($con, $sql);
-$videos=array();
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    while($row = mysqli_fetch_assoc($result)) 
-    {
-        array_push($videos, $row['name']);
+    while($row = mysqli_fetch_assoc($result)) {
+        //echo "url: " . $row['url']. "<br>";
     }
 } else {
     echo "0 results";
 }
+echo"<video width='320' height='240' controls>";
+echo"<source src='videos/tst2.mp4' type='video/mp4'>";
 
+echo " Your browser does not support the video tag.";
+echo "</video>";
 mysqli_close($con);
 }
 ?>
@@ -36,12 +38,10 @@ mysqli_close($con);
 
 <body>
 
-<form align="center" action="findVideo.php" method="POST">
+<form action="findVideo.php" method="POST">
   Video name: <input type="text" name="videoToFind"><br>
   <input type="submit" value="Submit">
 </form>
-<form id="goBackMain" align="center" action="mainPage.php" method="POST">
-<p> Go back to <input type="submit" value="MainPage"></p>  
-</form>
+   
 </body>
 </html>
