@@ -3,12 +3,12 @@
 	<title>CSCE Group 15's project</title>
 
 	<head>
-		<title>	CSCE Group 15's project!</title>
+		<title>	CSCE Group 15's project</title>
 	<script type="text/javascript">
  	</script>
 	
 	</head>
-<h1>Welcome to CSCE Group 15's project page</h1>
+<h1>Welcome to CSCE Group 15's project page!</h1>
 	<body align="center " style="background-color:#172" >	
 	<p>
 	welcom message
