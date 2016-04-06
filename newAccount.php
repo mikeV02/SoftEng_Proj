@@ -43,8 +43,8 @@ function account_Validation() {
 		//echo "All data Inserted.";
   
 		$result2 = mysql_query($sql2, $con);
-
-		if(mysql_num_rows($result2) >=1){
+		echo $result2;
+		if(mysql_num_rows($result2) !=0){
 			echo "The username entered already exists. Please try again.";
 		}else{
 			if($passreg == $passcheck){
