@@ -1,18 +1,69 @@
 
+<?php
+$db = "softeng";
+$password = "softeng";
+$username = "root";
+$db2 = "videos";
+$con = mysqli_connect("localhost", $username, $password, $db);
+if(!$con)
+{
+	die('Not connected' .mysql_error());
+}
+if(isset($_POST['upload']))
+{
+	$video_name = $_FILES["video"]["name"];
+	$video_type = $_FILES["video"]["type"];
+	$video_size = $_FILES["video"]["size"];
+	$video_tmp_name = $_FILES["video"]["tmp_name"];
+	
+	//Values check by Miguel
+	/*echo $video_name;
+	echo $video_type;
+	echo $video_size;
+	echo $video_tmp_name;*/
+	
+	if($video_name ==''){ echo "<script>alert('Select a Video.')</script>"; exit();}
+	
+	move_uploaded_file($video_tmp_name, "videos/$video_name");
+	//$url="/home/ubuntu/Desktop/Files/";
+	$url = "http://softeng.mikedlv.com/videos/$video_name";
+	$sql = "INSERT INTO videos (name, url) VALUE ('$video_name','$url')";
+	$result = mysqli_query($con, $sql);
+	if(!isset($result)){
+		echo("error database");			
+	}
+}
+?>
+
+<!doctype html>
 <html>
-<body>
+<head>
 
-<video width="320" height="240" controls>
-  <source src="videos/tst2.mp4" type="video/mp4">
+<meta charset = "utf-8">
+<title > Video Upload </title>
+</head>
 
-  Your browser does not support the video tag.
-</video>
+<h1 align="center" > Upload Video  </h1>
+
+<body style="background-color:#322"  >
+
+<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
+	<input type="file" name = "video">
+	<input type="submit" name= "upload" value="Upload video">
+
+</form>
 </form>
 <form id="goBackMain" align="center" action="mainPage.php" method="POST">
 <p> Go back to <input type="submit" value="MainPage"></p>  
 </form>
+
 <?php
-echo"hello"
+if(isset($_POST['upload']))
+{
+	echo "<br />".$name." has been uploaded";
+}
 ?>
+
 </body>
+
 </html>
