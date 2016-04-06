@@ -26,11 +26,12 @@ $videoName = " ";
 
 if(count($videos) >0)
 {
+    /*
     for($i= 0; $i < count($videos); $i++)
     {
         if(strcmp($videos[$i],$_POST['videoToFind']) == 0)
         {
-           // $videoName = $videos[$i];
+           $videoName = $videos[$i];
         }
     }
     $em = " ";
@@ -38,7 +39,6 @@ if(count($videos) >0)
     {
         echo "No videos found with that name."
     }
-    /*
     else
     {
         $search = "videos/".$videoName;
