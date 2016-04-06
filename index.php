@@ -11,7 +11,7 @@
 <h1>Welcome to CSCE Group 15's project page!</h1>
 	<body align="center " style="background-color:#172" >	
 	<div id="videoTag">
-		<img src="1112.jpg" alt="index picture" height="200" id="indexImg" width="1000" />
+		<img src="indexImage.png" alt="index picture" height="200" id="indexImg" width="1000" />
 		
 	<p>
 	Welcome to Group 15's project
