@@ -1,37 +1,28 @@
-
 <?php
+if (isset($_POST['videoToFind'])) 
+{
 $db = "softeng";
 $password = "softeng";
 $username = "root";
 $db2 = "videos";
-$con = mysqli_connect("localhost", $username, $password, $db);
-if(!$con)
-{
-	die('Not connected' .mysql_error());
+$con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not connect to SQL:'. mysqli_connect_error());
+//display videos that are in database
+$sql = "SELECT * FROM videos ";
+$result = mysqli_query($con, $sql);
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        //echo "url: " . $row['url']. "<br>";
+    }
+} else {
+    echo "0 results";
 }
-if(isset($_POST['upload']))
-{
-	$video_name = $_FILES["video"]["name"];
-	$video_type = $_FILES["video"]["type"];
-	$video_size = $_FILES["video"]["size"];
-	$video_tmp_name = $_FILES["video"]["tmp_name"];
-	
-	//Values check by Miguel
-	/*echo $video_name;
-	echo $video_type;
-	echo $video_size;
-	echo $video_tmp_name;*/
-	
-	if($video_name ==''){ echo "<script>alert('Select a Video.')</script>"; exit();}
-	
-	move_uploaded_file($video_tmp_name, "videos/$video_name");
-	//$url="/home/ubuntu/Desktop/Files/";
-	$url = "http://softeng.mikedlv.com/videos/$video_name";
-	$sql = "INSERT INTO videos (name, url) VALUE ('$video_name','$url')";
-	$result = mysqli_query($con, $sql);
-	if(!isset($result)){
-		echo("error database");			
-	}
+echo"<video width='320' height='240' controls>";
+echo"<source src='videos/tst2.mp4' type='video/mp4'>";
+
+echo " Your browser does not support the video tag.";
+echo "</video>";
+mysqli_close($con);
 }
 ?>
 
@@ -40,30 +31,17 @@ if(isset($_POST['upload']))
 <head>
 
 <meta charset = "utf-8">
-<title > Video Upload </title>
+<title> Find Video</title>
 </head>
 
-<h1 align="center" > Upload Video  </h1>
+<h1 align="center"> Find Video  </h1>
 
-<body style="background-color:#322"  >
+<body>
 
-<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
-	<input type="file" name = "video">
-	<input type="submit" name= "upload" value="Upload video">
-
+<form action="findVideo.php" method="POST">
+  Video name: <input type="text" name="videoToFind"><br>
+  <input type="submit" value="Submit">
 </form>
-</form>
-<form id="goBackMain" align="center" action="mainPage.php" method="POST">
-<p> Go back to <input type="submit" value="MainPage"></p>  
-</form>
-
-<?php
-if(isset($_POST['upload']))
-{
-	echo "<br />".$name." has been uploaded";
-}
-?>
-
+   
 </body>
-
 </html>
