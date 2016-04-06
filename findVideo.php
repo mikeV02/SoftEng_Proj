@@ -1,4 +1,5 @@
 <?php
+/*
 if (isset($_POST['videoToFind'])) 
 {
 $db = "softeng";
@@ -24,6 +25,7 @@ echo " Your browser does not support the video tag.";
 echo "</video>";
 mysqli_close($con);
 }
+*/
 ?>
 
 <!doctype html>
