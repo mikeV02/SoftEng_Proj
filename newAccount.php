@@ -33,7 +33,7 @@ function account_Validation() {
 		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";*/
 		
 	$sql = "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
-	$query="SELECT * FROM users WHERE user_login = '$user_nam'";
+	$query="SELECT * FROM users WHERE user_login = '".$user_nam."'";
 	
 	if(!$con){
 		die('Not connected : '.mysql_error());
