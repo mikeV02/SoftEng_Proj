@@ -47,6 +47,7 @@ function account_Validation() {
 		if(mysql_num_rows($result2) !=0){
 			echo "The username entered already exists. Please try again.";
 		}else{
+	/*
 			if($passreg == $passcheck){
 				$result = mysqli_query($con, $sql);
 				if(isset($result)){
@@ -67,6 +68,7 @@ function account_Validation() {
 			} else{
 				echo "Please make sure both passwords are the same.";
 			}
+		*/
 		}
 	}
 ?>
