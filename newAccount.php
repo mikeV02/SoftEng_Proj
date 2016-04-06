@@ -42,7 +42,7 @@ function account_Validation() {
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		//echo "All data Inserted.";
   
-		$result2 = mysql_query($sql2);
+		$result2 = mysql_query($sql2, $con);
 
 		if(mysql_num_rows($result2) >=1){
 			echo "The username entered already exists. Please try again.";
