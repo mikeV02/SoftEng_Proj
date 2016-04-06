@@ -27,8 +27,6 @@ mysqli_close($con);
 }
 */
 ?>
-
-<!doctype html>
 <html>
 <head>
 
