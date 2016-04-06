@@ -41,7 +41,7 @@ function account_Validation() {
 
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		//echo "All data Inserted.";
-		$user_check = mysql_query($query);
+		$user_check = mysql_query($query, $con);
 	//	echo $user_check
 		
 		if(mysql_num_rows($user_check) == 1){
