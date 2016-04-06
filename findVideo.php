@@ -15,7 +15,6 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) 
     {
         array_push($videos, $row['name']);
-        //echo "url: " . $row['url']. "<br>";
     }
 } else {
     echo "0 results";
@@ -31,7 +30,7 @@ if(count($videos) >0)
     {
         if(strcmp($videos[$i],$_POST['videoToFind']) == 0)
         {
-            $videoName = $videos[$i];
+           // $videoName = $videos[$i];
         }
     }
     $em = " ";
