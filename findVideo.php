@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html>
 <body>
 
@@ -12,5 +11,8 @@
 <form id="goBackMain" align="center" action="mainPage.php" method="POST">
 <p> Go back to <input type="submit" value="MainPage"></p>  
 </form>
+<?php
+echo"hello"
+?>
 </body>
 </html>
