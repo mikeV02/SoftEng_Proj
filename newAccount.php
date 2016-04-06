@@ -34,17 +34,16 @@ function account_Validation() {
 		
 	$sql = "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
 
-	$sql2 = "SELECT Count(*) FROM users WHERE user_login = '$user_nam'";
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
 
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		//echo "All data Inserted.";
-  
-		$result2 = mysql_query($sql2);
-		echo $result2;
-		if(mysql_num_rows($result2) !=0){
+  		$query = mysql_query("SELECT Count(*) FROM users WHERE user_login = '$user_nam'");
+		//$result2 = mysql_query($sql2);
+		//echo $result2;
+		if(mysql_num_rows($query) >0){
 			echo "The username entered already exists. Please try again.";
 		}else{
 	/*
