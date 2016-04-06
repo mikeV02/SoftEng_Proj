@@ -17,6 +17,9 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results";
 }
+//to do: 
+//check search name in the database and echo no results found if the name 
+//does not exist
 echo"<video width='320' height='240' controls>";
 echo"<source src='videos/tst2.mp4' type='video/mp4'>";
 
