@@ -3,7 +3,7 @@
 	<title>CSCE Group 15's project</title>
 
 	<head>
-		<title>	CSCE Group 15's project</title>
+		<title>	CSCE Group 15's project!</title>
 	<script type="text/javascript">
  	</script>
 	
