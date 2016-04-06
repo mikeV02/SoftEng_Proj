@@ -23,10 +23,10 @@ if (mysqli_num_rows($result) > 0) {
 //check if the name searched exists in the data base and then play the video
 //if it does not exist show an error message
 $videoName = " ";
-/*
+
 if(count($videos) >0)
 {
-    /*
+    
     for($i= 0; $i < count($videos); $i++)
     {
         if(strcmp($videos[$i],$_POST['videoToFind']) == 0)
@@ -41,22 +41,21 @@ if(count($videos) >0)
     }
     else
     {
+        echo"else";
+        /*
         $search = "videos/".$videoName;
         echo"<video width='320' height='240' controls>";
         echo"<source src=$search type='video/mp4'>";
         echo " Your browser does not support the video tag.";
         echo "</video>";
+        */
     }
-    */
-
-/*    
+  
 }
 else
 {
     echo"No results";
 }
-
-//*/
 mysqli_close($con);
 }
 ?>
