@@ -29,6 +29,10 @@
 	<p  id="pLogin">Please click <input type="submit" value="here">  to log in your account</p>
 	</form>
 	<br>
+	<form id = "startFform" align="center " action="findVideo.php" method="post" onsubmit="return guestL_Validation()" >
+	<p  id="pLogin">Please click <input type="submit" value="here">  to find a video</p>
+	</form>
+	<br>
 		<br>
 	</body>
 </html>
