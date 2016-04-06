@@ -41,9 +41,12 @@ mysqli_close($con);
 
 <body>
 
-<form action="findVideo.php" method="POST">
+<form align="center" action="findVideo.php" method="POST">
   Video name: <input type="text" name="videoToFind"><br>
   <input type="submit" value="Submit">
+</form>
+<form id="goBackMain" align="center" action="mainPage.php" method="POST">
+<p> Go back to <input type="submit" value="MainPage"></p>  
 </form>
    
 </body>
