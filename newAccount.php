@@ -41,12 +41,11 @@ function account_Validation() {
 
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		//echo "All data Inserted.";
-	//	$user_check = mysql_query($query, $con);
-	//	echo $user_check
-		
-		$query = mysql_query("SELECT Count(*) FROM Users WHERE username=$username, $con");
-		
-		if(mysql_num_rows($query) != 0){
+
+		$sql = "SELECT * FROM users WHERE user_login = '".$user_nam."'";
+		$result = mysqli_query($con,$query);
+
+		if(mysql_num_rows($result)>=1){
 			echo "The username entered already exists. Please try again.";
 		}else{
 			if($passreg == $passcheck){
