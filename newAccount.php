@@ -44,7 +44,7 @@ function account_Validation() {
 		$user_check = mysql_query($query, $con);
 	//	echo $user_check
 		
-		if(mysql_num_rows($user_check) == 1){
+		if(mysql_num_rows($user_check) != 0){
 			echo "The username entered already exists. Please try again.";
 		}else{
 			if($passreg == $passcheck){
