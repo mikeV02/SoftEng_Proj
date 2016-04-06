@@ -17,12 +17,11 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results";
 }
-//to do: 
-//check search name in the database and echo no results found if the name 
-//does not exist
+//to do:
+//check if the name searched exists in the data base and then play the video
+//if it does not exist show an error message
 echo"<video width='320' height='240' controls>";
 echo"<source src='videos/tst2.mp4' type='video/mp4'>";
-
 echo " Your browser does not support the video tag.";
 echo "</video>";
 mysqli_close($con);
@@ -48,6 +47,5 @@ mysqli_close($con);
 <form id="goBackMain" align="center" action="mainPage.php" method="POST">
 <p> Go back to <input type="submit" value="MainPage"></p>  
 </form>
-   
 </body>
 </html>
