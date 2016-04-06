@@ -40,13 +40,12 @@ function account_Validation() {
 
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		//echo "All data Inserted.";
-  		$query = mysql_query("SELECT Count(*) FROM users WHERE user_login = '$user_nam'");
-		//$result2 = mysql_query($sql2);
-		//echo $result2;
-		if(mysql_num_rows($query) >0){
-			echo "The username entered already exists. Please try again.";
-		}else{
-	/*
+  		//$query = mysqli_query("SELECT Count(*) FROM users WHERE user_login = '$user_nam'", $con);
+
+		//if(mysqli_num_rows($query) >0){
+		//	echo "The username entered already exists. Please try again.";
+		//}else{
+
 			if($passreg == $passcheck){
 				$result = mysqli_query($con, $sql);
 				if(isset($result)){
@@ -67,8 +66,7 @@ function account_Validation() {
 			} else{
 				echo "Please make sure both passwords are the same.";
 			}
-		*/
-		}
+		//}
 	}
 ?>
 
