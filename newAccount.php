@@ -33,8 +33,8 @@ function account_Validation() {
 		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";*/
 		
 	$sql = "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
-	//$query="SELECT Count(*) FROM users WHERE user_login = '$user_nam' ";
-	$sql2 = "SELECT * FROM users WHERE user_login = '$user_nam'";
+
+	$sql2 = "SELECT Count(*) FROM users WHERE user_login = '$user_nam'";
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
@@ -44,7 +44,7 @@ function account_Validation() {
 
 		$result2 = mysqli_query($con,$sql2);
 
-		if(mysql_num_rows($result2)>=1){
+		if(mysqli_num_rows($result2)>=1){
 			echo "The username entered already exists. Please try again.";
 		}else{
 			if($passreg == $passcheck){
