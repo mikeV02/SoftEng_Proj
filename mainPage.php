@@ -43,10 +43,12 @@
 	recent view videos<br>
 	</p>
 	
-	
+	<form id = "aboutUs" align="left " action="aboutUs.php" method="post" >
+	<input type="submit" value="about us"> 
+	</form>
 	
 	<form id = "logout" align="left " action="index.php" method="post" >
-	<p  id="sunmit">Please click <input type="submit" value="here"> to logout </p>
+	<p  id="logout">Please click <input type="submit" value="here"> to logout </p>
 	</form>
 	
 	
