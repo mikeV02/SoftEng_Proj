@@ -93,7 +93,7 @@
   <form role="form">
     <div class="form-group">
       <label for="user_log">User ID:</label>
-      <input type="text" size="300" class="form-control" id="user_log" placeholder="Enter ID">
+      <input type="text"  class="form-control" id="user_log" placeholder="Enter ID">
     </div>
     <div class="form-group">
       <label for="password_log">Password:</label>
