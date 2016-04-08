@@ -24,7 +24,7 @@
 <div class="container">
   <div class="jumbotron">
     <div class="row">
-    	<div class="col-sm-4">
+    	<div class="col-sm-8">
     <h1 align="left">Welcome to Video Hog!</h>
     	</div>
     	<div class="col-sm-4">
