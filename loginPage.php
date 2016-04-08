@@ -89,11 +89,11 @@
 		
 	action="mainPage.php"-->
 <div class="container">
-  <h2>Welcome to CSCE Group 15's project log in page</h2>
+  <h2>Login Form</h2>
   <form role="form">
     <div class="form-group">
-      <label for="user_log">Email:</label>
-      <input type="text" class="form-control" id="user_log" placeholder="Enter ID">
+      <label for="user_log">User ID:</label>
+      <input type="text" size="300" class="form-control" id="user_log" placeholder="Enter ID">
     </div>
     <div class="form-group">
       <label for="password_log">Password:</label>
