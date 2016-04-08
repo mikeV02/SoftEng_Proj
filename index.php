@@ -23,7 +23,14 @@
 
 <div class="container">
   <div class="jumbotron">
-    <h1 align="left">Welcome to Video Hog!</h><img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="400" height="300">
+    <div class="row">
+    	<div class="col-sm-4">
+    <h1 align="left">Welcome to Video Hog!</h>
+    	</div>
+    	<div class="col-sm-4">
+    <img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="400" height="300">
+    	</div>
+    </div>
   </div>
   <div class="row">
     <div class="col-sm-4">
