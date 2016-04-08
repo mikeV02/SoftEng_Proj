@@ -13,11 +13,47 @@
 	<div id="videoTag">
 		<img src="indexImage.png" alt="index picture" height="200" id="indexImg" width="1000" />
 		
-	<p>
-	Welcome to Group 15's project
-	<br>
-	
-	explain about website
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to CSCE Group 15's project page!</h1>
+    
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Visitor</h3>
+      	<form align="center " id = "startGform" action="guestLogin.php" method="post" onsubmit="return guestC_Validation()" >
+	<p  id="pCreate">Please click <input type="submit" value="here">to login as a visitor</p>
+	</form>
+    </div>
+    <div class="col-sm-4">
+      <h3>Create Account</h3>
+     <form id = "startCform"  align="center " action="newAccount.php" method="post" onsubmit="return guestC_Validation()" >
+	<p  id="pCreate">Please click <input type="submit" value="here"> to create a new account</p>
+	</form>
+    </div>
+    <div class="col-sm-4">
+      <h3>Log in</h3>        
+      <form id = "startLform" align="center " action="loginPage.php" method="post" onsubmit="return guestL_Validation()" >
+	<p  id="pLogin">Please click <input type="submit" value="here">  to log in your account</p>
+	</form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
 	<br>
 	</p>
 	<br>
