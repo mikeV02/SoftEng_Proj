@@ -84,16 +84,20 @@
 		and we do not reaveal sensitive data
 		
 	action="mainPage.php"-->
-	<form role="form" id = "loginform" action="loginPage.php" method="post" onsubmit="return login_Validation()" >
-	<div class="form-group">
-	 <label for="User Id">User Id:</label>
-	 <input type="text" class="form-control" id="user_log" placeholder="Id here">
-	 </div>
-	<div class="form-group">
-	 <label for="password_log">Password:</label>
-	 <input type="password" class="form-control" id="password_log" placeholder="password here">
-		<input type="submit" value="Login">
-	</form>
-	
+<div class="container">
+  <h2>Welcome to CSCE Group 15's project log in page</h2>
+  <form role="form">
+    <div class="form-group">
+      <label for="user_log">Email:</label>
+      <input type="text" class="form-control" id="user_log" placeholder="Enter ID">
+    </div>
+    <div class="form-group">
+      <label for="password_log">Password:</label>
+      <input type="password" class="form-control" id="password_log" placeholder="Enter password">
+    </div>
+   
+    <button type="submit" class="btn btn-default">Login</button>
+  </form>
+</div>
 	</body>
 </html>
