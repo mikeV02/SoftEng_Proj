@@ -23,8 +23,8 @@
 
 <div class="container">
   <div class="jumbotron">
-    <h1>Welcome to CSCE Group 15's project page!</h1>
-    
+    <h1>Welcome to Video Hog!</h1>
+    <img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="200" height="100">
   </div>
   <div class="row">
     <div class="col-sm-4">
