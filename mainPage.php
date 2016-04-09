@@ -24,14 +24,14 @@
 		</div>
 		<div class="col-sm-4">
 			<form id = "startSform" align="center " action="uploadvideo.php" method="post" >
-			<p  id="sunmit">Please click <input type="submit" value="here"> to upload a video </p>
+			<p>Please click <input type="submit" value="here"> to upload a video </p>
 			</form>
 			<br><br>
 			<form id = "startFform" align="center " action="findVideo.php" method="post" >
-			<p  id="sunmit">Please click <input type="submit" value="here"> to find a video </p>
+			<p>Please click <input type="submit" value="here"> to find a video </p>
 			</form><br><br>
 			<form id = "startWform" align="center " action="playVideo.html" method="post" onsubmit="return guestL_Validation()" >
-			<p  id="pLogin">Please click <input type="submit" value="here">  to watch a video</p>
+			<p>Please click <input type="submit" value="here">  to watch a video</p>
 			</form>
 			<br><br>
    
@@ -50,7 +50,7 @@
 	</div><br><br>
 	<div class="row">
 	<form id = "logout" align="right "style="margin-right:50px;" action="index.php" method="post" >
-	<p  id="logout">Please click <input type="submit" value="here"> to logout </p>
+	<p >Please click <input type="submit" value="here"> to logout </p>
 	</form>
 	</div>
 	
