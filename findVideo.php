@@ -29,7 +29,8 @@ mysqli_close($con);
 ?>
 
 <!doctype html>
-<html>
+<html lang="en-US">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <head>
 
 <meta charset = "utf-8">
@@ -41,8 +42,12 @@ mysqli_close($con);
 <body>
 
 <form align="center" action="findVideo.php" method="POST">
-  Video name: <input type="text" name="videoToFind"><br>
+ <div ng-app="">
+  <input type="text" name="videoToFind"><br>
   <input type="submit" value="Submit">
+  <p> Video name: <input type="text" ng-model="name" placeholder="Enter name here"></p>
+  <h1>Search {{name}}</h1>
+</div>
 </form>
 <form id="goBackMain" align="center" action="mainPage.php" method="POST">
 <p> Go back to <input type="submit" value="MainPage"></p>  
