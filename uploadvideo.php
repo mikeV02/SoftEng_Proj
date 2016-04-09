@@ -37,14 +37,31 @@ if(isset($_POST['upload']))
 ?>
 
 <!doctype html>
-<html>
+<html  lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
+<script type="text/javascript"></script>
 <head>
 
 <meta charset = "utf-8">
 <title > Video Upload </title>
 </head>
-
-<h1 align="center" > Upload Video  </h1>
+<div class="container">
+		<div class="jumbotron">
+			<div class="row">
+    				<div class="col-sm-8">
+    					<h1 align="left">Upload Video </h>
+    				</div>
+    				<div class="col-sm-4">
+    					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
+    				</div>
+    			</div>
+  		</div>
+  	</div>
 
 <body style="background-color:#322"  >
 
