@@ -65,15 +65,14 @@ if(isset($_POST['upload']))
 
 <body style="background-color:#322"  >
 
-<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
-	<input type="file" name = "video">
-	<input type="submit" name= "upload" value="Upload video">
+	<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
+		<input type="file" name = "video">
+		<input type="submit" name= "upload" value="Upload video">
+	</form>
 
-</form>
-</form>
-<form id="goBackMain" align="center" action="mainPage.php" method="POST">
-<p> Go back to <input type="submit" value="MainPage"></p>  
-</form>
+	<form id="goBackMain" align="center" action="mainPage.php" method="POST">
+		<p> Go back to <input type="submit" value="MainPage"></p>  
+	</form>
 
 <?php
 
