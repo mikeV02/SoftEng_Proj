@@ -49,7 +49,7 @@ mysqli_close($con);
 <form align="center" action="findVideo.php" method="POST">
     <div ng-app="">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6" align="right">
                 <p> Video name: <input style="margin-left:30px" type="text" name="videoToFind" ng-model="name" placeholder="Enter name here"></p>
             </div>
             <div class="col-sm-3">
