@@ -100,7 +100,7 @@
       <input type="password" class="form-control" id="password_log" placeholder="Enter password">
     </div>
    
-    <button type="submit" class="btn btn-default">Login</button>
+    <button type="submit" onclick="return login_Validation()" class="btn btn-default">Login</button>
   </form>
 </div>
 	</body>
