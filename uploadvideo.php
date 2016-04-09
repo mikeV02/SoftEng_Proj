@@ -52,7 +52,7 @@ if(isset($_POST['upload']))
 		<div class="jumbotron">
 			<div class="row">
     				<div class="col-sm-8">
-    					<h1 align="left">Upload Video </h>
+    					<h align="center">Upload Video </h>
     				</div>
     				<div class="col-sm-4">
     					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
@@ -62,12 +62,12 @@ if(isset($_POST['upload']))
   	</div>
 </head>
 <body style="background-color:#322"  >
-
+	<div class="row">
 	<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
 		<input align="center" type="file" name = "video">
 		<input type="submit" name= "upload" value="Upload video">
 	</form>
-
+	</div>
 	<form id="goBackMain" align="center" action="mainPage.php" method="POST">
 		<p> Go back to <input type="submit" value="MainPage"></p>  
 	</form>
