@@ -72,14 +72,16 @@
 <div class="container">
   <h2>Login Form</h2>
   <form align ="center" role="form" method="post" onsubmit="true">
-    <div class="col-xs-3">
+    <div class="form-control">
       <label for="user_log">User ID:</label>
       <input type="text"  class="form-control" name ="user_log" id="user_log" placeholder="Enter ID">
-    </div><br><br>
-    <div class="col-xs-3">
+    </div>
+    <br><br>
+    <div class="form-control">
       <label for="password_log">Password:</label>
       <input type="password" class="form-control" name="password_log" id="password_log" placeholder="Enter password">
-    </div><br><br>
+    </div>
+    <br><br>
    
     <button type="submit" class="btn btn-default">Login</button>
   </form>
