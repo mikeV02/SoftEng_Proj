@@ -15,7 +15,7 @@
 	<body style="background-color:lightgrey">	
 	<div class ="row">
 		<div class="col-sm-4" id="videoTag">
-			<video align ="right" width="500" height="400" controls>
+			<video align ="right" width="500" height="300">
 			<source src="rabbit.mp4" type="video/mp4">
 			Your browser does not support HTML5 video.
 			</video>
