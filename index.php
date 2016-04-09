@@ -28,7 +28,7 @@
     <h1 align="left">Welcome to Video Hog!</h>
     	</div>
     	<div class="col-sm-4">
-    <img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="200" height="100">
+    <img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
     	</div>
     </div>
   </div>
