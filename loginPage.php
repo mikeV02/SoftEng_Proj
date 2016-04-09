@@ -75,7 +75,7 @@
 	?>
 <div class="container">
   <h2>Login Form</h2>
-  <form role="form">
+  <form role="form" method="post" onsubmit="true">
     <div class="form-group">
       <label for="user_log">User ID:</label>
       <input type="text"  class="form-control" id="user_log" placeholder="Enter ID">
