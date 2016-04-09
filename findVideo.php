@@ -31,6 +31,11 @@ mysqli_close($con);
 <!doctype html>
 <html lang="en-US">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <head>
 
 <meta charset = "utf-8">
@@ -45,7 +50,9 @@ mysqli_close($con);
  <div ng-app="">
   <p> Video name: <input type="text" name="videoToFind" ng-model="name" placeholder="Enter name here"></p>
   <h1>You will search {{name}} </h1>
-  <input type="submit" value="Search">
+  <button type="submit" class="btn btn-info">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>
 </div>
 </form>
 <form id="goBackMain" align="center" action="mainPage.php" method="POST">
