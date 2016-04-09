@@ -14,7 +14,7 @@
 	<h1>Welcome to CSCE Group 15's project page</h1>
 	<body style="background-color:lightgrey"  columns-2>	
 	<div class ="row">
-		<div class="col-sm-5">
+		<div class="col-sm-4">
 			<div id="videoTag">
 				<video width="600" style="float: left; margin-bottom:30px;margin-right:30px;" controls>
 				<source src="rabbit.mp4" type="video/mp4">
@@ -22,7 +22,7 @@
 				</video>
 			</div>
 		</div>
-		<div class="col-sm-5">
+		<div class="col-sm-4">
 			<form id = "startSform" align="left " action="uploadvideo.php" method="post" >
 			<p  id="sunmit">Please click <input type="submit" value="here"> to upload a video </p>
 			</form>
@@ -40,7 +40,7 @@
 			</form>
 			
 		</div>
-		<div class="col-sm-5">
+		<div class="col-sm-4">
 
 			<p> Welcome ' <?php echo $_GET["userID"]; ?>' to Gorup15's project page.<br></p>
 			<a href="#">New videos <span class="badge">5</span></a><br>
@@ -49,7 +49,7 @@
 		</div>
 	</div>
 	<div class="row">
-	<form id = "logout" align="left " action="index.php" method="post" >
+	<form id = "logout" align="right " action="index.php" method="post" >
 	<p  id="logout">Please click <input type="submit" value="here"> to logout </p>
 	</form>
 	</div>
