@@ -9,7 +9,18 @@
 <script type="text/javascript"></script>
 	<head>
 		<title>	CSCE Group 15's project</title>
-	<h1 align="center">Welcome to CSCE Group 15's project page</h1>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="row">
+    				<div class="col-sm-8">
+    					<h1 align="left">Welcome to Video Hog!</h>
+    				</div>
+    				<div class="col-sm-4">
+    					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
+    				</div>
+    			</div>
+  		</div>
+  	</div>
 	</head>
 	<br><br>
 	<body style="background-color:lightgrey">	
