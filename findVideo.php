@@ -47,17 +47,19 @@ mysqli_close($con);
 <body>
 
 <form align="center" action="findVideo.php" method="POST">
-  <div class="row">
-        <div class="col-sm-8">
-            <div ng-app=""><p> Video name: <input type="text" name="videoToFind" ng-model="name" placeholder="Enter name here"></p>
+    <div ng-app="">
+        <div class="row">
+            <div class="col-sm-3">
+                <p> Video name: <input type="text" name="videoToFind" ng-model="name" placeholder="Enter name here"></p>
+            </div>
+            <div class="col-sm-1">
+                <button type="submit" class="btn btn-info">
+                    <span class="glyphicon glyphicon-search"></span> Search
+                </button>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <button type="submit" class="btn btn-info">
-                 <span class="glyphicon glyphicon-search"></span> Search
-            </button>
-        </div>
-    <h1>You will search {{name}} </h1>
-</div>
+        <h1>You will search {{name}} </h1>
+    </div>
 </form>
 <form id="goBackMain" align="center" action="mainPage.php" method="POST">
 <p> Go back to <input type="submit" value="MainPage"></p>  
