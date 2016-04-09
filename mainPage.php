@@ -11,11 +11,12 @@
 		<title>	CSCE Group 15's project</title>
 	<h1 align="center">Welcome to CSCE Group 15's project page</h1>
 	</head>
+	<br><br><br><br>
 	<body style="background-color:lightgrey">	
 	<div class ="row">
 		<div class="col-sm-4">
 			<div id="videoTag">
-				<video width="600" height="400" controls>
+				<video alighn ="center" width="600" height="400" controls>
 				<source src="rabbit.mp4" type="video/mp4">
 				Your browser does not support HTML5 video.
 				</video>
@@ -46,7 +47,7 @@
 			<a href="#">Comments <span class="badge">10</span></a><br>
 			<a href="#">Updates <span class="badge">2</span></a>
 		</div>
-	</div>
+	</div><br><br>
 	<div class="row">
 	<form id = "logout" align="right "style="margin-right:50px;" action="index.php" method="post" >
 	<p  id="logout">Please click <input type="submit" value="here"> to logout </p>
