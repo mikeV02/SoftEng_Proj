@@ -43,9 +43,8 @@ mysqli_close($con);
 
 <form align="center" action="findVideo.php" method="POST">
  <div ng-app="">
-  <input type="text" name="videoToFind"><br>
-  <input type="submit" value="Submit">
-  <p> Video name: <input type="text" ng-model="name" placeholder="Enter name here"></p>
+    <input type="submit" value="Submit">
+  <p> Video name: <input type="text" name="videoToFind" ng-model="name" placeholder="Enter name here"></p>
   <h1>Search {{name}}</h1>
 </div>
 </form>
