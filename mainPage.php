@@ -11,12 +11,12 @@
 		<title>	CSCE Group 15's project</title>
 	<h1 align="center">Welcome to CSCE Group 15's project page</h1>
 	</head>
-	<br><br><br><br>
+	<br><br>
 	<body style="background-color:lightgrey">	
 	<div class ="row">
 		<div class="col-sm-4">
 			<div id="videoTag">
-				<video align ="center" width="600" height="400" controls>
+				<video align ="right" width="500" height="400" controls>
 				<source src="rabbit.mp4" type="video/mp4">
 				Your browser does not support HTML5 video.
 				</video>
@@ -43,9 +43,9 @@
 		<div class="col-sm-4">
 
 			<p> Welcome ' <?php echo $_GET["userID"]; ?>' to Gorup15's project page.<br></p>
-			<a href="#">New videos <span class="badge">5</span></a><br>
-			<a href="#">Comments <span class="badge">10</span></a><br>
-			<a href="#">Updates <span class="badge">2</span></a>
+			<a href="#">New videos <span class="badge">5</span></a><br><br><br>
+			<a href="#">Comments <span class="badge">10</span></a><br><br><br>
+			<a href="#">Updates <span class="badge">2</span></a><br><br>
 		</div><br><br>
 	</div><br><br>
 	<div class="row">
