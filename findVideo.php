@@ -41,8 +41,18 @@ mysqli_close($con);
 <meta charset = "utf-8">
 <title> Find Video</title>
 </head>
-
-<h1 align="center"> Find Video  </h1>
+<div class="container">
+		<div class="jumbotron">
+			<div class="row">
+    				<div class="col-sm-8">
+    					<h1 align="left">Search Video</h>
+    				</div>
+    				<div class="col-sm-4">
+    					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
+    				</div>
+    			</div>
+  		</div>
+  	</div>
 
 <body>
 
