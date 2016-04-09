@@ -14,11 +14,13 @@
 	<br><br>
 	<body style="background-color:lightgrey">	
 	<div class ="row">
-		<div class="col-sm-4" id="videoTag">
-			<video style="float:right; margin-left:50px; width="500" height="300">
-			<source src="rabbit.mp4" type="video/mp4">
-			Your browser does not support HTML5 video.
-			</video>
+		<div class="col-sm-4" >
+			<div id="videoTag">
+				<video style="float:right; margin-left:50px; width="500" height="300">
+				<source src="rabbit.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+				</video>
+			</div>
 		</div>
 		<div class="col-sm-4">
 			<form id = "startSform" align="center " action="uploadvideo.php" method="post" >
