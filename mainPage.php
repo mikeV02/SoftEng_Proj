@@ -11,8 +11,7 @@
 		<title>	CSCE Group 15's project</title>
 	
 	</head>
-	<h1>Welcome to CSCE Group 15's project page</h1>
-	<body style="background-color:lightgrey"  columns-2>	
+	<body style="background-color:lightgrey">	
 	<div class ="row">
 		<div class="col-sm-4">
 			<div id="videoTag">
