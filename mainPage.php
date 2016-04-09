@@ -16,7 +16,7 @@
 	<div class ="row">
 		<div class="col-sm-4">
 			<div id="videoTag">
-				<video width="600" style="float: left; margin-bottom:30px;margin-right:30px;" controls>
+				<video width="600" height="400" controls>
 				<source src="rabbit.mp4" type="video/mp4">
 				Your browser does not support HTML5 video.
 				</video>
