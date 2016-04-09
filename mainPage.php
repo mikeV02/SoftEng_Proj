@@ -23,19 +23,19 @@
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<form id = "startSform" align="left " action="uploadvideo.php" method="post" >
+			<form id = "startSform" align="center " action="uploadvideo.php" method="post" >
 			<p  id="sunmit">Please click <input type="submit" value="here"> to upload a video </p>
 			</form>
 			<br>
-			<form id = "startFform" align="left " action="findVideo.php" method="post" >
+			<form id = "startFform" align="center " action="findVideo.php" method="post" >
 			<p  id="sunmit">Please click <input type="submit" value="here"> to find a video </p>
 			</form>
-			<form id = "startWform" align="left " action="playVideo.html" method="post" onsubmit="return guestL_Validation()" >
+			<form id = "startWform" align="center " action="playVideo.html" method="post" onsubmit="return guestL_Validation()" >
 			<p  id="pLogin">Please click <input type="submit" value="here">  to watch a video</p>
 			</form>
 			<br>
    
-			<form id = "aboutUs" align="left " action="aboutUs.php" method="post" >
+			<form id = "aboutUs" align="center " action="aboutUs.php" method="post" >
 			<input type="submit" value="about us"> 
 			</form>
 			
@@ -49,7 +49,7 @@
 		</div>
 	</div>
 	<div class="row">
-	<form id = "logout" align="right " action="index.php" method="post" >
+	<form id = "logout" align="right "style="margin-right:50px;" action="index.php" method="post" >
 	<p  id="logout">Please click <input type="submit" value="here"> to logout </p>
 	</form>
 	</div>
