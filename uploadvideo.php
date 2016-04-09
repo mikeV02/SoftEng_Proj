@@ -37,6 +37,7 @@ if(isset($_POST['upload']))
 ?>
 
 <!doctype html>
+<head>
 <html  lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta charset="utf-8">
@@ -45,7 +46,7 @@ if(isset($_POST['upload']))
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
 <script type="text/javascript"></script>
-<head>
+
 
 <title > Video Upload </title>
 	<div class="container">
@@ -62,12 +63,12 @@ if(isset($_POST['upload']))
   	</div>
 </head>
 <body style="background-color:#322"  >
-	<div class="row">
+
 	<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
 		<input align="center" type="file" name = "video">
 		<input type="submit" name= "upload" value="Upload video">
 	</form>
-	</div>
+
 	<form id="goBackMain" align="center" action="mainPage.php" method="POST">
 		<p> Go back to <input type="submit" value="MainPage"></p>  
 	</form>
