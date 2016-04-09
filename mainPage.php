@@ -9,7 +9,7 @@
 <script type="text/javascript"></script>
 	<head>
 		<title>	CSCE Group 15's project</title>
-	
+	<h1 align="center">Welcome to CSCE Group 15's project page</h1>
 	</head>
 	<body style="background-color:lightgrey">	
 	<div class ="row">
