@@ -52,7 +52,7 @@ mysqli_close($con);
             <div class="col-sm-6" align="right">
                 <p> Video name: <input style="margin-left:30px" type="text" name="videoToFind" ng-model="name" placeholder="Enter name here"></p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3" align="left">
                 <button type="submit" class="btn btn-info">
                     <span class="glyphicon glyphicon-search"></span> Search
                 </button>
