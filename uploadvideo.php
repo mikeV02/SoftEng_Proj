@@ -49,11 +49,14 @@ if(isset($_POST['upload']))
 
 
 <title > Video Upload </title>
-	<div class="container">
+	
+</head>
+<body style="background-color:#322"  >
+<div class="container">
 		<div class="jumbotron">
 			<div class="row">
     				<div class="col-sm-8">
-    					<h align="center">Upload Video </h>
+    					<h1 align="center">Upload Video </h>
     				</div>
     				<div class="col-sm-4">
     					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
@@ -61,9 +64,6 @@ if(isset($_POST['upload']))
     			</div>
   		</div>
   	</div>
-</head>
-<body style="background-color:#322"  >
-
 	<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
 		<input align="center" type="file" name = "video">
 		<input type="submit" name= "upload" value="Upload video">
