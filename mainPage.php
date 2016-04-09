@@ -25,8 +25,7 @@
 	
 
 	<p> 
-	    Welcome <?php echo $_GET["userID"]; ?> to Gorup15's project page.<br>
-	<p> Login username is <?php echo $_SESSION["login_user"]; ?> </p>   
+	    Welcome ' <?php echo $_GET["userID"]; ?>' to Gorup15's project page.<br>
 	<a href="#">New videos <span class="badge">5</span></a><br>
 	<a href="#">Comments <span class="badge">10</span></a><br>
 	<a href="#">Updates <span class="badge">2</span></a>
