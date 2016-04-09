@@ -6,12 +6,6 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<title>CSCE Group 15's project</title>
 
-	<script type="text/javascript">
-	function login_Validation() {
-		// if id and password not matching from database return false 
-		// else return true
-		return ret;
-	</script>
 	<head>
 		<title>	CSCE Group 15's project</title>
 	</head>
@@ -76,18 +70,6 @@
 			mysql_close($db_handle);
 		}
 	?>
-
-<!--END MIGUEL
-		I also modifiend the next code to make the form call the same page to use the code above
-		to check the database.
-		We could create an intermedian page to check credentials before going to mainPage.
-		I was trying some code, and I got to send the credentials via GET to the main page to
-		show the username in that page.
-		
-		It's better to use php t manage the database as we execute it on the server,
-		and we do not reaveal sensitive data
-		
-	action="mainPage.php"-->
 <div class="container">
   <h2>Login Form</h2>
   <form role="form">
@@ -100,7 +82,7 @@
       <input type="password" class="form-control" id="password_log" placeholder="Enter password">
     </div>
    
-    <button type="submit" onclick="return login_Validation()" class="btn btn-default">Login</button>
+    <button type="submit" class="btn btn-default">Login</button>
   </form>
 </div>
 	</body>
