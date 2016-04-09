@@ -47,10 +47,10 @@ if(isset($_POST['upload']))
 <script type="text/javascript"></script>
 <head>
 
-<meta charset = "utf-8">
 <title > Video Upload </title>
 </head>
-<div class="container">
+<body style="background-color:#322"  >
+	<div class="container">
 		<div class="jumbotron">
 			<div class="row">
     				<div class="col-sm-8">
@@ -62,11 +62,8 @@ if(isset($_POST['upload']))
     			</div>
   		</div>
   	</div>
-
-<body style="background-color:#322"  >
-
 	<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
-		<input type="file" name = "video">
+		<input align="center" type="file" name = "video">
 		<input type="submit" name= "upload" value="Upload video">
 	</form>
 
