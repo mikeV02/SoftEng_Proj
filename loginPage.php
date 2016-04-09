@@ -72,11 +72,11 @@
 <div class="container">
   <h2>Login Form</h2>
   <form role="form" method="post" onsubmit="true">
-    <div class="form-group">
+    <div class="col-xs-3">
       <label for="user_log">User ID:</label>
       <input type="text"  class="form-control" name ="user_log" id="user_log" placeholder="Enter ID">
     </div>
-    <div class="form-group">
+    <div class="col-xs-3">
       <label for="password_log">Password:</label>
       <input type="password" class="form-control" name="password_log" id="password_log" placeholder="Enter password">
     </div>
