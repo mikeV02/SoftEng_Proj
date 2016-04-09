@@ -50,7 +50,7 @@ mysqli_close($con);
     <div ng-app="">
         <div class="row">
             <div class="col-sm-6" align="right">
-                <p> Video name: <input style="margin-left:30px" type="text" name="videoToFind" ng-model="name" placeholder="Enter name here"></p>
+                <p> Video name: <input style="margin-left:30px" type="text" name="videoToFind" ng-model="videoName" placeholder="Enter name here"></p>
             </div>
             <div class="col-sm-3" align="left">
                 <button type="submit" class="btn btn-info">
@@ -58,7 +58,7 @@ mysqli_close($con);
                 </button>
             </div>
         </div>
-        <h1>You will search {{name}} </h1>
+        <h1>You will search "{{videoName}}" </h1>
     </div>
 </form>
 <form id="goBackMain" align="center" action="mainPage.php" method="POST">
