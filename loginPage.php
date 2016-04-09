@@ -41,7 +41,10 @@
 				$eps=$_POST["password_log"];
 				
 				//HASH BY MIGUEL
-				$hashpass = hash("sha256", $eps);
+				$hashpass = hash("sha256", $eps);;
+				echo $eps;
+				echo "    ";
+				echo $hashpass;
 				
 				if ($ps==$hashpass)
 				{
