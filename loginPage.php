@@ -78,11 +78,11 @@
   <form role="form" method="post" onsubmit="true">
     <div class="form-group">
       <label for="user_log">User ID:</label>
-      <input type="text"  class="form-control" id="user_log" placeholder="Enter ID">
+      <input type="text"  class="form-control" name ="user_log" id="user_log" placeholder="Enter ID">
     </div>
     <div class="form-group">
       <label for="password_log">Password:</label>
-      <input type="password" class="form-control" id="password_log" placeholder="Enter password">
+      <input type="password" class="form-control" name="password_log" id="password_log" placeholder="Enter password">
     </div>
    
     <button type="submit" class="btn btn-default">Login</button>
