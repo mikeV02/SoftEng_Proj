@@ -72,7 +72,7 @@ if(isset($_POST['upload']))
 			</div><br><br>
 			<div class="row">
 				<div class = "col-sm-7">
-					<input type="submit" align="left" name= "upload" value="Upload video">
+					<input type="submit" align="right" name= "upload" value="Upload video">
 				</div>	
 			</div>
 		</form>
