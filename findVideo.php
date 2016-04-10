@@ -1,3 +1,30 @@
+<!doctype html>
+<html lang="en-US">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<head>
+
+<meta charset = "utf-8">
+<title> Find Video</title>
+</head>
+<div class="container">
+		<div class="jumbotron">
+			<div class="row">
+    				<div class="col-sm-8">
+    					<h1 align="left">Search Video</h>
+    				</div>
+    				<div class="col-sm-4">
+    					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
+    				</div>
+    			</div>
+  		</div>
+  	</div>
+
+<body>
 <?php
 if (isset($_POST['videoToFind'])) 
 {
@@ -27,34 +54,6 @@ echo "</video>";
 mysqli_close($con);
 }
 ?>
-
-<!doctype html>
-<html lang="en-US">
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<head>
-
-<meta charset = "utf-8">
-<title> Find Video</title>
-</head>
-<div class="container">
-		<div class="jumbotron">
-			<div class="row">
-    				<div class="col-sm-8">
-    					<h1 align="left">Search Video</h>
-    				</div>
-    				<div class="col-sm-4">
-    					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
-    				</div>
-    			</div>
-  		</div>
-  	</div>
-
-<body>
 
 <form align="center" action="findVideo.php" method="POST">
     <div ng-app="">
