@@ -64,10 +64,16 @@ if(isset($_POST['upload']))
     			</div>
   		</div>
   	</div><br><br>
-	<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
-		<input align="right" type="file" name = "video">
-		<input type="submit" name= "upload" value="Upload video">
-	</form>
+  		<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
+  			<div class="row">
+				<div class = "col-sm-5" align="right">
+						<input  type="file" name = "video">
+				</div>
+				<div class = "col-sm-5" align="left">
+					<input type="submit" name= "upload" value="Upload video">
+				</div>	
+			</div>
+		</form>
 
 	<form id="goBackMain" align="center" action="mainPage.php" method="POST">
 		<p> Go back to <input type="submit" value="MainPage"></p>  
