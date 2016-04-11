@@ -42,7 +42,7 @@
 			<p>Please click <input type="submit" value="here"> to find a video </p>
 			</form><br><br>
 			<form id = "startWform" align="center " action="playVideo.html" method="post" onsubmit="return guestL_Validation()" >
-			<p>Please click <input type="submit" value="here">  to watch a video</p>
+			<p>Please click <input type="submit" value="here">  to watch videos</p>
 			</form>
 			<br><br>
    
