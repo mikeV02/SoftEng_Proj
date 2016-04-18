@@ -93,7 +93,7 @@ session_start();
                     <button id="setup-new-broadcast" class="setup">Setup</button>
                 </section>
 				<section align="center" id="login-section" style="display: none">
-				Join the broadcasts below or <a href= "<?php dirname(__FILE__)."/../loginPage.php"; ?>">Login</a> to start new one 				
+				Join the broadcasts below or <a href= "<?php echo dirname(__FILE__)."/../loginPage.php"; ?>">Login</a> to start new one 				
 				</section>                
                 <!-- list of all available broadcasting rooms -->
                 <table style="width: 100%;" id="rooms-list"></table>
