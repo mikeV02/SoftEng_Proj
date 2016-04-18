@@ -17,8 +17,8 @@ Released   : 20140107
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" />
-<link href="main/default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="main/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="home/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
@@ -30,7 +30,7 @@ Released   : 20140107
 	</div>
 	<div id="menu">
 		<ul>
-			<li class="current_page_item"><a href="index.php" accesskey="1" title="">Homepage</a></li>
+			<li class="current_page_item"><a href="http://softeng.mikedlv.com/" accesskey="1" title="">Homepage</a></li>
 			<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
 			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
 			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
@@ -40,9 +40,9 @@ Released   : 20140107
 <div id="banner">
 	<div class="container">
 		<ul class="staff">
-			<li><img src="main/images/pic01.jpg" alt="" /></li>
-			<li><img src="main/images/pic02.jpg" alt="" /></li>
-			<li><img src="main/images/pic03.jpg" alt="" /></li>
+			<li><img src="home/images/pic01.jpg" alt="" /></li>
+			<li><img src="home/images/pic02.jpg" alt="" /></li>
+			<li><img src="home/images/pic03.jpg" alt="" /></li>
 		</ul>
 		<div class="title">
 			<h2>Share your thoughts</h2>
@@ -50,7 +50,7 @@ Released   : 20140107
 		</div>
 		<p></p>
 		<ul class="actions">
-			<li><a href="main/video.html" class="button">Find featured videos</a></li>
+			<li><a href="home/video.html" class="button">Find featured videos</a></li>
 		</ul>
 	</div>
 </div>
