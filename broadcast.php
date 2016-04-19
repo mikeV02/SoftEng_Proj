@@ -75,7 +75,7 @@ session_start();
         <script src="broadcast/DetectRTC.js"></script>
     </head>
 
-    <body onbeforeunload="killBroadcast();>
+    <body onunload="killBroadcast();">
         <article>
             <header style="text-align: center;">
                 <h1>Web Broadcasting Using WebRTC 
