@@ -51,9 +51,10 @@ if (isset($_POST['videoToFind'])) {
 <?php
 	} else {
 		echo "0 results";
+		mysqli_close($con);
 	}
 
-mysqli_close($con);
+//mysqli_close($con);
 }
 ?>
 
