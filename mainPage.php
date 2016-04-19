@@ -71,7 +71,7 @@ session_start();
 
 								echo "<h1 id='title'>$finame $laname</h1>";
 							?>
-							<p>Brief description</p>
+							<p><a href="logout.php">Logout</a></p>
 						</div>
 
 					<!-- Nav -->
