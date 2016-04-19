@@ -69,7 +69,7 @@ session_start();
 								}
 							
 
-								echo '<h1 id="title">'+$fname+' '+$lname+'</h1>';
+								echo "<h1 id='title'>$fname $lname</h1>";
 							?>
 							<p>Brief description</p>
 						</div>
