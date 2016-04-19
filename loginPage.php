@@ -76,7 +76,7 @@ Released   : 20140107
 			{
 				$row=mysql_fetch_assoc($result);
 				
-				if ($username!==$row['user_login'])
+				if ($username != $row['user_login'])
 				{
 					$message = "Username not found";
 					echo "<script type='text/javascript'>
@@ -103,14 +103,14 @@ Released   : 20140107
 						window.location.href='$redirect';
 						</script>";
 					}
+					else
+		    			{
+		    				$message = "Invalid Password";
+						echo "<script type='text/javascript'>
+							alert('$message');
+							</script>";
+		    			}
 				}
-	    			else
-	    			{
-	    				$message = "Invalid Password";
-					echo "<script type='text/javascript'>
-						alert('$message');
-						</script>";
-	    			}
 			}
 		}
 		else
