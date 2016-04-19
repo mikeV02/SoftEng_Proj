@@ -27,7 +27,7 @@ Released   : 20140107
 	</div>
 	<div id="menu">
 		<ul>
-			<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
+			<li><a href="loginPage.php" accesskey="3" title="" color="white">Login</a></li>
 			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
 			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
 		</ul>
