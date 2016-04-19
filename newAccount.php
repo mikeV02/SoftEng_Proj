@@ -54,20 +54,19 @@ Released   : 20140107
 	$con = mysqli_connect("localhost", $username, $password, $db);
 	/*$sql = "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name)
 		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";*/
-		
-	$sql = "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
-
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
+		
+	$sql = "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
+	$check= "SELECT * FROM users WHERE user_login = '$user_nam' ";
+	$rs = mysqli_query($con,$check);
+	//$data = mysqli_fetch_array($rs, MYSQLI_NUM);
 
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
-		//echo "All data Inserted.";
-  		//$query = mysqli_query("SELECT Count(*) FROM users WHERE user_login = '$user_nam'", $con);
-
-		//if(mysqli_num_rows($query) >0){
-		//	echo "The username entered already exists. Please try again.";
-		//}else{
+		if($data = myswli_fetch_array($rs, MYSQLI_NUM)){
+			echo "User already exists in out records.";
+		}	else{
 
 			if($passreg == $passcheck){
 				$result = mysqli_query($con, $sql);
@@ -89,7 +88,7 @@ Released   : 20140107
 			} else{
 				echo "Please make sure both passwords are the same.";
 			}
-		//}
+		}
 	}
 ?>
 
