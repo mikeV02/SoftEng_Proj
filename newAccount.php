@@ -62,7 +62,7 @@ Released   : 20140107
 	$rs = mysqli_query($con,$check);
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		if($data = mysqli_fetch_array($rs, MYSQLI_NUM)){
-			echo "User already exists in out records.";
+			echo "User already exists in our records.";
 			$redirect2=sprintf("http://softeng.mikedlv.com/newAccount.php");
 			$message2 = "Username already exists! Try again";
 			echo "<script type='text/javascript'>
