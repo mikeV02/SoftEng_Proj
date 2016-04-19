@@ -99,7 +99,7 @@ Released   : 20140107
 ?>
 		
 <!-- added by Fabian M. -->	
-<h1><i><b> Create a new HogAccount! </i></b></h1>
+<h1 align="center"><i><b> Create a new HogAccount! </i></b></h1>
 <div class="container" align="center">
 	<form action="newAccount.php" method="post" onsubmit="true">
 		First Name:
