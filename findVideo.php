@@ -7,6 +7,75 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <head>
+<meta charset = "utf-8">
+<title> Find Video</title>
+</head>
+
+<body>
+<form align="center" action="findVideo.php" method="POST">
+    <div ng-app="">
+        <div class="row">
+            <div class="col-sm-6" align="right">
+                <p> Video name: <input style="margin-left:30px" type="text" id="videoToFind" name="videoToFind" ng-model="videoName" placeholder="Enter name here"></p>
+            </div>
+            <div class="col-sm-3" align="left">
+                <button type="submit" class="btn btn-info">
+                    <span class="glyphicon glyphicon-search"></span> Search
+                </button>
+            </div>
+        </div>
+        <h1>You will search "{{videoName}}" </h1>
+    </div>
+</form>
+
+<?php
+if (isset($_POST['videoToFind'])) {
+
+	$vid_name = $_POST['videoToFind'];
+	$db = "softeng";
+	$password = "softeng";
+	$username = "root";
+	$db2 = "videos";
+	$con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not connect to SQL:'. mysqli_connect_error());
+	if(!$con){
+		die('Not connected : '.mysql_error());
+	}
+
+	$sql = "SELECT * FROM videos WHERE name = '$vid_name' ";
+	$check = mysqli_query($con, $sql);
+	if($video = mysqli_fetch_array($check, MYSQLI_NUM)){
+		<video width="320" height="240" controls>
+		<source src="'$vid_name'.mp4" type="video/mp4">
+		</video>
+	} else {
+		echo "0 results";
+	}
+
+mysqli_close($con);
+}
+?>
+
+
+
+<form id="goBackMain" align="center" action="mainPage.php" method="POST">
+<p> Go back to <input type="submit" value="MainPage"></p>  
+</form>
+</body>
+</html>
+
+
+
+
+<!--
+<!doctype html>
+<html lang="en-US">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<head>
 
 <meta charset = "utf-8">
 <title> Find Video</title>
@@ -75,3 +144,4 @@ mysqli_close($con);
 </form>
 </body>
 </html>
+-->
