@@ -42,7 +42,7 @@ Released   : 20140107
 			<ul>
 				<li>
 					<label for="usermail">User</label>
-					<input type="email" name="user" placeholder="User name" required>
+					<input type="text" name="user" placeholder="User name" required>
 				</li>
 				<li>
 					<label for="password">Password</label>
