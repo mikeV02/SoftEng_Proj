@@ -91,22 +91,6 @@
        </form>
  		</div>
  </div>
-<div class="container">
-  <h2>Login Form</h2>
-  <form align ="center" role="form" method="post" onsubmit="true">
-    <div class="form-group">
-      <label for="user_log">User ID:</label>
-      <input type="text"  class="form-control" name ="user_log" id="user_log" placeholder="Enter ID">
-    </div>
-    <br><br>
-    <div class="form-group">
-      <label for="password_log">Password:</label>
-      <input type="password" class="form-control" name="password_log" id="password_log" placeholder="Enter password">
-    </div>
-    <br><br>
-   
-    <button type="submit" class="btn btn-default">Login</button>
-  </form>
-</div>
+
 	</body>
 </html>
