@@ -31,14 +31,14 @@ Released   : 20140107
 <link rel="stylesheet" href="style.css">   
 <div id="header" class="container">
 	<div id="logo">
-		<h1><a href="http://softeng.mikedlv.com/">Video Hog</a></h1>
+		<h1><a href="http://softeng.mikedlv.com/"><font color="white">Video Hog</font></a></h1>
 	</div>
-	<div id="menu">
+	<div id="menu"><font color="white">
 		<ul>
 			<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
 			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
 			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
-		</ul>
+		</ul></font>
 	</div>
 </div>
 	<!--ADDED BY MIGUEL
