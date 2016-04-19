@@ -23,6 +23,7 @@ session_start();
                 vertical-align: top;
                 width: 100%;
             }
+
             input {
                 border: 1px solid #d9d9d9;
                 border-radius: 1px;
@@ -30,6 +31,7 @@ session_start();
                 margin: .2em;
                 width: 30%;
             }
+
             select {
                 border: 1px solid #d9d9d9;
                 border-radius: 1px;
@@ -40,6 +42,7 @@ session_start();
                 vertical-align: 6px;
                 width: 18%;
             }
+
             .setup {
                 border-bottom-left-radius: 0;
                 border-top-left-radius: 0;
@@ -49,7 +52,9 @@ session_start();
                 margin-top: 8px;
                 position: absolute;
             }
+
             p { padding: 1em; }
+
             li {
                 border-bottom: 1px solid rgb(189, 189, 189);
                 border-left: 1px solid rgb(189, 189, 189);
@@ -100,7 +105,7 @@ session_start();
             <script>
 <?php
 /*
-if(!isset($_SESSION["broadcast_user"]))
+if(!isset($_SESSION["login_user"]))
 {
 	echo "var authorSection = document.getElementById('author-section');";
 	echo "authorSection.style.display = 'none';";
@@ -133,16 +138,20 @@ if(!isset($_SESSION["broadcast_user"]))
                     onRoomFound: function(room) {
                         var alreadyExist = document.querySelector('button[data-broadcaster="' + room.broadcaster + '"]');
                         if (alreadyExist) return;
+
                         if (typeof roomsList === 'undefined') roomsList = document.body;
+
                         var tr = document.createElement('tr');
                         tr.innerHTML = '<td><strong>' + room.roomName + '</strong> broadcast</td>' +
                             '<td><button class="join">Join</button></td>';
                         roomsList.insertBefore(tr, roomsList.firstChild);
+
                         var joinRoomButton = tr.querySelector('.join');
                         joinRoomButton.setAttribute('data-broadcaster', room.broadcaster);
                         joinRoomButton.setAttribute('data-roomToken', room.broadcaster);
                         joinRoomButton.onclick = function() {
                             this.disabled = true;
+
                             var broadcaster = this.getAttribute('data-broadcaster');
                             var roomToken = this.getAttribute('data-roomToken');
                             broadcastUI.joinRoom({
@@ -156,9 +165,11 @@ if(!isset($_SESSION["broadcast_user"]))
                         document.title = 'Viewers: ' + numberOfViewers;
                     }
                 };
+
                 function setupNewBroadcastButtonClickHandler() {
                     document.getElementById('broadcast-name').disabled = true;
                     document.getElementById('setup-new-broadcast').disabled = true;
+
                     captureUserMedia(function() {
                         var shared = 'video';
                         if (window.option == 'Only Audio') {
@@ -175,6 +186,7 @@ if(!isset($_SESSION["broadcast_user"]))
                     });
                     hideUnnecessaryStuff();
                 }
+
                 function captureUserMedia(callback) {
                     var constraints = null;
                     window.option = broadcastingOption ? broadcastingOption.value : '';
@@ -208,15 +220,18 @@ if(!isset($_SESSION["broadcast_user"]))
                     if (option != 'Only Audio' && option != 'Screen' && DetectRTC.hasWebcam !== true) {
                         alert('DetectRTC library is unable to find webcam; maybe you denied webcam access once and it is still denied or maybe webcam device is not attached to your system or another app is using same webcam.');
                     }
+
                     var htmlElement = document.createElement(option === 'Only Audio' ? 'audio' : 'video');
                     htmlElement.setAttribute('autoplay', true);
                     htmlElement.setAttribute('controls', true);
                     videosContainer.insertBefore(htmlElement, videosContainer.firstChild);
+
                     var mediaConfig = {
                         video: htmlElement,
                         onsuccess: function(stream) {
                             config.attachStream = stream;
                             callback && callback();
+
                             htmlElement.setAttribute('muted', true);
                             //rotateInCircle(htmlElement);
                         },
@@ -231,13 +246,18 @@ if(!isset($_SESSION["broadcast_user"]))
                     if (constraints) mediaConfig.constraints = constraints;
                     getUserMedia(mediaConfig);
                 }
+
                 var broadcastUI = broadcast(config);
+
                 /* UI specific */
                 var videosContainer = document.getElementById('videos-container') || document.body;
                 var setupNewBroadcast = document.getElementById('setup-new-broadcast');
                 var roomsList = document.getElementById('rooms-list');
+
                 var broadcastingOption = document.getElementById('broadcasting-option');
+
                 if (setupNewBroadcast) setupNewBroadcast.onclick = setupNewBroadcastButtonClickHandler;
+
                 function hideUnnecessaryStuff() {
                     var visibleElements = document.getElementsByClassName('visible'),
                         length = visibleElements.length;
