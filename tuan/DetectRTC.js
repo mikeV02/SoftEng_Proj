@@ -1,3 +1,8 @@
+// Muaz Khan
+// MIT License
+// DetectRTC.hasWebcam (has webcam device!)
+// DetectRTC.hasMicrophone (has microphone device!)
+// DetectRTC.hasSpeakers (has speakers!)
 
 (function() {
 

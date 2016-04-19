@@ -1,4 +1,7 @@
-﻿
+﻿// Muaz Khan         - www.MuazKhan.com
+// MIT License
+// This library is known as multi-user connectivity wrapper!
+// It handles connectivity tasks to make sure two or more users can interconnect!
 
 var broadcast = function(config) {
     var self = {
