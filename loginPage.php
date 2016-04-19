@@ -17,7 +17,7 @@
 		<link href="home/default.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
 		
-		<link rel="stylesheet" href="style.css">
+	<!--	<link rel="stylesheet" href="style.css">   -->
 	</head>
 
 <!--
