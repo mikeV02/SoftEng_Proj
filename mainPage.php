@@ -135,81 +135,67 @@ session_start();
 							<header>
 								<h2>Featured Videos</h2>
 							</header>
-							<p contentEditable="true">Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
-							<!--<button id="save">Save Changes</button> -->
-
 							<video width="640" height="480" controls>
 							  <source src="main/flower.mp4" type="video/mp4">
 							  <source src="main/movie.ogg" type="video/ogg">
 							Your browser does not support the video tag.
 							</video>
-<!--
-							<div class="row">
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u$ 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
-
-						</div>
-					</section>
--->
 				<!-- About Me -->
 					<section id="about" class="three">
 						<div class="container">
 
 							<header>
-								<h2>About Me</h2>
+								<h2>Upload Video</h2>
 							</header>
-
-							<a href="#" class="image featured"><img src="main/images/pic08.jpg" alt="" /></a>
-							<p contentEditable="true">Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
+					<?php
+					$db = "softeng";
+					$password = "softeng";
+					$username = "root";
+					$db2 = "videos";
+					$con = mysqli_connect("localhost", $username, $password, $db);
+					if(!$con)
+					{
+						die('Not connected' .mysql_error());
+					}
+					if(isset($_POST['upload']))
+					{
+						$video_name = $_FILES["video"]["name"];
+						$video_type = $_FILES["video"]["type"];
+						$video_size = $_FILES["video"]["size"];
+						$video_tmp_name = $_FILES["video"]["tmp_name"];
+						if($video_name ==''){ echo "<script>alert('Select a Video.')</script>"; exit();}
+						
+						move_uploaded_file($video_tmp_name, "videos/$video_name");
+						//$url="/home/ubuntu/Desktop/Files/";
+						$url = "http://softeng.mikedlv.com/videos/$video_name";
+						$sql = "INSERT INTO videos (name, url) VALUE ('$video_name','$url')";
+						$result = mysqli_query($con, $sql);
+						if(!isset($result)){
+							echo("error database");			
+						}
+					}
+					?>
+					  <form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
+			  			<div class="row" align="center">
+						<input   type="file" name = "video">
+						</div><br><br>
+						<div class="row" align="center">
+						<input type="submit"  name= "upload" value="Upload video">
+						</div>
+					</form>
+				<br><br><br><br>
+				<form id="goBackMain" align="center" action="mainPage.php" method="POST">
+					<p> Go back to <input type="submit" value="MainPage"></p>  
+				</form>
+			
+				<?php
+						if(isset($_POST['upload']))
+						{
+							echo "<br />".$name." has been uploaded";
+						}
+				?>
+				<a href="#" class="image featured"><img src="main/images/pic08.jpg" alt="" /></a>
+							
 						</div>
 					</section>
 
@@ -249,7 +235,7 @@ session_start();
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Video Hog. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</div>
