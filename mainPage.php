@@ -41,7 +41,31 @@ session_start();
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="main/images/userIcon.jpg" alt="" /></span>
-							<h1 id="title"><?php echo $_SESSION["user"]; ?></h1>
+							
+							<!-- Display Name by Miguel -->
+							<?php
+								$user_name = "root";
+								$password = "softeng";
+								$database = "softeng";
+								$server = "localhost";
+		
+								$db_handle = mysql_connect($server, $user_name, $password);
+								$db_found = mysql_select_db($database, $db_handle);
+		
+								$username=$_SESSION["user"];
+		
+								$query=sprintf("SELECT ID, fname, lname, FROM users WHERE user_login = '%s'"
+									, mysql_real_escape_string($username));
+
+								if ($db_found) {
+									$result = mysql_query($query);
+									if ($result && mysql_num_rows($result) > 0)
+									{
+										$row=mysql_fetch_assoc($result);
+
+										$fullname=sprintf("'%s' '%s'", $row['fname'], $row['lname']);
+
+							<h1 id="title"><?php echo $username; ?></h1>
 							<p>Brief description</p>
 						</div>
 
