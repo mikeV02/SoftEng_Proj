@@ -1,4 +1,4 @@
-<!--
+
 <!doctype html>
 <html lang="en-US">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -11,8 +11,9 @@
 <meta charset = "utf-8">
 <title> Find Video</title>
 </head>
--->
+<!--
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-->
 <!--
 Design by TEMPLATED
 http://templated.co
@@ -22,6 +23,7 @@ Description: A two-column, fixed-width design with dark color scheme.
 Version    : 1.0
 Released   : 20140107
 -->
+<!--
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,6 +36,7 @@ Released   : 20140107
 	<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
+-->
 <body>
 <div id="header" class="container">
 	<div id="logo">
