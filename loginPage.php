@@ -80,7 +80,6 @@ Released   : 20140107
 			if ($result && mysql_num_rows($result) > 0)
 			{
 				$row=mysql_fetch_assoc($result);
-				echo $row['user_email']; 
 				
 				$ps=$row['user_pass'];
 				$eps=$_POST["password_log"];
