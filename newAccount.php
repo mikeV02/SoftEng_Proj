@@ -1,4 +1,4 @@
-<html  lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!--<html  lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,19 @@ function account_Validation() {
 	//Whatever was here was not doing anything.
 }
 </script>
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+<title>Video Hog</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" />
+	<link href="home/default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
 
 <!-- Added by Fabian Monasterio -->
 <!-- Code below should create new user in the database without any problems. -->
@@ -75,7 +87,7 @@ function account_Validation() {
 	}
 ?>
 
-<head>
+
 <body>
 <div id="header" class="container">
 	<div id="logo">
