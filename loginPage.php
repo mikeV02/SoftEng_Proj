@@ -76,7 +76,7 @@ Released   : 20140107
 			{
 				$row=mysql_fetch_assoc($result);
 				
-				if ($username!==$row['user_login'];)
+				if ($username!==$row['user_login']
 				{
 					$message = "Username not found";
 					echo "<script type='text/javascript'>
