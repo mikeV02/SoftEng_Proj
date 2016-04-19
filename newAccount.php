@@ -22,6 +22,7 @@ Released   : 20140107
 </head>
 <body>
 
+<!--
 <div id="main">
 	<div id="tray" class="topbar" style="width: auto;">
 		<div class="fill">
@@ -40,8 +41,8 @@ Released   : 20140107
 		</div>
 	</div>
 </div>
-
-<!--	
+-->
+	
 <div id="header" class="container">
 	<div id="logo">
 		<h1><a href="http://softeng.mikedlv.com/">Video Hog</a></h1>
@@ -54,7 +55,7 @@ Released   : 20140107
 		</ul>
 	</div>
 </div>
--->
+
 <!-- Added by Fabian Monasterio -->
 <!-- Code below should create new user in the database without any problems. -->
 <?php
