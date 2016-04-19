@@ -50,6 +50,14 @@ Released   : 20140107
 			</a></li>
 			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
 			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+			<?php
+				if(isset($_SESSION["user"]))
+				{
+					echo "<li><a href='logout.php' accesskey='6' title='Logout'>";
+			
+				}
+			?>
+			</a></li>
 		</ul>
 	</div>
 </div>
