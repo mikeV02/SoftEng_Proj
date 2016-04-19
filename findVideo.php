@@ -61,8 +61,8 @@ Released   : 20140107
         <div class="row">
             <div class="col-sm-6" align="center">
                 <p> Video name: <input style="margin-left:30px" type="text" id="videoToFind" name="videoToFind" ng-model="videoName" placeholder="Enter name here"></p>
-            </div>
-            <div class="col-sm-3" align="center">
+          <!--  </div>
+            <div class="col-sm-3" align="center"> -->
                 <button type="submit" class="btn btn-info" align="center">
                     <span class="glyphicon glyphicon-search"></span> Search
                 </button>
