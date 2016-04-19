@@ -22,7 +22,7 @@ Released   : 20140107
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title><a href="http://softeng.mikedlv.com/" accesskey="1" title="">Video Hog</a></title>
+<title>Video Hog</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" />
@@ -33,7 +33,7 @@ Released   : 20140107
 <body>
 <div id="header" class="container">
 	<div id="logo">
-		<h1><a href=>Video Hog</a></h1>
+		<h1><a href="http://softeng.mikedlv.com/">Video Hog</a></h1>
 	</div>
 	<div id="menu">
 		<ul>
