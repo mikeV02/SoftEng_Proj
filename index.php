@@ -37,22 +37,6 @@ Released   : 20140107
 		</ul>
 	</div>
 </div>
-	<section class="loginform cf">
-		<form name="login" action="index_submit" method="get" accept-charset="utf-8">
-			<ul>
-				<li>
-					<label for="usermail">User</label>
-					<input type="text" name="user" placeholder="User name" required>
-				</li>
-				<li>
-					<label for="password">Password</label>
-					<input type="password" name="password" placeholder="password" required></li>
-				<li>
-					<input type="submit" value="Login">
-				</li>
-			</ul>
-		</form>
-	</section>
 <div id="banner">
 	<div class="container">
 		<ul class="staff">
@@ -69,6 +53,20 @@ Released   : 20140107
 			<li><a href="home/video.html" class="button">Find featured videos</a></li>
 		</ul>
 	</div>
+		<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+			<ul>
+				<li>
+					<label for="usermail">User <br></label>
+					<input type="text" name="user" placeholder="User name" required>
+				</li>
+				<li>
+					<label for="password">Password<br></label>
+					<input type="password" name="password" placeholder="password" required></li>
+				<li>
+					<input type="submit" value="Login">
+				</li>
+			</ul>
+		</form>
 </div>
 
 <!--
