@@ -68,7 +68,7 @@ session_start();
 								}
 							?>
 
-							<h1 id="title"><?php echo $username; ?></h1>
+							<h1 id="title"><?php echo $fullname; ?></h1>
 							<p>Brief description</p>
 						</div>
 
