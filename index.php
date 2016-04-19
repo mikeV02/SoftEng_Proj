@@ -31,8 +31,6 @@ Released   : 20140107
 	<div id="menu">
 		<ul>
 			<!--<li class="current_page_item"><a href="http://softeng.mikedlv.com/" accesskey="1" title="">Homepage</a></li> -->
-			<li><input type="text" placeholder="name"/></li>
-			<li><input type="password" placeholder="password"/></li>
 			<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
 			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
 			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
