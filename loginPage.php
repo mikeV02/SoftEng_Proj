@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -82,7 +86,7 @@ Released   : 20140107
 					// Store Session Data
 					//$_SESSION['login_user']= $username;  // Initializing Session with value of PHP Variable
 					//echo $_SESSION['login_user'];
-					
+					$_SESSION['broadcast_user'] = $username;
 					$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
 					, mysql_real_escape_string($username));
 					
