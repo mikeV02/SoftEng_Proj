@@ -72,10 +72,13 @@ session_start();
         <script src="broadcast/broadcast.js"> </script> <!-- Multi-user connectivity handler -->
         
         <!-- This Library is used to detect WebRTC features -->
-        <script src="broadcast/DetectRTC.js"></script>
+        <script src="broadcast/DetectR<!--TC.js"></script>
     </head>
-
+<!--
     <body onunload="killBroadcast();">
+-->
+    <body>
+    	
         <article>
             <header style="text-align: center;">
                 <h1>Web Broadcasting Using WebRTC 
