@@ -33,12 +33,14 @@ Released   : 20140107
 	<div id="logo">
 		<h1><a href="http://softeng.mikedlv.com/"><font color="white">Video Hog</font></a></h1>
 	</div>
-	<div id="menu"><font color="white">
+	<div id="menu">
 		<ul>
+			<font color="white">
 			<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
 			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
 			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
-		</ul></font>
+		</font>
+		</ul>
 	</div>
 </div>
 	<!--ADDED BY MIGUEL
