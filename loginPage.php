@@ -115,12 +115,12 @@ Released   : 20140107
 
       <div class="input-group input-group-lg">
         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input type="text" class="form-control" placeholder="Username or email">
+        <input type="text" id="user_log" name="user_log" class="form-control" placeholder="Username or email">
           </div>
 
         <div class="input-group input-group-lg">
           <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" name="password_log" id="password_log" placeholder="Password">
         </div>
 
         <button type="submit" class="float">Login</button>
