@@ -104,7 +104,7 @@ session_start();
         
             <script>
 <?php
-if(!isset($_SESSION["broadcast_user"]))
+if(!isset($_SESSION["user"]))
 {
 	echo "var authorSection = document.getElementById('author-section');";
 	echo "authorSection.style.display = 'none';";
