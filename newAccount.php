@@ -21,6 +21,28 @@ Released   : 20140107
 
 </head>
 <body>
+
+<div id="main">
+	<div id="tray" class="topbar" style="width: auto;">
+		<div class="fill">
+			<div class="container">
+				<!--     ::before      -->
+				<a class="brand href="http://softeng.mikedlv.com/">
+					<img src="http://softeng.mikedlv.com//home/images/pic01">
+				</a>
+				<div id="menu">
+					<ul>
+						<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
+						<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
+						<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--	
 <div id="header" class="container">
 	<div id="logo">
 		<h1><a href="http://softeng.mikedlv.com/">Video Hog</a></h1>
@@ -33,7 +55,7 @@ Released   : 20140107
 		</ul>
 	</div>
 </div>
-
+-->
 <!-- Added by Fabian Monasterio -->
 <!-- Code below should create new user in the database without any problems. -->
 <?php
