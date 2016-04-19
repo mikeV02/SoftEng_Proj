@@ -60,12 +60,13 @@ Released   : 20140107
     <div ng-app="">
         <div class="row">
             <div class="col-sm-6" align="center">
-                <p> Video name: <input style="margin-left:30px" type="text" id="videoToFind" name="videoToFind" ng-model="videoName" placeholder="Enter name here"></p>
+                <p> Video name: <input style="margin-left:30px" type="text" id="videoToFind" name="videoToFind" ng-model="videoName" placeholder="Enter name here">
           <!--  </div>
             <div class="col-sm-3" align="center"> -->
                 <button type="submit" class="btn btn-info" align="center">
                     <span class="glyphicon glyphicon-search"></span> Search
                 </button>
+                </p>
             </div>
         </div>
         
