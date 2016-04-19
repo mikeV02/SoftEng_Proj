@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 Design by TEMPLATED
@@ -33,7 +36,18 @@ Released   : 20140107
 	<div id="menu">
 		<ul>
 			<!--<li class="current_page_item"><a href="http://softeng.mikedlv.com/" accesskey="1" title="">Homepage</a></li> -->
-			<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
+			<li><a href="loginPage.php" accesskey="3" title="">
+			<?php
+				if(isset($_SESSION["user"]))
+				{
+					echo $_SESSION["user"];
+				}
+				else
+				{
+					echo "Login";
+				}
+			?>
+			</a></li>
 			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
 			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
 		</ul>
