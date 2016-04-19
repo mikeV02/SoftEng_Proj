@@ -26,7 +26,7 @@ Released   : 20140107
 	<div id="tray" class="topbar" style="width: auto;">
 		<div class="fill">
 			<div class="container">
-				<!--     ::before      -->
+				::before     
 				<div id="logo">
 					<h1><a href="http://softeng.mikedlv.com/">Video Hog</a></h1>
 				</div>
@@ -37,6 +37,7 @@ Released   : 20140107
 						<li><a href="#" accesskey="5" title="">Contact Us</a></li>
 					</ul>
 				</div>
+				::after
 			</div>
 		</div>
 	</div>
