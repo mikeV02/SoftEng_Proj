@@ -37,6 +37,22 @@ Released   : 20140107
 		</ul>
 	</div>
 </div>
+	<section class="loginform cf">
+		<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+			<ul>
+				<li>
+					<label for="usermail">User</label>
+					<input type="email" name="user" placeholder="User name" required>
+				</li>
+				<li>
+					<label for="password">Password</label>
+					<input type="password" name="password" placeholder="password" required></li>
+				<li>
+					<input type="submit" value="Login">
+				</li>
+			</ul>
+		</form>
+	</section>
 <div id="banner">
 	<div class="container">
 		<ul class="staff">
