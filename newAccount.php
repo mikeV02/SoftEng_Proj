@@ -27,9 +27,9 @@ Released   : 20140107
 		<div class="fill">
 			<div class="container">
 				<!--     ::before      -->
-				<a class="brand href="http://softeng.mikedlv.com/">
-					<img src="http://softeng.mikedlv.com//home/images/pic01.jpg">
-				</a>
+				<div id="logo">
+					<h1><a href="http://softeng.mikedlv.com/">Video Hog</a></h1>
+				</div>
 				<div id="menu">
 					<ul>
 						<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
