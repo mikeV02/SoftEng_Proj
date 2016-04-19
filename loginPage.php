@@ -81,12 +81,10 @@ Released   : 20140107
 				
 				if ($ps==$hashpass)
 				{
-					//Trying to set SESSION ID
-					//session_start();
-					// Store Session Data
-					//$_SESSION['login_user']= $username;  // Initializing Session with value of PHP Variable
-					//echo $_SESSION['login_user'];
-					$_SESSION["broadcast_user"] = $username;
+					// SESSION ID by Miguel
+					$_SESSION['valid'] = true;
+					
+					$_SESSION["user"] = $username;
 					$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
 					, mysql_real_escape_string($username));
 					

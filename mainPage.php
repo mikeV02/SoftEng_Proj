@@ -41,7 +41,7 @@ session_start();
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="main/images/userIcon.jpg" alt="" /></span>
-							<h1 id="title"><?php echo $_GET["userID"]; ?></h1>
+							<h1 id="title"><?php echo $_SESSION["user"]; ?></h1>
 							<p>Brief description</p>
 						</div>
 
