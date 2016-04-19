@@ -31,6 +31,7 @@ Released   : 20140107
 -->
 
 <body>
+<link rel="stylesheet" href="style.css">   
 <div id="header" class="container">
 	<div id="logo">
 		<h1><a href="http://softeng.mikedlv.com/">Video Hog</a></h1>
