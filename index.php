@@ -31,7 +31,7 @@ Released   : 20140107
 <body>
 <div id="header" class="container">
 	<div id="logo">
-		<h1><a href=>Video Hog</a></h1>
+		<h1><a href=><font color="red">Video Hog</font></a></h1>
 	</div>
 	<div id="menu">
 		<ul>
