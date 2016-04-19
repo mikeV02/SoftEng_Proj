@@ -71,7 +71,7 @@ session_start();
 
 								echo "<h1 id='title'>$finame $laname</h1>";
 							?>
-							<p><a href="logout.php"><img src="https://www.idldisplays.com/images/button-logout.png" width="80" height="15"></a></p>
+							<p><a href="logout.php"><img src="https://www.idldisplays.com/images/button-logout.png" width="75" height="20"></a></p>
 						</div>
 
 					<!-- Nav -->
