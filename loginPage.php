@@ -85,8 +85,7 @@ Released   : 20140107
 					$_SESSION['valid'] = true;
 					
 					$_SESSION["user"] = $username;
-					$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
-					, mysql_real_escape_string($username));
+					$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php");
 					
 					echo "<script type='text/javascript'>
 					window.location.href='$redirect';
