@@ -68,7 +68,7 @@ session_start();
 								}
 							
 
-								echo '<h1 id="title">'$fullname'</h1>';
+								echo '<h1 id="title">'+$fullname+'</h1>';
 							?>
 							<p>Brief description</p>
 						</div>
