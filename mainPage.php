@@ -64,6 +64,7 @@ session_start();
 										$row=mysql_fetch_assoc($result);
 
 										$fullname=sprintf("'%s' '%s'", $row['fname'], $row['lname']);
+							?>
 
 							<h1 id="title"><?php echo $username; ?></h1>
 							<p>Brief description</p>
