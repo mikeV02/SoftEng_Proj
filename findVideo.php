@@ -52,9 +52,6 @@ Released   : 20140107
 	</div>
 </div>
 
-
-
-
 <body>
 <form align="center" action="findVideo.php" method="POST">
     <div ng-app="">
@@ -91,7 +88,7 @@ if (isset($_POST['videoToFind'])) {
 	$check = mysqli_query($con, $sql);
 	if($video = mysqli_fetch_array($check, MYSQLI_NUM)){
 ?>
-	<video width="640" height="480" controls>
+	<video width="640" height="480" align="center" controls>
 	  <source src='<?php echo $vid_name ?>' type="video/mp4">
 	Your browser does not support the video tag.
 	</video>
