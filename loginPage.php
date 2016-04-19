@@ -21,7 +21,7 @@ session_start();
 		<link href="home/default.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
 		
-	<!--	<link rel="stylesheet" href="style.css">   -->
+		<link rel="stylesheet" href="style.css">   
 	</head>
 
 <!--
@@ -106,7 +106,7 @@ Released   : 20140107
 			mysql_close($db_handle);
 		}
 	?>
-	<link rel="stylesheet" href="style.css">   
+ 
 <div class="login">
   <div class="heading">
     <h2>Sign in</h2>
