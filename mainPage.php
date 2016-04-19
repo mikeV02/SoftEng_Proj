@@ -186,8 +186,6 @@ session_start();
 							echo "<br />".$name." has been uploaded";
 						}
 				?>
-				<a href="#" class="image featured"><img src="main/images/pic08.jpg" alt="" /></a>
-							
 						</div>
 					</section>
 
