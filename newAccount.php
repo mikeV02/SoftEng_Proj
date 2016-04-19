@@ -75,7 +75,24 @@ function account_Validation() {
 	}
 ?>
 
-	<head>
+<head>
+<body>
+<div id="header" class="container">
+	<div id="logo">
+		<h1><a href=>Video Hog</a></h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="http://softeng.mikedlv.com/" accesskey="1" title="">Homepage</a></li>
+			<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
+			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
+			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+	
+		
+<!--		
 		<title>	CSCE Group 15's project</title>
 	</head>
 	<div class="container">
@@ -90,7 +107,8 @@ function account_Validation() {
     			</div>
   		</div>
   	</div>
-	<body align="center" style="background-color:#540">
+<body align="center" style="background-color:#540"> -->
+		
 <!-- added by Fabian M. -->			
 	<form action="newAccount.php" method="post" onsubmit="true">
 		First Name:
