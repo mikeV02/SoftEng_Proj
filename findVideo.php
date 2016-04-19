@@ -41,7 +41,7 @@ if (isset($_POST['videoToFind'])) {
 		die('Not connected : '.mysql_error());
 	}
 
-	$sql = "SELECT * FROM videos WHERE name = '$vid_name' ";
+	$sql = "SELECT * FROM videos WHERE name = '$vid_name'.".mp4" ";
 	$check = mysqli_query($con, $sql);
 	if($video = mysqli_fetch_array($check, MYSQLI_NUM)){
 ?>
