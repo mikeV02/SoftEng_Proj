@@ -46,7 +46,7 @@ Released   : 20140107
 		</ul>
 		<div class="title">
 			<h2>Share your thoughts</h2>
-			<span class="byline"> Learning and sharing as you have not experienced before.</span>
+			<span class="byline"> Learning and sharing as you have not experienced before!</span>
 		</div>
 		<p></p>
 		<ul class="actions">
