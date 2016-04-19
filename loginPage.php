@@ -65,7 +65,7 @@ Released   : 20140107
 		
 		$username=$_POST["user_log"];
 		
-		$query=sprintf("SELECT ID, user_login, user_pass, user_email, display_name FROM users WHERE user_login = '%s'"
+		$query=sprintf("SELECT user_login, user_pass FROM users WHERE user_login = '%s'"
 				, mysql_real_escape_string($username));
 
 		if ($db_found)
@@ -103,10 +103,13 @@ Released   : 20140107
 			}
 			else
 			{
-				$message = "Username not found";
-				echo "<script type='text/javascript'>
-					alert('$message');
-					</script>";
+				if ($username != "")
+				{
+					$message = "Username not found";
+					echo "<script type='text/javascript'>
+						alert('$message');
+						</script>";
+				}
 			}
 		}
 		else
