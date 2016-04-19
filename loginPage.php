@@ -53,6 +53,15 @@ Released   : 20140107
 	-->
 	
 	<?php
+		if(isset($_SESSION["user"]))
+		{
+			$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php");
+					
+			echo "<script type='text/javascript'>
+				window.location.href='$redirect';
+				</script>";
+		}
+		
 		$user_name = "root";
 		$password = "softeng";
 		$database = "softeng";
