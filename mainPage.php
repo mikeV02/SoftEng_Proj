@@ -102,11 +102,8 @@ session_start();
 
 				<div class="bottom">
 
-					<!-- Social Icons -->
+					<!-- Other links  Icons -->
 						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 
 				</div>
