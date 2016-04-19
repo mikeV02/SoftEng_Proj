@@ -89,7 +89,7 @@ Released   : 20140107
 					$eps=$_POST["password_log"];
 					
 					//HASH BY MIGUEL
-					$hashpass = hash("sha256", $eps);;
+					$hashpass = hash("sha256", $eps);
 					
 					if ($ps==$hashpass)
 					{
