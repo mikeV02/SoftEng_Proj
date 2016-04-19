@@ -7,21 +7,11 @@
 	<title>CSCE Group 15's project</title>
 
 	<head>
-		<title>	CSCE Group 15's project</title>
+		<title>	Video Hog</title>
+		<link rel="stylesheet" href="style.css">
 	</head>
-	<div class="container">
-		<div class="jumbotron">
-			<div class="row">
-    				<div class="col-sm-8">
-    					<h1 align="left">Welcom to Video Hog!</h>
-    				</div>
-    				<div class="col-sm-4">
-    					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
-    				</div>
-    			</div>
-  		</div>
-  	</div>
-	<body align="center" style="background-color:#247"> 
+
+
 
 	<!--ADDED BY MIGUEL
 		This is using PHP to work with the DataBase
@@ -82,6 +72,25 @@
 		}
 	?>
 	
+<div class="login">
+  <div class="heading">
+    <h2>Sign in</h2>
+    <form action="#">
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input type="text" class="form-control" placeholder="Username or email">
+          </div>
+
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+          <input type="password" class="form-control" placeholder="Password">
+        </div>
+
+        <button type="submit" class="float">Login</button>
+       </form>
+ 		</div>
+ </div>
 <div class="container">
   <h2>Login Form</h2>
   <form align ="center" role="form" method="post" onsubmit="true">
