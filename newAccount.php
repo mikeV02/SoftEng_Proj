@@ -52,17 +52,14 @@ Released   : 20140107
 	$hashpass = hash("sha256", $passreg);
 	
 	$con = mysqli_connect("localhost", $username, $password, $db);
-	/*$sql = "INSERT INTO users (ID, user_login, user_pass, user_email, user_registered, user_status, display_name)
-		VALUES(NULL, '$user_nam', '$passreg', '$uemail', NULL, 0, '$user_nam')";*/
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
 		
 	$sql = "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$user_nam', '$hashpass', '$uemail', NULL, 0, '$user_nam')";
+	//Username check in db by Fabian M.
 	$check= "SELECT * FROM users WHERE user_login = '$user_nam' ";
 	$rs = mysqli_query($con,$check);
-	//$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-
 	if((isset($user_nam)) && (isset($uemail)) && (isset($passreg)) && (isset($passcheck))){
 		if($data = mysqli_fetch_array($rs, MYSQLI_NUM)){
 			echo "User already exists in out records.";
@@ -100,26 +97,6 @@ Released   : 20140107
 		}
 	}
 ?>
-
-
-	
-		
-<!--		
-		<title>	CSCE Group 15's project</title>
-	</head>
-	<div class="container">
-		<div class="jumbotron">
-			<div class="row">
-    				<div class="col-sm-8">
-    					<h1 align="left">Welcome to Video Hog!</h>
-    				</div>
-    				<div class="col-sm-4">
-    					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
-    				</div>
-    			</div>
-  		</div>
-  	</div>
-<body align="center" style="background-color:#540"> -->
 		
 <!-- added by Fabian M. -->	
 <div class="container" align="center">
