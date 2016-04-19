@@ -1,3 +1,4 @@
+<!--
 <!doctype html>
 <html lang="en-US">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -10,6 +11,45 @@
 <meta charset = "utf-8">
 <title> Find Video</title>
 </head>
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+Name       : Pastime 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140107
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Video Hog</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" />
+	<link href="home/default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+<div id="header" class="container">
+	<div id="logo">
+		<h1><a href="http://softeng.mikedlv.com/">Video Hog</a></h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="loginPage.php" accesskey="3" title="" color="white">Login</a></li>
+			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
+			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
 
 <body>
 <form align="center" action="findVideo.php" method="POST">
@@ -59,95 +99,8 @@ if (isset($_POST['videoToFind'])) {
 }
 ?>
 
-
-
 <form id="goBackMain" align="center" action="mainPage.php" method="POST">
 <p> Go back to <input type="submit" value="MainPage"></p>  
 </form>
 </body>
 </html>
-
-
-
-
-<!--
-<!doctype html>
-<html lang="en-US">
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<head>
-
-<meta charset = "utf-8">
-<title> Find Video</title>
-</head>
-<div class="container">
-		<div class="jumbotron">
-			<div class="row">
-    				<div class="col-sm-8">
-    					<h1 align="left">Search Video</h>
-    				</div>
-    				<div class="col-sm-4">
-    					<img src="indexImage.PNG" class="img-rounded" align "right" alt="Cinque Terre" width="220" height="150">
-    				</div>
-    			</div>
-  		</div>
-  	</div>
-
-<body>
-<?php
-/*
-if (isset($_POST['videoToFind'])) 
-{
-$db = "softeng";
-$password = "softeng";
-$username = "root";
-$db2 = "videos";
-$con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not connect to SQL:'. mysqli_connect_error());
-//display videos that are in database
-$sql = "SELECT * FROM videos ";
-$result = mysqli_query($con, $sql);
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        //echo "url: " . $row['url']. "<br>";
-    }
-} else {
-    echo "0 results";
-}
-//to do:
-//check if the name searched exists in the data base and then play the video
-//if it does not exist show an error message
-echo"<video width='320' height='240' controls>";
-echo"<source src='videos/tst2.mp4' type='video/mp4'>";
-echo " Your browser does not support the video tag.";
-echo "</video>";
-mysqli_close($con);
-}
-*/
-?>
-
-<form align="center" action="findVideo.php" method="POST">
-    <div ng-app="">
-        <div class="row">
-            <div class="col-sm-6" align="right">
-                <p> Video name: <input style="margin-left:30px" type="text" name="videoToFind" ng-model="videoName" placeholder="Enter name here"></p>
-            </div>
-            <div class="col-sm-3" align="left">
-                <button type="submit" class="btn btn-info">
-                    <span class="glyphicon glyphicon-search"></span> Search
-                </button>
-            </div>
-        </div>
-        <h1>You will search "{{videoName}}" </h1>
-    </div>
-</form>
-<form id="goBackMain" align="center" action="mainPage.php" method="POST">
-<p> Go back to <input type="submit" value="MainPage"></p>  
-</form>
-</body>
-</html>
--->
