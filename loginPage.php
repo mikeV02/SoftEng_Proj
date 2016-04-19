@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<html xmlns="http://www.w3.org/1999/xhtml">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -21,7 +21,31 @@
     			</div>
   		</div>
   	</div>
-	<body align="center" style="background-color:#247">
+	<body align="center" style="background-color:#247"> -->
+<html>
+	<body>
+	<div class="container">
+		<section id="content">
+			<form action="">
+				<h1>Login Form</h1>
+				<div>
+					<input type="text" placeholder="Username" required="" id="username" />
+				</div>
+				<div>
+					<input type="password" placeholder="Password" required="" id="password" />
+				</div>
+				<div>
+					<input type="submit" value="Log in" />
+					<a href="#">Lost your password?</a>
+					<a href="#">Register</a>
+				</div>
+			</form><!-- form -->
+			<div class="button">
+				<a href="#">Download source file</a>
+			</div><!-- button -->
+		</section><!-- content -->
+	</div><!-- container -->
+	</body>
 	<!--ADDED BY MIGUEL
 		This is using PHP to work with the DataBase
 	-->
