@@ -63,12 +63,13 @@ session_start();
 									{
 										$row=mysql_fetch_assoc($result);
 
-										$fullname=sprintf("'%s' '%s'", $row['fname'], $row['lname']);
+										$fname=$row['fname'];
+										$lname=$row['lname'];
 									}
 								}
 							
 
-								echo '<h1 id="title">'+$fullname+'</h1>';
+								echo '<h1 id="title">'+$fname+' '+$lname+'</h1>';
 							?>
 							<p>Brief description</p>
 						</div>
