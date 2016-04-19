@@ -67,9 +67,9 @@ session_start();
 										$laname=$row['lname'];
 									}
 								}
-							
+								mysql_close($db_handle);
 
-								echo "<h1 id='title'>$username</h1>";
+								echo "<h1 id='title'>$finame</h1>";
 							?>
 							<p>Brief description</p>
 						</div>
