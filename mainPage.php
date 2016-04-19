@@ -62,17 +62,14 @@ session_start();
 									if ($result && mysql_num_rows($result) > 0)
 									{
 										$row=mysql_fetch_assoc($result);
-										$message = $row['fname'];
-										echo "<script type='text/javascript'>
-											alert('$message');
-											</script>";
+										
 										$finame=$row['fname'];
 										$laname=$row['lname'];
 									}
 								}
 								mysql_close($db_handle);
 
-								echo "<h1 id='title'>$finame</h1>";
+								echo "<h1 id='title'>$username</h1>";
 							?>
 							<p>Brief description</p>
 						</div>
