@@ -35,11 +35,9 @@ Released   : 20140107
 	</div>
 	<div id="menu">
 		<ul>
-			<font color="white">
-			<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
-			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
-			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
-		</font>
+			<li><a href="loginPage.php" accesskey="3" title=""><font color="white">Login</font></a></li>
+			<li><a href="newAccount.php" accesskey="4" title=""><font color="white">Create account</font></a></li>
+			<li><a href="#" accesskey="5" title=""><font color="white">Contact Us</font></a></li>
 		</ul>
 	</div>
 </div>
