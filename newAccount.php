@@ -131,7 +131,8 @@ Released   : 20140107
   	</div>
 <body align="center" style="background-color:#540"> -->
 		
-<!-- added by Fabian M. -->			
+<!-- added by Fabian M. -->	
+<div class="container">
 	<form action="newAccount.php" method="post" onsubmit="true">
 		First Name:
 		<input type="text" name="ufname" id="ufname" value=""><br>
@@ -148,6 +149,7 @@ Released   : 20140107
 		
 	<input type="submit" value="Register">
 	</form>
+</div>
 </body>
 </html>
 
