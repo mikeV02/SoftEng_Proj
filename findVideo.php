@@ -45,8 +45,8 @@ if (isset($_POST['videoToFind'])) {
 	$check = mysqli_query($con, $sql);
 	if($video = mysqli_fetch_array($check, MYSQLI_NUM)){
 ?>
-		<video width="320" height="240" controls>
-		<source src="main/'$vid_name'" type="video/mp4">
+		<video width="320" height="240" controls align="center">
+		<source src='$vid_name' type="video/mp4">
 		</video>
 <?php
 	} else {
