@@ -53,20 +53,25 @@ Released   : 20140107
 			<li><a href="home/video.html" class="button">Find featured videos</a></li>
 		</ul>
 	</div>
-		<form name="login" action="index_submit" method="get" accept-charset="utf-8">
-			<ul>
-				<li>
-					<label for="usermail">User <br></label>
-					<input type="text" name="user" placeholder="User name" required>
-				</li>
-				<li>
-					<label for="password">Password<br></label>
-					<input type="password" name="password" placeholder="password" required></li>
-				<li>
-					<input type="submit" value="Login">
-				</li>
-			</ul>
-		</form>
+<div class="login">
+  <div class="heading">
+    <h2>Sign in</h2>
+    <form action="#">
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input type="text" class="form-control" placeholder="Username or email">
+          </div>
+
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+          <input type="password" class="form-control" placeholder="Password">
+        </div>
+
+        <button type="submit" class="float">Login</button>
+       </form>
+ 		</div>
+ </div>
 </div>
 
 <!--
