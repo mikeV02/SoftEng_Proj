@@ -64,7 +64,6 @@ Released   : 20140107
 		$db_found = mysql_select_db($database, $db_handle);
 		
 		$username=$_POST["user_log"];
-		echo $username;
 		
 		$query=sprintf("SELECT ID, user_login, user_pass, user_email, display_name FROM users WHERE user_login = '%s'"
 				, mysql_real_escape_string($username));
@@ -76,6 +75,7 @@ Released   : 20140107
 			{
 				$row=mysql_fetch_assoc($result);
 				
+				echo $username;
 				if ($username != $row['user_login'])
 				{
 					$message = "Username not found";
