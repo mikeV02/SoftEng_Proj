@@ -86,7 +86,7 @@ Released   : 20140107
 					// Store Session Data
 					//$_SESSION['login_user']= $username;  // Initializing Session with value of PHP Variable
 					//echo $_SESSION['login_user'];
-					$_SESSION['broadcast_user'] = $username;
+					$_SESSION["broadcast_user"] = $username;
 					$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php?userID=%s"
 					, mysql_real_escape_string($username));
 					
