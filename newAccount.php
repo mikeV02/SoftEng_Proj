@@ -40,7 +40,7 @@ Released   : 20140107
 			</div>
 		</div>
 	</div>
-</div>
+<!-- </div>   -->
 
 <!--	
 <div id="header" class="container">
@@ -153,6 +153,7 @@ Released   : 20140107
 		
 	<input type="submit" value="Register">
 	</form>
+</div>
 </div>
 </body>
 </html>
