@@ -66,9 +66,10 @@ session_start();
 										$fullname=sprintf("'%s' '%s'", $row['fname'], $row['lname']);
 									}
 								}
-							?>
+							
 
-							<h1 id="title"><?php echo $fullname; ?></h1>
+							echo "<h1 id="title">$fullname</h1>";
+							?>
 							<p>Brief description</p>
 						</div>
 
