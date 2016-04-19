@@ -53,11 +53,10 @@ Released   : 20140107
 			<?php
 				if(isset($_SESSION["user"]))
 				{
-					echo "<li><a href='logout.php' accesskey='6' title='Logout'>";
+					echo "<li><a href='logout.php' accesskey='6' title=''>Logout</a></li>";
 			
 				}
 			?>
-			</a></li>
 		</ul>
 	</div>
 </div>
