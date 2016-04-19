@@ -67,12 +67,12 @@ session_start();
         </script>
         
         <!-- scripts used for broadcasting -->
-        <script src="firebase.js"> </script> <!-- Signaling -->
-        <script src="RTCPeerConnection-v1.5.js"> </script> <!-- WebRTC simple wrapper -->
-        <script src="broadcast.js"> </script> <!-- Multi-user connectivity handler -->
+        <script src="broadcast/firebase.js"> </script> <!-- Signaling -->
+        <script src="broadcast/RTCPeerConnection-v1.5.js"> </script> <!-- WebRTC simple wrapper -->
+        <script src="broadcast/broadcast.js"> </script> <!-- Multi-user connectivity handler -->
         
         <!-- This Library is used to detect WebRTC features -->
-        <script src="DetectRTC.js"></script>
+        <script src="broadcast/DetectRTC.js"></script>
     </head>
 
     <body>
