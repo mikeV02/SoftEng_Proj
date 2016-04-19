@@ -175,7 +175,7 @@ session_start();
 						}
 					}
 					?>
-					  <form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
+					  <form action = #  align="center" method = "POST" enctype ="multipart/form-data">
 			  			<div class="row" align="center">
 						<input   type="file" name = "video">
 						</div><br><br>
@@ -183,11 +183,6 @@ session_start();
 						<input type="submit"  name= "upload" value="Upload video">
 						</div>
 					</form>
-				<br><br><br><br>
-				<form id="goBackMain" align="center" action="mainPage.php" method="POST">
-					<p> Go back to <input type="submit" value="MainPage"></p>  
-				</form>
-			
 				<?php
 						if(isset($_POST['upload']))
 						{
