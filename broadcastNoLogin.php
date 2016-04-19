@@ -99,6 +99,7 @@ session_start();
         
             <script>
 <?php
+/*
 if(!isset($_SESSION["broadcast_user"]))
 {
 	echo "var authorSection = document.getElementById('author-section');";
@@ -106,6 +107,7 @@ if(!isset($_SESSION["broadcast_user"]))
 	echo "var loginSection = document.getElementById('login-section');";
 	echo "loginSection.style.display = '';";
 }
+*/
 ?>
                 var config = {
                     openSocket: function(config) {        
