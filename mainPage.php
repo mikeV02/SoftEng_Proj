@@ -175,7 +175,7 @@ session_start();
 						}
 					}
 					?>
-					  <form action = #  align="center" method = "POST" enctype ="multipart/form-data">
+					  <form action = "mainPage.php"  align="center" method = "POST" enctype ="multipart/form-data">
 			  			<div class="row" align="center">
 						<input   type="file" name = "video">
 						</div><br><br>
@@ -202,10 +202,6 @@ session_start();
 								<h2>Contact</h2>
 							</header>
 
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
 
 							<form method="post" action="#">
 								<div class="row">
