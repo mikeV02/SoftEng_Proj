@@ -21,40 +21,7 @@ Released   : 20140107
 
 </head>
 <body>
-<div class="navbar navbar-fixed-top" style="width: auto;">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target="nav.collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			<a class="brand" href="http://softeng.mikedlv.com/">
-				<!--     <img src="logo.png" alt="VideoHog">    -->
-					VideoHog
-			</a>
-			<div class="nav-collapse">
-				<ul class="nav pull-right">
-					<li><a href="loginPage.php" accesskey="3" title="">Login</a></li>
-					<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
-					<li><a href="#" accesskey="5" title="">Contact Us</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-<!--
+
 <div id="main">
 	<div id="tray" class="topbar" style="width: auto;">
 		<div class="fill">
@@ -72,7 +39,7 @@ Released   : 20140107
 			</div>
 		</div>
 	</div>
-<!-- </div>   -->
+</div>
 
 <!--	
 <div id="header" class="container">
