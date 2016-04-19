@@ -63,8 +63,8 @@ session_start();
 									{
 										$row=mysql_fetch_assoc($result);
 
-										$fname=$row['fname'];
-										$lname=$row['lname'];
+										$finame=$row['fname'];
+										$laname=$row['lname'];
 									}
 								}
 							
