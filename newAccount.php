@@ -7,13 +7,6 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
 <script type="text/javascript"></script>
 	<title>CSCE Group 15's project</title>
-
-<script type="text/javascript">
-
-function account_Validation() {
-	//Whatever was here was not doing anything.
-}
-</script>
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
@@ -29,7 +22,7 @@ Released   : 20140107
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Video Hog</title>
+<title><a href="http://softeng.mikedlv.com/" accesskey="1" title="">Video Hog</a></title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" />
