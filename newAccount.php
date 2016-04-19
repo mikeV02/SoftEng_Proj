@@ -28,7 +28,7 @@ Released   : 20140107
 			<div class="container">
 				<!--     ::before      -->
 				<a class="brand href="http://softeng.mikedlv.com/">
-					<img src="http://softeng.mikedlv.com//home/images/pic01">
+					<img src="http://softeng.mikedlv.com//home/images/pic01.jpg">
 				</a>
 				<div id="menu">
 					<ul>
