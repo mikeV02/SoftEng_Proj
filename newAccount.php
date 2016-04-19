@@ -114,7 +114,7 @@ Released   : 20140107
 <body align="center" style="background-color:#540"> -->
 		
 <!-- added by Fabian M. -->	
-<div class="container" align="justify">
+<div class="container" align="center">
 	<form action="newAccount.php" method="post" onsubmit="true">
 		First Name:
 		<input type="text" name="ufname" id="ufname" value=""><br>
