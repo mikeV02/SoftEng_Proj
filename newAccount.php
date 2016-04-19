@@ -21,7 +21,7 @@ Released   : 20140107
 
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top" style="width: auto;">
 	<div class="navbar-inner">
 		<div class="container">
 			<a class="btn btn-navbar" data-toggle="collapse" data-target="nav.collapse">
@@ -74,7 +74,7 @@ Released   : 20140107
 	</div>
 <!-- </div>   -->
 
-	
+<!--	
 <div id="header" class="container">
 	<div id="logo">
 		<h1><a href="http://softeng.mikedlv.com/">Video Hog</a></h1>
@@ -186,7 +186,7 @@ Released   : 20140107
 	<input type="submit" value="Register">
 	</form>
 </div>
-</div>
+
 </body>
 </html>
 
