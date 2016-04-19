@@ -46,7 +46,7 @@ if (isset($_POST['videoToFind'])) {
 	if($video = mysqli_fetch_array($check, MYSQLI_NUM)){
 ?>
 	<video width="640" height="480" controls>
-	  <source src='<?php $vid_name ?>' type="video/mp4">
+	  <source src='<?php echo $vid_name ?>' type="video/mp4">
 	Your browser does not support the video tag.
 	</video>
 <?php
