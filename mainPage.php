@@ -54,7 +54,7 @@ session_start();
 		
 								$username=$_SESSION["user"];
 		
-								$query=sprintf("SELECT ID, fname, lname, FROM users WHERE user_login = '%s'"
+								$query=sprintf("SELECT fname, lname FROM users WHERE user_login = '%s'"
 									, mysql_real_escape_string($username));
 
 								if ($db_found) {
@@ -69,7 +69,7 @@ session_start();
 								}
 								mysql_close($db_handle);
 
-								echo "<h1 id='title'>$username</h1>";
+								echo "<h1 id='title'>$finame $laname</h1>";
 							?>
 							<p>Brief description</p>
 						</div>
