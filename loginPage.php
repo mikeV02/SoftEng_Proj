@@ -66,7 +66,7 @@ Released   : 20140107
 		$username=$_POST["user_log"];
 		echo $username;
 		
-		$query=sprintf("SELECT ID, user_pass, user_email, display_name FROM users WHERE user_login = '%s'"
+		$query=sprintf("SELECT ID, user_login, user_pass, user_email, display_name FROM users WHERE user_login = '%s'"
 				, mysql_real_escape_string($username));
 
 		if ($db_found)
@@ -76,28 +76,40 @@ Released   : 20140107
 			{
 				$row=mysql_fetch_assoc($result);
 				
-				$ps=$row['user_pass'];
-				$eps=$_POST["password_log"];
-				
-				//HASH BY MIGUEL
-				$hashpass = hash("sha256", $eps);;
-				
-				if ($ps==$hashpass)
+				if ($username!=$row['user_login'];)
 				{
-					// SESSION ID by Miguel
-					$_SESSION['valid'] = true;
-					
-					$_SESSION["user"] = $username;
-					$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php");
-					
+					$message = "Username not found";
 					echo "<script type='text/javascript'>
-					window.location.href='$redirect';
-					</script>";
-				
+						alert('$message');
+						</script>";
+				}
+				else
+				{
+					$ps=$row['user_pass'];
+					$eps=$_POST["password_log"];
+					
+					//HASH BY MIGUEL
+					$hashpass = hash("sha256", $eps);;
+					
+					if ($ps==$hashpass)
+					{
+						// SESSION ID by Miguel
+						$_SESSION['valid'] = true;
+						
+						$_SESSION["user"] = $username;
+						$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php");
+						
+						echo "<script type='text/javascript'>
+						window.location.href='$redirect';
+						</script>";
+					}
 				}
 	    			else
 	    			{
-	    				echo 'Username or Password NOT Found';
+	    				$message = "Invalid Password";
+					echo "<script type='text/javascript'>
+						alert('$message');
+						</script>";
 	    			}
 			}
 		}
