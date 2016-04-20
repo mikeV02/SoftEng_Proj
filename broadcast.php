@@ -72,32 +72,26 @@ session_start();
         <script src="broadcast/broadcast.js"> </script> <!-- Multi-user connectivity handler -->
         
         <!-- This Library is used to detect WebRTC features -->
-        <script src="broadcast/DetectR<!--TC.js"></script>
+        <script src="broadcast/DetectRTC.js"></script>
     </head>
-<!--
-    <body onunload="killBroadcast();">
--->
+
     <body>
-    	
         <article>
             <header style="text-align: center;">
                 <h1>Web Broadcasting Using WebRTC 
                 </h1>            
             </header>        
             <!-- copy this <section> and next <script> -->
-            <section class="experiment">
-            <form>					
-		<section align="center" id="author-section">
+            <section class="experiment">                
+                <section align="center" id="author-section">
                     Media: <select id="broadcasting-option">
                         <option>Audio + Video</option>
                         <option>Only Audio</option>
                         <option>Screen</option>
-                    </select> 
-					&nbsp;&nbsp; Broadcast name:<input type="text" id="broadcast-name"> &nbsp;
-					Key:<input type="text" id="broadcast-key"> &nbsp;
+                    </select> &nbsp; &nbsp;New broadcast name: 
+                    <input type="text" id="broadcast-name"> &nbsp; &nbsp;
                     <button id="setup-new-broadcast" class="setup">Setup</button>
                 </section>
-	   </form>
 				<section align="center" id="login-section" style="display: none">
 				Join the broadcasts below or <a href= "//softeng.mikedlv.com/loginPage.php">Login</a> to start new one 				
 				</section>                
@@ -146,17 +140,14 @@ if(!isset($_SESSION["user"]))
                         if (typeof roomsList === 'undefined') roomsList = document.body;
 
                         var tr = document.createElement('tr');
-                        tr.innerHTML = '<td><strong>' + room.roomName + '</strong> broadcast. Enter key: <input class = "userkey" type="text" id="user-broadcast-key"></td>' +
+                        tr.innerHTML = '<td><strong>' + room.roomName + '</strong> broadcast</td>' +
                             '<td><button class="join">Join</button></td>';
                         roomsList.insertBefore(tr, roomsList.firstChild);
 
                         var joinRoomButton = tr.querySelector('.join');
-			var userKey = tr.querySelector('.userkey');
-
                         joinRoomButton.setAttribute('data-broadcaster', room.broadcaster);
                         joinRoomButton.setAttribute('data-roomToken', room.broadcaster);
                         joinRoomButton.onclick = function() {
-			    ajaxVerifyKey(room.roomName);
                             this.disabled = true;
 
                             var broadcaster = this.getAttribute('data-broadcaster');
@@ -174,8 +165,6 @@ if(!isset($_SESSION["user"]))
                 };
 
                 function setupNewBroadcastButtonClickHandler() {
-		    // save Broadcast Key to the session variables
-		    ajaxSaveBroadcastKey();
                     document.getElementById('broadcast-name').disabled = true;
                     document.getElementById('setup-new-broadcast').disabled = true;
 
@@ -274,104 +263,6 @@ if(!isset($_SESSION["user"]))
                         visibleElements[i].style.display = 'none';
                     }
                 }
-                
-                function ajaxSaveBroadcastKey(){
-		var ajaxRequest;  // The variable that makes Ajax possible!
-               
-		try {
-                  // Opera 8.0+, Firefox, Safari
-                  ajaxRequest = new XMLHttpRequest();
-		}catch (e) {
-                  // Internet Explorer Browsers
-                  try {
-                     ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
-                  }catch (e) {
-                     try{
-                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
-                     }catch (e){
-                        // Something went wrong
-                        alert("Your browser broke!");
-                        return false;
-                     }
-                  }
-               }
-               
-               // Create a function that will send broadcast key 
-               // to the server 
-					
-               ajaxRequest.onreadystatechange = function(){
-                  if(ajaxRequest.readyState == 4){
-					 var res = ajaxRequest.responseText;
-					 if(res == "NAME_EXIST")
-					 {
-						alert("Broadcast name exists. Give an other name!"); 
-						return;
-					 }
-                  }
-               }
-               
-               // Now get the value from user and pass it to
-               // server script.
-					
-               var broadcastKey = document.getElementById('broadcast-key').value;
-			   var broadcastName = document.getElementById('broadcast-name').value;
-               var queryString = "?broadcastName=" + broadcastName ;
-			   queryString += "&broadcastKey=" + broadcastKey;
-               ajaxRequest.open("GET", "broadcastKeys.php" + queryString, true);
-               ajaxRequest.send(null); 
-            }
-            
-            			function ajaxVerifyKey(broadcastName){
-               var ajaxRequest;  // The variable that makes Ajax possible!
-               
-               try {
-                  // Opera 8.0+, Firefox, Safari
-                  ajaxRequest = new XMLHttpRequest();
-               }catch (e) {
-                  // Internet Explorer Browsers
-                  try {
-                     ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
-                  }catch (e) {
-                     try{
-                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
-                     }catch (e){
-                        // Something went wrong
-                        alert("Your browser broke!");
-                        return false;
-                     }
-                  }
-               }
-               
-               // Create a function that will send broadcast key 
-               // to the server 
-					
-               ajaxRequest.onreadystatechange = function(){
-                  if(ajaxRequest.readyState == 4){
-					 var res = ajaxRequest.responseText;
-					 if(res == "1")
-					 {
-						alert("Broadcast name does not exist or invalid key!");
-						window.location.reload();						
-						return;
-					 }
-                  }
-               }
-               
-               // Now get the value from user and pass it to
-               // server script.
-					
-               var userKey = document.getElementById('user-broadcast-key').value;
-               var queryString = "?broadcastName=" + broadcastName ;
-			   queryString += "&userKey=" + userKey;
-               ajaxRequest.open("GET", "verifyKey.php" + queryString, true);
-               ajaxRequest.send(null); 
-            }
-	   function killBroadcast()
-	   {
-		var broadcastName = document.getElementById('broadcast-name').value;
-		location = 'destroyBroadcast.php?broadcastName='+broadcastName;
-	   }
-            
             </script>
                            
             </section>
