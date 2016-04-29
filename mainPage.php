@@ -102,10 +102,14 @@ session_start();
 
 				<div class="bottom">
 
-					<!-- Other links  Icons -->
-						<ul class="icons">
+					<!-- Socail icons -->
+					<ul class="icons">
+							<li><a href="https://twitter.com/?lang=en" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://myaccount.google.com/" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 
+					
 				</div>
 
 			</div>
