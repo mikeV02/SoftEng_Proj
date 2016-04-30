@@ -84,7 +84,7 @@ if (isset($_POST['videoToFind'])) {
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
-	$vid_name .= ".mp4%";
+	$vid_name .= "%";
 	$vid_name = "%".$vid_name;
 	$sql = "SELECT * FROM videos WHERE name LIKE  '$vid_name' ";
 	print_r($sql);
