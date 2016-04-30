@@ -87,10 +87,14 @@ if (isset($_POST['videoToFind'])) {
 	$vid_name .= "%";
 	$vid_name = "%".$vid_name;
 	$sql = "SELECT * FROM videos WHERE name LIKE  '$vid_name' ";
-	print_r($sql);
 	$check = mysqli_query($con, $sql);
 	if($video = mysqli_fetch_array($check, MYSQLI_NUM)){
-	echo $sql[0];
+	$items = array();
+	$result = mysql_query($sql);
+	print_r($result);
+	while(($row = mysql_fetch_assoc($result))) {
+		$items[$row['id_customer']] = $row['name_customer'];
+	}
 ?>
 	<div align="center">
 	<video width="640" height="480" controls>
