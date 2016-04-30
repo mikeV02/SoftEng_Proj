@@ -84,10 +84,13 @@ if (isset($_POST['videoToFind'])) {
 	if(!$con){
 		die('Not connected : '.mysql_error());
 	}
-	$vid_name .= ".mp4";
-	$sql = "SELECT * FROM videos WHERE name = '$vid_name' ";
+	$vid_name .= ".mp4%";
+	$vid_name = "%".$vid_name;
+	$sql = array();
+	$sql = "SELECT * FROM videos WHERE name like = '$vid_name' ";
 	$check = mysqli_query($con, $sql);
 	if($video = mysqli_fetch_array($check, MYSQLI_NUM)){
+	echo $sql[0];
 ?>
 	<div align="center">
 	<video width="640" height="480" controls>
