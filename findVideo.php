@@ -90,7 +90,9 @@ if (isset($_POST['videoToFind'])) {
 	$check = mysqli_query($con, $sql);
 	while($video = mysqli_fetch_array($check, MYSQLI_BOTH))
 	{
-		echo $video["name"];		
+		echo $video["name"];
+		$output = "videos/".$video["name"];
+		echo $output;
 	?>
 		<div align="center">
 		<video width="640" height="480" controls>
