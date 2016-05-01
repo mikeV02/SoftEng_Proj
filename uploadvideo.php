@@ -52,7 +52,8 @@ if(isset($_POST['upload']))
 <title > Video Upload </title>
 	
 </head>
-<body style="background-color:#322"  >
+<!--<body style="background-color:#322"  >-->
+<body>
 <div class="container">
 		<div class="jumbotron">
 			<div class="row">
