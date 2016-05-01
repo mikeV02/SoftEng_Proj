@@ -21,7 +21,9 @@ if(isset($_POST['upload']))
 	/*echo $video_name;
 	echo $video_type;
 	echo $video_size;
-	echo $video_tmp_name;*/
+	echo $video_tmp_name;
+	 echo "<script>alert('Select a Video.')</script>";location.reload(); }
+	*/
 	
 	
 	if($video_name !=''){
