@@ -23,8 +23,8 @@ if(isset($_POST['upload']))
 	echo $video_size;
 	echo $video_tmp_name;*/
 	
-	if($video_name ==''){ echo "<script>alert('Select a Video.')</script>";location.reload(); }
 	
+	if($video_name !=''){
 	move_uploaded_file($video_tmp_name, "videos/$video_name");
 	//$url="/home/ubuntu/Desktop/Files/";
 	$url = "http://softeng.mikedlv.com/videos/$video_name";
@@ -32,6 +32,7 @@ if(isset($_POST['upload']))
 	$result = mysqli_query($con, $sql);
 	if(!isset($result)){
 		echo("error database");			
+	}
 	}
 }
 ?>
