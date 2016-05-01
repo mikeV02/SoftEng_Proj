@@ -89,21 +89,14 @@ if (isset($_POST['videoToFind'])) {
 	$sql = "SELECT * FROM videos WHERE name LIKE  '$vid_name' ";
 	echo $sql;
 	$check = mysqli_query($con, $sql);
-	if($video = mysqli_fetch_array($check, MYSQLI_NUM))
+	while($video = mysqli_fetch_array($check, MYSQLI_NUM))
 	{
-		for($i =0 ; $i < count($video); $i++)
+	/*	for($i =0 ; $i < count($video); $i++)
 		{
-			echo $video[$i];	
+			echo $video[$i];*/
+		echo $video[0];		
 		
-	?>
-		<div align="center">
-		<video width="640" height="480" controls>
-		  <source src='<?php echo $video[$i] ?>' type="video/mp4" align="center">
-		Your browser does not support the video tag.
-		</video>
-		</div>
-	<?php
-		}
+	}
 
 	
 	
