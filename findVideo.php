@@ -89,12 +89,12 @@ if (isset($_POST['videoToFind'])) {
 	$sql = "SELECT * FROM videos WHERE name LIKE  '$vid_name' ";
 	echo $sql;
 	$check = mysqli_query($con, $sql);
-	while($video = mysqli_fetch_array($check, MYSQLI_NUM))
+	while($video = mysqli_fetch_array($check, MYSQLI_BOTH))
 	{
 	/*	for($i =0 ; $i < count($video); $i++)
 		{
 			echo $video[$i];*/
-		echo $video[0];		
+		echo $video["name"];		
 		
 	}
 
