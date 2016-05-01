@@ -91,7 +91,7 @@ Released   : 20140107
 		while($video = mysqli_fetch_array($check, MYSQLI_BOTH))
 		{
 			//echo $video["name"];
-			$output = $video["name"];
+			$output = $video["url"];
 			echo $output;
 			
 			//Corret Video Play Path by Miguel
