@@ -73,37 +73,36 @@ Released   : 20140107
 </form>
 
 <?php
-if (isset($_POST['videoToFind'])) {
-
-	$vid_name = $_POST['videoToFind'];
-	$db = "softeng";
-	$password = "softeng";
-	$username = "root";
-	$db2 = "videos";
-	$con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not connect to SQL:'. mysqli_connect_error());
-	if(!$con){
-		die('Not connected : '.mysql_error());
+	if (isset($_POST['videoToFind'])) {
+	
+		$vid_name = $_POST['videoToFind'];
+		$db = "softeng";
+		$password = "softeng";
+		$username = "root";
+		$db2 = "videos";
+		$con = mysqli_connect("localhost", $username, $password, $db) OR die('Could not connect to SQL:'. mysqli_connect_error());
+		if(!$con){
+			die('Not connected : '.mysql_error());
+		}
+		$vid_name .= "%";
+		$vid_name = "%".$vid_name;
+		$sql = "SELECT * FROM videos WHERE name LIKE  '$vid_name' ";
+		$check = mysqli_query($con, $sql);
+		while($video = mysqli_fetch_array($check, MYSQLI_BOTH))
+		{
+			//echo $video["name"];
+			$output = "videos/".$video["name"];
+			//echo $output;
+		
+			echo "<div align='center'>"
+				"<video width='640' height='480' controls>"
+			  	"<source src='$output' type='video/mp4' align='center'>"
+				"Your browser does not support the video tag."
+				"</video>"
+				"</div>"
+		}
+	mysqli_close($con);
 	}
-	$vid_name .= "%";
-	$vid_name = "%".$vid_name;
-	$sql = "SELECT * FROM videos WHERE name LIKE  '$vid_name' ";
-	$check = mysqli_query($con, $sql);
-	while($video = mysqli_fetch_array($check, MYSQLI_BOTH))
-	{
-		//echo $video["name"];
-		$output = "videos/".$video["name"];
-		echo $output;
-	?>
-		<div align="center">
-		<video width="640" height="480" controls>
-		  <source src='<?php echo $output ?>' type="video/mp4" align="center">
-		Your browser does not support the video tag.
-		</video>
-		</div> 
-	<?php
-	}
-mysqli_close($con);
-}
 ?>
 
 </body>
