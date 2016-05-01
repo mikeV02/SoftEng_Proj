@@ -16,8 +16,16 @@ if(isset($_POST['upload']))
 	$video_type = $_FILES["video"]["type"];
 	$video_size = $_FILES["video"]["size"];
 	$video_tmp_name = $_FILES["video"]["tmp_name"];
-
-	if($video_name !=''){
+	
+	//Values check by Miguel
+	/*echo $video_name;
+	echo $video_type;
+	echo $video_size;
+	echo $video_tmp_name;
+	 
+	*/
+	
+	if($video_name !=''){echo "<script>alert('Select a Video.')</script>";exit(); }
 	move_uploaded_file($video_tmp_name, "videos/$video_name");
 	//$url="/home/ubuntu/Desktop/Files/";
 	$url = "http://softeng.mikedlv.com/videos/$video_name";
@@ -25,7 +33,6 @@ if(isset($_POST['upload']))
 	$result = mysqli_query($con, $sql);
 	if(!isset($result)){
 		echo("error database");			
-	}
 	}
 }
 ?>
