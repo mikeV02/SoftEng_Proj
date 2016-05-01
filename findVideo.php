@@ -92,7 +92,7 @@ Released   : 20140107
 		{
 			//echo $video["name"];
 			$output = "videos/".$video["name"];
-			//echo $output;
+			echo $output;
 		
 			echo "<div align='center'>
 				<video width='640' height='480' controls>
