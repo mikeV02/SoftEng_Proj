@@ -89,7 +89,8 @@ if (isset($_POST['videoToFind'])) {
 	$sql = "SELECT * FROM videos WHERE name LIKE  '$vid_name' ";
 	echo $sql;
 	$check = mysqli_query($con, $sql);
-	while ($row = mysql_fetch_array($sql))   
+	$row = mysql_fetch_array($sql);
+	print_r($row);
 	echo "yay";
 	if($video = mysqli_fetch_array($check, MYSQLI_NUM)){
 ?>
