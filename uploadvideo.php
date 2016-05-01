@@ -16,16 +16,7 @@ if(isset($_POST['upload']))
 	$video_type = $_FILES["video"]["type"];
 	$video_size = $_FILES["video"]["size"];
 	$video_tmp_name = $_FILES["video"]["tmp_name"];
-	
-	//Values check by Miguel
-	/*echo $video_name;
-	echo $video_type;
-	echo $video_size;
-	echo $video_tmp_name;
-	 echo "<script>alert('Select a Video.')</script>";location.reload(); }
-	*/
-	
-	
+
 	if($video_name !=''){
 	move_uploaded_file($video_tmp_name, "videos/$video_name");
 	//$url="/home/ubuntu/Desktop/Files/";
