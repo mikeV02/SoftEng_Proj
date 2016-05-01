@@ -25,7 +25,7 @@ if(isset($_POST['upload']))
 	 
 	*/
 	
-	if($video_name !=''){echo "<script>alert('Select a Video.')</script>";exit(); }
+	if($video_name ==''){echo "<script>alert('Select a Video.')</script>";exit(); }
 	move_uploaded_file($video_tmp_name, "videos/$video_name");
 	//$url="/home/ubuntu/Desktop/Files/";
 	$url = "http://softeng.mikedlv.com/videos/$video_name";
