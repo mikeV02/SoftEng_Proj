@@ -91,16 +91,11 @@ Released   : 20140107
 		while($video = mysqli_fetch_array($check, MYSQLI_BOTH))
 		{
 			//echo $video["name"];
-			$output = $video["url"];
+			$output = $video["name"];
 			echo $output;
 			
 			//Corret Video Play Path by Miguel
-			if ($check && mysql_num_rows($check) > 0)
-			{
-				$row=mysql_fetch_assoc($check);
-										
-				$path=$row['url'];
-			}
+			$path=$video['url'];
 		
 			echo "<div align='center'>
 				<video width='640' height='480' controls>
