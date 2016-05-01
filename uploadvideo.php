@@ -75,7 +75,7 @@ if(isset($_POST['upload']))
 			</div>
 		</form>
 	<br><br><br><br>
-	<form id="goBackMain" align="center" action="softeng.mikedlv.com" method="POST">
+	<form id="goBackMain" align="center" action="http://softeng.mikedlv.com" method="POST">
 		<p> Go back to <input type="submit" value="MainPage"></p>  
 	</form>
 
