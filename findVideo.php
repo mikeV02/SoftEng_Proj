@@ -91,12 +91,12 @@ if (isset($_POST['videoToFind'])) {
 	$check = mysqli_query($con, $sql);
 	if($video = mysqli_fetch_array($check, MYSQLI_ASSOC))
 	{
-		while($res = mysqli_fetch_array($check, MYSQLI_ASSOC))
+		while($res = mysqli_fetch_array($check, MYSQLI_BOTH))
 		{
 	?>
 		<div align="center">
 		<video width="640" height="480" controls>
-		  <source src='<?php echo $res["name"] ?>' type="video/mp4" align="center">
+		  <source src='<?php echo $res[0] ?>' type="video/mp4" align="center">
 		Your browser does not support the video tag.
 		</video>
 		</div>
