@@ -90,7 +90,7 @@ if (isset($_POST['videoToFind'])) {
 	echo $sql;
 	$check = mysqli_query($con, $sql);
 	$row = $sql->fetch_array(MYSQLI_NUM);
-	print_r($row);
+	printf ("%s \n", $row[0]);
 	if($video = mysqli_fetch_array($check, MYSQLI_NUM)){
 ?>
 	
