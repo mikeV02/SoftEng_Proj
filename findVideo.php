@@ -93,7 +93,7 @@ if (isset($_POST['videoToFind'])) {
 	{
 		while($res = mysqli_fetch_array($check, MYSQLI_BOTH))
 		{
-			echo "wooo\n";
+			echo $res["name"];
 	?>
 		<div align="center">
 		<video width="640" height="480" controls>
