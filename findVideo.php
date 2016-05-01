@@ -94,12 +94,12 @@ Released   : 20140107
 			$output = "videos/".$video["name"];
 			//echo $output;
 		
-			echo "<div align='center'>"
-				"<video width='640' height='480' controls>"
-			  	"<source src='$output' type='video/mp4' align='center'>"
-				"Your browser does not support the video tag."
-				"</video>"
-				"</div>";
+			echo "<div align='center'>
+				<video width='640' height='480' controls>
+			  	<source src='$output' type='video/mp4' align='center'>
+				Your browser does not support the video tag.
+				</video>
+				</div>";
 		}
 	mysqli_close($con);
 	}
