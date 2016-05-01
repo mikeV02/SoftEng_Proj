@@ -96,7 +96,7 @@ if (isset($_POST['videoToFind'])) {
 	?>
 		<div align="center">
 		<video width="640" height="480" controls>
-		  <source src='<?php $output ?>' type="video/mp4" align="center">
+		  <source src='<?php echo $output ?>' type="video/mp4" align="center">
 		Your browser does not support the video tag.
 		</video>
 		</div> 
