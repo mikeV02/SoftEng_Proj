@@ -99,7 +99,7 @@ Released   : 20140107
 			  	"<source src='$output' type='video/mp4' align='center'>"
 				"Your browser does not support the video tag."
 				"</video>"
-				"</div>"
+				"</div>";
 		}
 	mysqli_close($con);
 	}
