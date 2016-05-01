@@ -101,10 +101,10 @@ if (isset($_POST['videoToFind'])) {
 	
 	
 
-	} else {
+/*	} else {
 		echo "0 results";
 		mysqli_close($con);
-	}
+	}*/
 
 //mysqli_close($con);
 }
