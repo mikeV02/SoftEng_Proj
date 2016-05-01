@@ -92,7 +92,9 @@ if (isset($_POST['videoToFind'])) {
 	if($video = mysqli_fetch_array($check, MYSQLI_ASSOC)){
 	while($res = mysqli_fetch_array($check, MYSQLI_ASSOC))
 	{
-		echo $res["name"];
+		echo"yaya";
+		printf ("%s \n", $res["name"]);
+		
 	}
 ?>
 	
