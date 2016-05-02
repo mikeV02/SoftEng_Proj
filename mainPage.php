@@ -160,7 +160,7 @@ session_start();
 							
 							  <script src="http://vjs.zencdn.net/5.9.2/video.js"></script>
 
-						<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-mobile-iframe="true"></div>
+						<div class="fb-share-button" data-href="videos/rabbit.mp4" data-layout="button" data-mobile-iframe="true"></div>
 						</div>
 				<!-- About Me -->
 					<section id="about" class="three">
