@@ -143,7 +143,7 @@ session_start();
 						<script type="text/JavaScript">
 						var playerInstance = jwplayer("myElement");
 						playerInstance.setup({
-						    file: "videos/rabbit.mp4"
+						    file: "//content.jwplatform.com/videos/MEDIAID-TEMPLATEID.mp4"
 						});
 						</script>
 						 <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
