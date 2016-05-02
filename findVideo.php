@@ -90,26 +90,14 @@ Released   : 20140107
 		$check = mysqli_query($con, $sql);
 		while($video = mysqli_fetch_array($check, MYSQLI_BOTH))
 		{
-			//echo $video["name"];
-			$output = $video["name"];
-			echo $output;
-			
-			//Corret Video Play Path by Miguel
+			echo $video["name"];
 			$path=$video['url'];
-		
 			echo "<div align='center'>
 				<video width='640' height='480' controls>
 			  	<source src='$path' type='video/mp4' align='center'>
 				Your browser does not support the video tag.
 				</video>
-				</div>
-			  <script src='//content.jwplatform.com/libraries/S2xWVQ9r.js'></script>
-			  <div id="container"></div>
-			  <script>
-			    jwplayer('container').setup({
-			      file: '$path'
-			    });
-			  </script>";
+				</div>";
 		}
 	mysqli_close($con);
 	}
