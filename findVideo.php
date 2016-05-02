@@ -102,7 +102,14 @@ Released   : 20140107
 			  	<source src='$path' type='video/mp4' align='center'>
 				Your browser does not support the video tag.
 				</video>
-				</div>";
+				</div>
+			  <script src='//content.jwplatform.com/libraries/S2xWVQ9r.js'></script>
+			  <div id="container"></div>
+			  <script>
+			    jwplayer('container').setup({
+			      file: '$path'
+			    });
+			  </script>";
 		}
 	mysqli_close($con);
 	}
