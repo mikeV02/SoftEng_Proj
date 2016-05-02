@@ -29,6 +29,7 @@ Released   : 20140107
 </head>
 
 <body>
+	
 <div id="header" class="container">
 	<div id="logo">
 		<h1><a href=>Video Hog</a></h1>
