@@ -73,7 +73,7 @@ Released   : 20140107
 		</div>
 		<p></p>
 		<ul class="actions">
-			<li><a href="home/playVideo.html" class="button">Find featured videos</a></li>
+			<li><a href="playVideo.html" class="button">Find featured videos</a></li>
 		</ul>
 	</div>
 
