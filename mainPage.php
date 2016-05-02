@@ -161,6 +161,8 @@ session_start();
 							
 							  <script src="http://vjs.zencdn.net/5.9.2/video.js"></script>
 							<div class="fb-share-button" data-href="http://softeng.mikedlv.com/videos/rabbit.mp4" data-layout="button_count" data-mobile-iframe="true"></div>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://softeng.mikedlv.com/videos/rabbit.mp4">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 				<!-- About Me -->
 					<section id="about" class="three">
 						<div class="container">
