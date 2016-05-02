@@ -107,6 +107,7 @@ Released   : 20140107
 			echo "<div align='center'>
 				<video width='640' height='480' controls>
 			  	<source src='$path' type='video/mp4' align='center'>
+			  	<source src='$path' type='video/webm' align ='center'>
 				Your browser does not support the video tag.
 				</video>
 				</div>";
