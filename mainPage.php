@@ -49,7 +49,7 @@ session_start();
 					<!-- Logo -->
 						<div id="logo">
 							
-							<span class="image avatar48"><img src="main/images/userIcon.jpg" alt=""  href="http://softeng.mikedlv.com//></span>
+							<span class="image avatar48"><img src="main/images/userIcon.jpg" alt="" /></span>
 							
 							<!-- Display Name by Miguel -->
 							<?php
