@@ -132,15 +132,25 @@ session_start();
 				<!-- Portfolio -->
 					<section id="portfolio" class="two">
 						<div class="container">
-
 							<header>
 								<h2>Featured Videos</h2>
 							</header>
-							<video width="640" height="480" controls>
-							  <source src="main/flower.mp4" type="video/mp4">
-							  <!--<source src="main/movie.ogg" type="video/ogg"> -->
-							Your browser does not support the video tag.
-							</video>
+						<link href="http://vjs.zencdn.net/5.9.2/video-js.css" rel="stylesheet">
+							
+							  <!-- If you'd like to support IE8 -->
+						 <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+							
+							  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+							  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+							    <source src="videos/rabbit.mp4" type='video/mp4'>
+							    <source src="videos/rabbit.webm" type='video/webm'>
+							    <p class="vjs-no-js">
+							      To view this video please enable JavaScript, and consider upgrading to a web browser that
+							      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+							    </p>
+							  </video>
+							
+							  <script src="http://vjs.zencdn.net/5.9.2/video.js"></script>
 				<!-- About Me -->
 					<section id="about" class="three">
 						<div class="container">
@@ -164,9 +174,8 @@ session_start();
 						$video_type = $_FILES["video"]["type"];
 						$video_size = $_FILES["video"]["size"];
 						$video_tmp_name = $_FILES["video"]["tmp_name"];
-						if($video_name !=''){ //echo "<script>alert('Select a Video.')</script>"; exit();}
+						if($video_name !=''){ 
 						move_uploaded_file($video_tmp_name, "videos/$video_name");
-						//$url="/home/ubuntu/Desktop/Files/";
 						$url = "http://softeng.mikedlv.com/videos/$video_name";
 						$sql = "INSERT INTO videos (name, url) VALUE ('$video_name','$url')";
 						$result = mysqli_query($con, $sql);
