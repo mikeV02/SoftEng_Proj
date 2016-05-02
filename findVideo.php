@@ -94,6 +94,16 @@ Released   : 20140107
 			$path=$video['url'];?>
 			<link href="http://vjs.zencdn.net/5.9.2/video-js.css" rel="stylesheet">
 			<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+			<!-- optional: default styles -->
+			<link href="/path/to/videojs.chapter-thumbnails.min.css" rel="stylesheet">
+			videojs('player_id').chapter_thumbnails({
+			    src: '/path/to/chapters.vtt'
+			});
+			<div class="vjs-chapters-thumbnails-item">
+			<img class="vjs-chapters-thumbnails-item-image" src="{{image}}" />
+			<span class="vjs-chapters-thumbnails-item-title">{{title}}</span>
+			</div>
+			<script src="/path/to/videojs.chapter-thumbnails.min.js"></script>
 			<center><video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
 			<source src='<?php echo $path; ?>' type='video/mp4'>
 			<source src='<?php echo $path; ?>' type='video/webm'>
