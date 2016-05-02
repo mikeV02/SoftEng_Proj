@@ -159,7 +159,7 @@ session_start();
 							  </video></center>
 							
 							  <script src="http://vjs.zencdn.net/5.9.2/video.js"></script>
-							<div class="fb-video" data-href="http://softeng.mikedlv.com/videos/rabbit.mp4" data-width="500" data-show-text="false"></div>
+							<div class="fb-share-button" data-href="http://softeng.mikedlv.com/videos/rabbit.mp4" data-layout="button_count" data-mobile-iframe="true"></div>
 				<!-- About Me -->
 					<section id="about" class="three">
 						<div class="container">
