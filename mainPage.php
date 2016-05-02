@@ -48,7 +48,6 @@ session_start();
 
 					<!-- Logo -->
 						<div id="logo">
-							
 							<span class="image avatar48"><img src="main/images/userIcon.jpg" alt="" /></span>
 							
 							<!-- Display Name by Miguel -->
@@ -104,6 +103,7 @@ session_start();
 								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Upload video</span></a></li>
 								<li><a href="findVideo.php" id="search-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Search video</span></a></li>
 								<li><a href="broadcast.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Broadcast</span></a></li>
+								<li><a href="http://softeng.mikedlv.com/" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Main Page</span></a></li>
 							</ul>
 						</nav>
 
