@@ -165,7 +165,6 @@ session_start();
 						$video_size = $_FILES["video"]["size"];
 						$video_tmp_name = $_FILES["video"]["tmp_name"];
 						if($video_name !=''){ //echo "<script>alert('Select a Video.')</script>"; exit();}
-						echo"<script?alert('Please select a video')</script>";
 						move_uploaded_file($video_tmp_name, "videos/$video_name");
 						//$url="/home/ubuntu/Desktop/Files/";
 						$url = "http://softeng.mikedlv.com/videos/$video_name";
@@ -175,6 +174,7 @@ session_start();
 							echo("error database");			
 						}
 						}
+						else echo"<script>alert('Please select a video')</script>";
 					}
 					?>
 					  <form action = "mainPage.php"  align="center" method = "POST" enctype ="multipart/form-data">
