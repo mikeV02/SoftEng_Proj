@@ -68,7 +68,7 @@ if(isset($_POST['upload']))
   	</div><br><br>
   		<form action = "uploadvideo.php"  align="center" method = "POST" enctype ="multipart/form-data">
   			<div class="row" align="center">
-				<input   type="file" name = "video">
+				<input   type="file" accept="video/mp4,video/x-m4v,video/*" name = "video">
 			</div><br><br>
 			<div class="row" align="center">
 				<input type="submit"  name= "upload" value="Upload video">
