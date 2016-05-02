@@ -164,7 +164,7 @@ session_start();
 						$video_type = $_FILES["video"]["type"];
 						$video_size = $_FILES["video"]["size"];
 						$video_tmp_name = $_FILES["video"]["tmp_name"];
-						if($video_name ==''){ echo "<script>alert('Select a Video.')</script>"; exit();}
+						if($video_name !=''){ //echo "<script>alert('Select a Video.')</script>"; exit();}
 						
 						move_uploaded_file($video_tmp_name, "videos/$video_name");
 						//$url="/home/ubuntu/Desktop/Files/";
@@ -173,6 +173,7 @@ session_start();
 						$result = mysqli_query($con, $sql);
 						if(!isset($result)){
 							echo("error database");			
+						}
 						}
 					}
 					?>
