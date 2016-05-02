@@ -56,7 +56,7 @@
   </table>
 </div>
 </form>
-<form id="goBackMain" align="center" action="mainPage.php" method="POST">
+<form id="goBackMain" align="center" action="index.php" method="POST">
 <p> Go back to <input type="submit" value="MainPage"></p>  
 </form>
 </body>
