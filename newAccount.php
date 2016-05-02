@@ -29,7 +29,7 @@ Released   : 20140107
 		<ul>
 			<li><a href="loginPage.php" accesskey="3" title="" >Login</a></li>
 			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
-			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+			<li><a href="aboutUs.php" accesskey="5" title="">Contact Us</a></li>
 		</ul>
 	</div>
 </div>
