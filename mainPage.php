@@ -205,8 +205,7 @@ session_start();
 							}
 							$notification = "A video with the same name already exists in the db. Your video has been saved as (1).";
 							echo "<script>
-							var text = prompt("prompt", "textbox's intial text");
-							alert(text);
+							alert('$notification');
 							</script>";
 							
 						//
