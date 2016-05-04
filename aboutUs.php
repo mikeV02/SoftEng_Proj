@@ -1,18 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<head>
-	  <title>About us</title>
-		
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" />
-	<link href="home/default.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
-		
-	<link rel="stylesheet" href="style.css">   
-	</head>
-
 <!--
 Design by TEMPLATED
 http://templated.co
@@ -22,24 +8,31 @@ Description: A two-column, fixed-width design with dark color scheme.
 Version    : 1.0
 Released   : 20140107
 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+<title>Video Hog</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" />
+	<link href="home/default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
 <body>
-<link rel="stylesheet" href="style.css">   
 <div id="header" class="container">
 	<div id="logo">
-		<h1><a href="http://softeng.mikedlv.com/"><font color="white">Video Hog</font></a></h1>
+		<h1><a href="http://softeng.mikedlv.com/"><font color="red">Video Hog</font></a></h1>
 	</div>
 	<div id="menu">
 		<ul>
-			<li><a href="loginPage.php" accesskey="3" title=""><font color="white">Login</font></a></li>
-			<li><a href="newAccount.php" accesskey="4" title=""><font color="white">Create account</font></a></li>
-			<li><a href="aboutUs.php" accesskey="5" title=""><font color="white">Contact Us</font></a></li>
+			<li><a href="loginPage.php" accesskey="3" title="" >Login</a></li>
+			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
+			<li><a href="aboutUs.php" accesskey="5" title="">Contact Us</a></li>
 		</ul>
 	</div>
 </div>
-<div class="container">
-  <h2>Video Hog</h2>
-             
   <table class="table member">
     <thead>
       <tr>
@@ -85,7 +78,5 @@ Released   : 20140107
 </div>
 </form>
 </body>
-
-
-
 </html>
+
