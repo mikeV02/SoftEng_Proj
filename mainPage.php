@@ -194,10 +194,10 @@ session_start();
 						//Added by Fabian M.
 						$check= "SELECT * FROM videos WHERE name = '$video_name' ";
 						$vd = mysqli_query($con,$check);
-						if(!($data = mysqli_fetch_array($vd, MYSQLI_NUM))){
+						if($data = mysqli_fetch_array($vd, MYSQLI_NUM)){
 							$video_name .= "(1)";
 							$url .= "(1)";
-							$notification = "A video with the same name already exists in the db. Your video has been saved as '$video_name'(1).";
+							$notification = "A video with the same name already exists in the db. Your video has been saved as (1).";
 							echo "<script type='text/javascript'>
 							alert('$notification');
 							</script>";
