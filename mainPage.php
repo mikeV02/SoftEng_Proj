@@ -195,6 +195,8 @@ session_start();
 						$check= "SELECT * FROM videos WHERE name = '$video_name' ";
 						$vd = mysqli_query($con,$check);
 						if($data = mysqli_fetch_array($vd, MYSQLI_NUM)){
+							$test = prompt('Enter a new value');
+							
 							$video_name .= "(1)";
 							$url .= "(1)";
 							
