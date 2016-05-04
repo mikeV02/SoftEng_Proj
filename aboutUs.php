@@ -37,8 +37,8 @@ Released   : 20140107
   <table class="table member">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
+        <th>First Name</th>
+        <th>Last Name</th>
         <th>Major</th>
 		<th>Email</th>
       </tr>
