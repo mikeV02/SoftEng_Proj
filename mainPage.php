@@ -189,19 +189,22 @@ session_start();
 						if($video_name !=''){ 
 						move_uploaded_file($video_tmp_name, "videos/$video_name");
 						$url = "http://softeng.mikedlv.com/videos/$video_name";
-
-						
+						$sql = "INSERT INTO videos (name, url) VALUE ('$video_name','$url')";
 						//Added by Fabian M.
 						$check= "SELECT * FROM videos WHERE name = '$video_name' ";
 						$vd = mysqli_query($con,$check);
 						if($data = mysqli_fetch_array($vd, MYSQLI_NUM)){
-							$notification = "A video with the same name already exists in the db. Please try again by changing the video's name.";
+							$notification = "A video with the same name already exists in the db. Please try again by changing the video name.";
+							$redirect=sprintf("http://softeng.mikedlv.com/mainPage.php");
 							echo "<script>
 							alert('$notification');
 							</script>";
+							mysqli_close($con);
+							echo "<script type='text/javascript'>
+							window.location.href='$redirect';
+							</script>";
 							
 						} else{
-							$sql = "INSERT INTO videos (name, url) VALUE ('$video_name','$url')";
 							$result = mysqli_query($con, $sql);
 							if(!isset($result)){
 								echo("error database");			
