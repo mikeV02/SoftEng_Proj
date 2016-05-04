@@ -197,7 +197,7 @@ session_start();
 						
 						$check= "SELECT * FROM videos WHERE name LIKE '$temp_video_name' ";
 						$vd = mysqli_query($con,$check);
-						if($data = mysqli_fetch_array($vd, MYSQLI_NUM)){
+						if($data = mysqli_fetch_array($vd, MYSQLI_BOTH)){
 							$list_length = strlen($data);
 							for($i = 0; $i <= $list_length; $i++) {
 							$video_name .= "(1)";
