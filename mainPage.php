@@ -195,13 +195,6 @@ session_start();
 						$check= "SELECT * FROM videos WHERE name = '$video_name' ";
 						$vd = mysqli_query($con,$check);
 						if($data = mysqli_fetch_array($vd, MYSQLI_NUM)){
-							echo "<script>
-    							var new_name = prompt("Please enter a new video name:");
-    							if (new_name != null) {
-
-    							}
-							</script>";
-							
 							$video_name .= "(1)";
 							$url .= "(1)";
 							
