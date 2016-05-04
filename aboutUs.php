@@ -33,6 +33,7 @@ Released   : 20140107
 		</ul>
 	</div>
 </div>
+<center>
   <table class="table member">
     <thead>
       <tr>
@@ -75,6 +76,7 @@ Released   : 20140107
       </tr>
     </tbody>
   </table>
+  </center>
 </div>
 </form>
 </body>
