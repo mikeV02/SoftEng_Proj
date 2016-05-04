@@ -199,7 +199,7 @@ session_start();
 						$vd = mysqli_query($con,$check);
 						if($data = mysqli_fetch_array($vd, MYSQLI_BOTH)){
 							$list_length = strlen($data);
-							for($i = 0; $i <= $list_length; $i++) {
+							for($i = 0; $i < $list_length; $i++) {
 							$video_name .= "(1)";
 							$url .= "(1)";
 							}
