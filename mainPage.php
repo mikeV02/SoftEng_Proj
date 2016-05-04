@@ -189,7 +189,7 @@ session_start();
 						if($video_name !=''){ 
 						move_uploaded_file($video_tmp_name, "videos/$video_name");
 						$url = "http://softeng.mikedlv.com/videos/$video_name";
-						$sql = "INSERT INTO videos (name, url) VALUE ('$video_name','$url')";
+
 						
 						//Added by Fabian M.
 						$check= "SELECT * FROM videos WHERE name = '$video_name' ";
@@ -197,18 +197,19 @@ session_start();
 						if($data = mysqli_fetch_array($vd, MYSQLI_NUM)){
 							$video_name .= "(1)";
 							$url .= "(1)";
+							
+							$sql = "INSERT INTO videos (name, url) VALUE ('$video_name','$url')";
+							$result = mysqli_query($con, $sql);
+							if(!isset($result)){
+								echo("error database");			
+							}
 							$notification = "A video with the same name already exists in the db. Your video has been saved as (1).";
 							echo "<script>
 							alert('$notification');
 							</script>";
 							
 						//
-						} else{
-							$result = mysqli_query($con, $sql);
-							if(!isset($result)){
-								echo("error database");			
-							}
-						}
+						} 
 						//
 						}
 						else echo"<script>alert('Please select a video')</script>";
