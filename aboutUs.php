@@ -1,14 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <head>
-  <title>about us</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
+	  <title>About us</title>
+		
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" />
+	<link href="home/default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
+		
+	<link rel="stylesheet" href="style.css">   
+	</head>
+
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+Name       : Pastime 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140107
+-->
+
 <body>
+<link rel="stylesheet" href="style.css">   
+<div id="header" class="container">
+	<div id="logo">
+		<h1><a href="http://softeng.mikedlv.com/"><font color="white">Video Hog</font></a></h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="loginPage.php" accesskey="3" title=""><font color="white">Login</font></a></li>
+			<li><a href="newAccount.php" accesskey="4" title=""><font color="white">Create account</font></a></li>
+			<li><a href="aboutUs.php" accesskey="5" title=""><font color="white">Contact Us</font></a></li>
+		</ul>
+	</div>
+</div>
 <div class="container">
   <h2>Video Hog</h2>
              
@@ -60,5 +88,7 @@
 <p> Go back to <input type="submit" value="MainPage"></p>  
 </form>
 </body>
+
+
 
 </html>
