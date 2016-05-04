@@ -80,6 +80,7 @@ Released   : 20140107
 </div>
 </form>
 <center>
+	<h1>Send us an email!</h1>
 <?php
 $action=$_REQUEST['action'];
 if ($action=="")    /* display the contact form */
