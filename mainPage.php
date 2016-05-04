@@ -198,15 +198,16 @@ session_start();
 							$video_name .= "(1)";
 							$url .= "(1)";
 							$notification = "A video with the same name already exists in the db. Your video has been saved as (1).";
-							echo "<script type='text/javascript'>
+							echo "<script>
 							alert('$notification');
 							</script>";
 							
+						//
+						} else{
 							$result = mysqli_query($con, $sql);
 							if(!isset($result)){
 								echo("error database");			
 							}
-						//
 						}
 						//
 						}
