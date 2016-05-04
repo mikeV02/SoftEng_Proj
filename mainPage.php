@@ -192,12 +192,17 @@ session_start();
 
 						
 						//Added by Fabian M.
-						$check= "SELECT * FROM videos WHERE name = '$video_name' ";
+						//$video_name .= "%";
+						$temp_video_name = "%".$video_name;
+						
+						$check= "SELECT * FROM videos WHERE name LIKE '$temp_video_name' ";
 						$vd = mysqli_query($con,$check);
 						if($data = mysqli_fetch_array($vd, MYSQLI_NUM)){
+							$list_length = strlen($data);
+							for($i = 0; $i <= $list_length; $i++) {
 							$video_name .= "(1)";
 							$url .= "(1)";
-							
+							}
 							$sql = "INSERT INTO videos (name, url) VALUE ('$video_name','$url')";
 							$result = mysqli_query($con, $sql);
 							if(!isset($result)){
