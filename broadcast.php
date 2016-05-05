@@ -11,6 +11,8 @@ session_start();
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         
         <link rel="stylesheet" href="styleBC.css">
+        	<link href="home/default.css" rel="stylesheet" type="text/css" media="all" />
+        	<link href="home/fonts.css" rel="stylesheet" type="text/css" media="all" />
         
         <style>
             audio, video {
