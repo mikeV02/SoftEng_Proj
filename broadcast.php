@@ -78,7 +78,7 @@ session_start();
     </head>
 
     <body>
-    	//Added now
+
     	<div id="header" class="container">
 	<div id="logo">
 		<h1><a href="http://softeng.mikedlv.com/"><font color="red">Video Hog</font></a></h1>
