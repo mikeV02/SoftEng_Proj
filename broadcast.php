@@ -76,6 +76,21 @@ session_start();
     </head>
 
     <body>
+    	//Added now
+    	<div id="header" class="container">
+	<div id="logo">
+		<h1><a href="http://softeng.mikedlv.com/"><font color="red">Video Hog</font></a></h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="loginPage.php" accesskey="3" title="" >Login</a></li>
+			<li><a href="newAccount.php" accesskey="4" title="">Create account</a></li>
+			<li><a href="aboutUs.php" accesskey="5" title="">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+    	
+    	
         <article>
             <header style="text-align: center;">
                 <h1>Web Broadcasting Using WebRTC 
